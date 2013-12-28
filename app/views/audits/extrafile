@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Profile name:</b>
+ <%= @audit.user.profile_name %>
+</p>
+
+<p>
+  <b>Department name:</b>
+  <%= @audit.department_name %>
+</p>
+
+<p>
+  <b>Auditee name:</b>
+  <%= @audit.auditee_name %>
+</p>
+
+<p>
+  <b>Auditee email:</b>
+  <%= @audit.auditee_email %>
+</p>
+
+<p>
+  <b>Auditor name:</b>
+  <%= @audit.auditor_name %>
+</p>
+
+<p>
+  <b>Auditor email:</b>
+  <%= @audit.auditor_email %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @audit.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @audit.end_date %>
+</p>
+
+
+    <td><%= finding.corrective_action %></td>
+    <td><%= finding.preventive_action %></td>
+    
+     <ul>
+      <% @audit.errors.full_messages.each do |msg| %>
+     
+        <li><%= msg %></li>
+   
+      <% end %>
+      </ul>
+    
+ @audits= Audit.paginate(:page => params[:page], :per_page => 3).order('id DESC')
+ 
+ 
+    
+    <div class="container">
+    <div class="row-fluid"> 
+    <div class="col-lg-12">
+    <%= will_paginate @audits %>
+    </div>
+    </div>
+    </div>

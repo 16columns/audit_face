@@ -1,0 +1,83 @@
+<%= simple_form_for(@audit, html: {class: "form-horizontal"}) do |f| %>
+  <% if @audit.errors.any? %>
+    <div class="container" id="error_explanation">
+    <div class="row-fluid">
+    <div class="col-lg-5 col-lg-offset-3">
+    <div class="well well-sm">
+      <p><%= pluralize(@audit.errors.count, "error") %> prohibited this audit from being saved</p>
+    </div>
+     
+    </div>
+    </div>
+    </div>
+  <% end %>
+ 
+<div class="container">
+<div class="row-fluid">
+<div class="col-lg-5 col-lg-offset-3">
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Create New Audit</strong></div>
+  <div class="panel-body">
+  <div class="col-xs-12">
+ <div class="form-inputs">
+   <div class="input-sm">
+    <%= f.input :department_name %>
+    </div>
+    <br/><br/>
+    
+   <div class="input-sm">
+    <%= f.input :auditee_name %>
+   </div>
+   <br/><br/>
+   
+   <div class="input-sm">
+    <%= f.input :auditee_email %>
+     </div>
+   <br/><br/>
+   
+   
+    <div class="input-sm">
+    <%= f.input :auditor_name %>
+    </div>
+   <br/><br/>
+   
+    <div class="input-sm">
+    <%= f.input :auditor_email, placeholder: 'awesomeauditor@domain.com' %>
+      </div>
+   <br/><br/>
+   
+   <div class="input-sm">
+    <%= f.input :start_date %>
+     </div>
+   <br/><br/><br/><br/><br/>
+   
+   <div class="input-sm">
+    <%= f.input :end_date %>
+     </div>
+   <br/><br/>
+    
+  </div>
+  
+      
+  </div>
+   
+
+</div>
+<br/><br/><br/><br/>
+   <div class="panel-footer">
+      
+      <div class="form-actions">
+    <%= f.submit class: "btn btn-success btn-lg btn-block" %>
+  </div>
+</div> 
+  
+ </div>
+   
+ </div>
+ </div>
+
+<% end %>
+
+   
+

@@ -1,0 +1,89 @@
+<%= simple_form_for(@finding, html: {class: "form-inline", multipart: true}) do |f| %>
+<%= f.error_notification %>
+
+<div class="container">
+<div class="row-fluid">
+<div class="col-lg-6">
+
+<div class="panel-group" id="accordion">
+  
+  <div class="panel panel-default">
+    
+    <div class="panel-heading">
+        
+       <strong> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"  style="font-family: 'Open Sans', sans-serif">
+          Describe audit finding
+        </a></strong>
+      
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="col-xs-12">
+        <%= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
+        <br/><br/>
+        <%= f.input :description, :input_html=>{:rows=>8} %>
+        </div>
+         <br/>
+         <div class="col-xs-4">
+         <%= f.input :iso_clause %>
+         </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      
+       <strong> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"  style="font-family: 'Open Sans', sans-serif">
+          Corrective and Preventive Action
+        </a></strong>
+      
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+      <div class="col-xs-12">
+       <%= f.input :corrective_action, :input_html=>{:rows=>5} %>
+        <%= f.input :preventive_action, :input_html=>{:rows=>5} %>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+     
+       <strong> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  style="font-family: 'Open Sans', sans-serif">
+          More Information
+        </a></strong>
+     
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+      <div class="col-xs-12">
+        <%= f.input :category, collection: FindingType.all, label_method: :category_name, value_method: :category_name %>
+        <%= f.input :risk_rating, collection: Risk.all, label_method: :risk_name, value_method: :risk_name %>
+        <%= f.input :status_id, collection: FindingStatus.all, label_method: :status_name, value_method: :status_name %>
+        <%= f.fields_for :document do |document_fields| %>
+        
+        <%= document_fields.input :attachment, as: :file %>
+        
+        <% end %>
+        
+        </div>
+      </div>
+    </div>
+     
+  </div>
+</div>
+    <br/>
+   
+     <%= f.button :submit, class: "btn btn-success btn-lg btn-block" %>
+         
+     
+</div>
+</div>
+</div>
+
+
+    
+<% end %>

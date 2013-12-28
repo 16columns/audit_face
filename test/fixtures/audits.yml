@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  department_name: MyString
+  auditee_name: MyString
+  auditee_email: MyString
+  auditor_name: MyString
+  auditor_email: MyString
+  start_date: 2013-11-29
+  end_date: 2013-11-29
+
+two:
+  department_name: MyString
+  auditee_name: MyString
+  auditee_email: MyString
+  auditor_name: MyString
+  auditor_email: MyString
+  start_date: 2013-11-29
+  end_date: 2013-11-29

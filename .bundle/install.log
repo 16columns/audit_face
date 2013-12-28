@@ -1,0 +1,959 @@
+# Logfile created on 2013-12-28 00:45:24 +0530 by logger.rb/31641
+I, [2013-12-28T00:45:24.396605 #3836]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T00:45:32.352060 #3836]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T00:45:36.699309 #3836]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T00:45:36.700309 #3836]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T00:46:10.769257 #3836]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T00:46:10.771257 #3836]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T00:46:10.772257 #3836]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T00:46:10.773257 #3836]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T00:46:17.947668 #3836]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T00:46:17.949668 #3836]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T00:46:21.968898 #3836]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T00:46:25.894122 #3836]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T00:46:30.578390 #3836]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T00:46:35.324662 #3836]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T00:46:35.326662 #3836]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T00:46:42.354064 #3836]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T00:46:42.356064 #3836]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T00:46:50.722542 #3836]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T00:46:50.723543 #3836]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T00:46:50.724543 #3836]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T00:46:54.669768 #3836]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T00:47:08.754574 #3836]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T00:47:08.755574 #3836]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+I, [2013-12-28T00:47:08.757574 #3836]  INFO -- : 0:  activeresource (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activeresource-3.2.8.gemspec
+I, [2013-12-28T00:47:19.478187 #3836]  INFO -- : 0:  atomic (1.1.14) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/atomic-1.1.14.gemspec
+I, [2013-12-28T00:47:25.944557 #3836]  INFO -- : 0:  bcrypt-ruby (3.1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bcrypt-ruby-3.1.2-x86-mingw32.gemspec
+I, [2013-12-28T00:47:25.946557 #3836]  INFO -- : 0:  bigdecimal (1.1.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bigdecimal-1.1.0.gemspec
+I, [2013-12-28T00:47:29.663770 #3836]  INFO -- : 0:  will_paginate (3.0.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/will_paginate-3.0.5.gemspec
+I, [2013-12-28T00:47:34.238031 #3836]  INFO -- : 0:  bootstrap-will_paginate (0.0.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bootstrap-will_paginate-0.0.10.gemspec
+I, [2013-12-28T00:47:34.240032 #3836]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bundler-1.5.1.gemspec
+I, [2013-12-28T00:47:38.013247 #3836]  INFO -- : 0:  climate_control (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/climate_control-0.0.3.gemspec
+I, [2013-12-28T00:47:42.047478 #3836]  INFO -- : 0:  cocaine (0.5.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/cocaine-0.5.3.gemspec
+I, [2013-12-28T00:47:45.442672 #3836]  INFO -- : 0:  coffee-script-source (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-source-1.3.3.gemspec
+I, [2013-12-28T00:47:48.732860 #3836]  INFO -- : 0:  execjs (1.4.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/execjs-1.4.0.gemspec
+I, [2013-12-28T00:47:52.782092 #3836]  INFO -- : 0:  coffee-script (2.2.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-2.2.0.gemspec
+I, [2013-12-28T00:47:55.919271 #3836]  INFO -- : 0:  rack-ssl (1.3.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-ssl-1.3.2.gemspec
+I, [2013-12-28T00:48:04.786779 #3836]  INFO -- : 0:  json (1.7.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/json-1.7.3.gemspec
+I, [2013-12-28T00:48:15.926416 #3836]  INFO -- : 0:  rdoc (3.12) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rdoc-3.12.gemspec
+I, [2013-12-28T00:48:25.497963 #3836]  INFO -- : 0:  thor (0.15.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thor-0.15.4.gemspec
+I, [2013-12-28T00:48:25.499963 #3836]  INFO -- : 0:  railties (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/railties-3.2.8.gemspec
+I, [2013-12-28T00:48:28.272122 #3836]  INFO -- : 0:  coffee-rails (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-rails-3.2.2.gemspec
+I, [2013-12-28T00:48:31.484306 #3836]  INFO -- : 0:  date_validator (0.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/date_validator-0.7.0.gemspec
+I, [2013-12-28T00:48:37.103627 #3836]  INFO -- : 0:  orm_adapter (0.5.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/orm_adapter-0.5.0.gemspec
+I, [2013-12-28T00:48:42.893958 #3836]  INFO -- : 0:  thread_safe (0.1.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thread_safe-0.1.3.gemspec
+I, [2013-12-28T00:48:46.054139 #3836]  INFO -- : 0:  warden (1.2.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/warden-1.2.3.gemspec
+I, [2013-12-28T00:48:55.127658 #3836]  INFO -- : 0:  devise (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/devise-3.2.2.gemspec
+I, [2013-12-28T00:49:02.236065 #3836]  INFO -- : 0:  font-awesome-rails (4.0.3.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/font-awesome-rails-4.0.3.0.gemspec
+I, [2013-12-28T00:49:19.524053 #3836]  INFO -- : 0:  jquery-rails (2.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/jquery-rails-2.0.2.gemspec
+I, [2013-12-28T00:49:30.793698 #3836]  INFO -- : 0:  paperclip (3.5.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/paperclip-3.5.2.gemspec
+I, [2013-12-28T00:49:30.796698 #3836]  INFO -- : 0:  rails (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rails-3.2.8.gemspec
+I, [2013-12-28T00:49:44.291470 #3836]  INFO -- : 0:  sass (3.1.20) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-3.1.20.gemspec
+I, [2013-12-28T00:49:49.290756 #3836]  INFO -- : 0:  sass-rails (3.2.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-rails-3.2.5.gemspec
+I, [2013-12-28T00:49:55.096088 #3836]  INFO -- : 0:  simple_form (2.1.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/simple_form-2.1.1.gemspec
+I, [2013-12-28T00:50:39.403622 #3836]  INFO -- : 0:  sqlite3 (1.3.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sqlite3-1.3.8-x86-mingw32.gemspec
+I, [2013-12-28T00:50:46.646036 #3836]  INFO -- : 0:  sqlite3-ruby (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sqlite3-ruby-1.3.3.gemspec
+I, [2013-12-28T00:50:50.094234 #3836]  INFO -- : 0:  uglifier (1.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/uglifier-1.2.6.gemspec
+I, [2013-12-28T00:52:25.688701 #324]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T00:52:25.690702 #324]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T00:52:25.691702 #324]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T00:52:25.693702 #324]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T00:52:25.694702 #324]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T00:52:25.696702 #324]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T00:52:25.697702 #324]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T00:52:25.699702 #324]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T00:52:25.700702 #324]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T00:52:25.701702 #324]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T00:52:25.703702 #324]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T00:52:25.705702 #324]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T00:52:25.706702 #324]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T00:52:25.708703 #324]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T00:52:25.709703 #324]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T00:52:25.710703 #324]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T00:52:25.712703 #324]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T00:52:25.714703 #324]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T00:52:25.715703 #324]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T00:52:25.716703 #324]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T00:52:25.718703 #324]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T00:52:25.720703 #324]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T00:52:25.722703 #324]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+I, [2013-12-28T00:52:25.724703 #324]  INFO -- : 0:  activeresource (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activeresource-3.2.8.gemspec
+I, [2013-12-28T00:52:25.726704 #324]  INFO -- : 0:  atomic (1.1.14) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/atomic-1.1.14.gemspec
+I, [2013-12-28T00:52:25.728704 #324]  INFO -- : 0:  bcrypt-ruby (3.1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bcrypt-ruby-3.1.2-x86-mingw32.gemspec
+I, [2013-12-28T00:52:25.729704 #324]  INFO -- : 0:  bigdecimal (1.1.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bigdecimal-1.1.0.gemspec
+I, [2013-12-28T00:52:25.730704 #324]  INFO -- : 0:  will_paginate (3.0.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/will_paginate-3.0.5.gemspec
+I, [2013-12-28T00:52:25.732704 #324]  INFO -- : 0:  bootstrap-will_paginate (0.0.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bootstrap-will_paginate-0.0.10.gemspec
+I, [2013-12-28T00:52:25.733704 #324]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bundler-1.5.1.gemspec
+I, [2013-12-28T00:52:25.734704 #324]  INFO -- : 0:  climate_control (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/climate_control-0.0.3.gemspec
+I, [2013-12-28T00:52:25.736704 #324]  INFO -- : 0:  cocaine (0.5.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/cocaine-0.5.3.gemspec
+I, [2013-12-28T00:52:25.738704 #324]  INFO -- : 0:  coffee-script-source (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-source-1.3.3.gemspec
+I, [2013-12-28T00:52:25.740704 #324]  INFO -- : 0:  execjs (1.4.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/execjs-1.4.0.gemspec
+I, [2013-12-28T00:52:25.742705 #324]  INFO -- : 0:  coffee-script (2.2.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-2.2.0.gemspec
+I, [2013-12-28T00:52:25.744705 #324]  INFO -- : 0:  rack-ssl (1.3.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-ssl-1.3.2.gemspec
+I, [2013-12-28T00:52:25.745705 #324]  INFO -- : 0:  json (1.7.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/json-1.7.3.gemspec
+I, [2013-12-28T00:52:25.747705 #324]  INFO -- : 0:  rdoc (3.12) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rdoc-3.12.gemspec
+I, [2013-12-28T00:52:25.748705 #324]  INFO -- : 0:  thor (0.15.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thor-0.15.4.gemspec
+I, [2013-12-28T00:52:25.750705 #324]  INFO -- : 0:  railties (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/railties-3.2.8.gemspec
+I, [2013-12-28T00:52:25.751705 #324]  INFO -- : 0:  coffee-rails (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-rails-3.2.2.gemspec
+I, [2013-12-28T00:52:25.752705 #324]  INFO -- : 0:  date_validator (0.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/date_validator-0.7.0.gemspec
+I, [2013-12-28T00:52:25.754705 #324]  INFO -- : 0:  orm_adapter (0.5.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/orm_adapter-0.5.0.gemspec
+I, [2013-12-28T00:52:25.756705 #324]  INFO -- : 0:  thread_safe (0.1.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thread_safe-0.1.3.gemspec
+I, [2013-12-28T00:52:25.758705 #324]  INFO -- : 0:  warden (1.2.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/warden-1.2.3.gemspec
+I, [2013-12-28T00:52:25.760706 #324]  INFO -- : 0:  devise (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/devise-3.2.2.gemspec
+I, [2013-12-28T00:52:25.762706 #324]  INFO -- : 0:  font-awesome-rails (4.0.3.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/font-awesome-rails-4.0.3.0.gemspec
+I, [2013-12-28T00:52:25.764706 #324]  INFO -- : 0:  jquery-rails (2.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/jquery-rails-2.0.2.gemspec
+E, [2013-12-28T00:52:55.079382 #324] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:08:36.702240 #3536]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:08:36.704240 #3536]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:08:36.706240 #3536]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:08:36.709241 #3536]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:08:36.711241 #3536]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:08:36.714241 #3536]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:08:36.717241 #3536]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:08:36.719241 #3536]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:08:36.722241 #3536]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:08:36.724241 #3536]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:08:36.726242 #3536]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:08:36.729242 #3536]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:08:36.732242 #3536]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:08:36.734242 #3536]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:08:36.737242 #3536]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:08:36.739242 #3536]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:08:36.741242 #3536]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:08:36.744243 #3536]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:08:36.746243 #3536]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:08:36.750243 #3536]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:08:36.754243 #3536]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:08:36.758243 #3536]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:08:36.761244 #3536]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+I, [2013-12-28T01:08:36.763244 #3536]  INFO -- : 0:  mysql2 (0.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mysql2-0.2.6-x86-mingw32.gemspec
+I, [2013-12-28T01:08:36.767244 #3536]  INFO -- : 0:  activerecord-mysql2-adapter (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-mysql2-adapter-0.0.3.gemspec
+I, [2013-12-28T01:08:36.769244 #3536]  INFO -- : 0:  activeresource (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activeresource-3.2.8.gemspec
+I, [2013-12-28T01:08:36.771244 #3536]  INFO -- : 0:  atomic (1.1.14) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/atomic-1.1.14.gemspec
+I, [2013-12-28T01:08:36.774244 #3536]  INFO -- : 0:  bcrypt-ruby (3.1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bcrypt-ruby-3.1.2-x86-mingw32.gemspec
+I, [2013-12-28T01:08:36.777244 #3536]  INFO -- : 0:  bigdecimal (1.1.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bigdecimal-1.1.0.gemspec
+I, [2013-12-28T01:08:36.779245 #3536]  INFO -- : 0:  will_paginate (3.0.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/will_paginate-3.0.5.gemspec
+I, [2013-12-28T01:08:36.784245 #3536]  INFO -- : 0:  bootstrap-will_paginate (0.0.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bootstrap-will_paginate-0.0.10.gemspec
+I, [2013-12-28T01:08:36.788245 #3536]  INFO -- : 0:  climate_control (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/climate_control-0.0.3.gemspec
+I, [2013-12-28T01:08:36.790245 #3536]  INFO -- : 0:  cocaine (0.5.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/cocaine-0.5.3.gemspec
+I, [2013-12-28T01:08:36.792245 #3536]  INFO -- : 0:  coffee-script-source (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-source-1.3.3.gemspec
+I, [2013-12-28T01:08:36.794245 #3536]  INFO -- : 0:  execjs (1.4.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/execjs-1.4.0.gemspec
+I, [2013-12-28T01:08:36.797246 #3536]  INFO -- : 0:  coffee-script (2.2.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-2.2.0.gemspec
+I, [2013-12-28T01:08:36.801246 #3536]  INFO -- : 0:  rack-ssl (1.3.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-ssl-1.3.2.gemspec
+I, [2013-12-28T01:08:36.803246 #3536]  INFO -- : 0:  json (1.7.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/json-1.7.3.gemspec
+I, [2013-12-28T01:08:36.805246 #3536]  INFO -- : 0:  rdoc (3.12) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rdoc-3.12.gemspec
+I, [2013-12-28T01:08:36.808246 #3536]  INFO -- : 0:  thor (0.15.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thor-0.15.4.gemspec
+I, [2013-12-28T01:08:36.810246 #3536]  INFO -- : 0:  railties (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/railties-3.2.8.gemspec
+I, [2013-12-28T01:08:36.813247 #3536]  INFO -- : 0:  coffee-rails (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-rails-3.2.2.gemspec
+I, [2013-12-28T01:08:36.816247 #3536]  INFO -- : 0:  date_validator (0.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/date_validator-0.7.0.gemspec
+I, [2013-12-28T01:08:36.819247 #3536]  INFO -- : 0:  orm_adapter (0.5.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/orm_adapter-0.5.0.gemspec
+I, [2013-12-28T01:08:36.821247 #3536]  INFO -- : 0:  thread_safe (0.1.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thread_safe-0.1.3.gemspec
+I, [2013-12-28T01:08:36.823247 #3536]  INFO -- : 0:  warden (1.2.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/warden-1.2.3.gemspec
+I, [2013-12-28T01:08:36.826247 #3536]  INFO -- : 0:  devise (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/devise-3.2.2.gemspec
+I, [2013-12-28T01:08:36.834248 #3536]  INFO -- : 0:  font-awesome-rails (4.0.3.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/font-awesome-rails-4.0.3.0.gemspec
+I, [2013-12-28T01:08:36.836248 #3536]  INFO -- : 0:  jquery-rails (2.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/jquery-rails-2.0.2.gemspec
+I, [2013-12-28T01:08:36.838248 #3536]  INFO -- : 0:  paperclip (3.5.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/paperclip-3.5.2.gemspec
+I, [2013-12-28T01:08:36.839248 #3536]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bundler-1.5.1.gemspec
+I, [2013-12-28T01:08:36.841248 #3536]  INFO -- : 0:  rails (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rails-3.2.8.gemspec
+I, [2013-12-28T01:08:36.843248 #3536]  INFO -- : 0:  sass (3.1.20) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-3.1.20.gemspec
+I, [2013-12-28T01:08:36.845248 #3536]  INFO -- : 0:  sass-rails (3.2.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-rails-3.2.5.gemspec
+I, [2013-12-28T01:08:36.847249 #3536]  INFO -- : 0:  simple_form (2.1.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/simple_form-2.1.1.gemspec
+I, [2013-12-28T01:08:36.849249 #3536]  INFO -- : 0:  uglifier (1.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/uglifier-1.2.6.gemspec
+I, [2013-12-28T01:12:44.035387 #3668]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:12:44.037387 #3668]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:12:44.039387 #3668]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:12:44.042387 #3668]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:12:44.045387 #3668]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:12:44.047388 #3668]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:12:44.050388 #3668]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:12:44.052388 #3668]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:12:44.054388 #3668]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:12:44.056388 #3668]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:12:44.059388 #3668]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:12:44.062388 #3668]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:12:44.065389 #3668]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:12:44.067389 #3668]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:12:44.069389 #3668]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:12:44.071389 #3668]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:12:44.074389 #3668]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:12:44.077389 #3668]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:12:44.079389 #3668]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:12:44.082390 #3668]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:12:44.084390 #3668]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:12:44.086390 #3668]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:12:44.088390 #3668]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:13:05.388608 #3668] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:28:21.349998 #1156]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:28:21.350998 #1156]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:28:21.351998 #1156]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:28:21.352998 #1156]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:28:21.353998 #1156]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:28:21.354998 #1156]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:28:21.355999 #1156]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:28:21.356999 #1156]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:28:21.357999 #1156]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:28:21.358999 #1156]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:28:21.359999 #1156]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:28:21.360999 #1156]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:28:21.361999 #1156]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:28:21.362999 #1156]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:28:21.363999 #1156]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:28:21.364999 #1156]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:28:21.366999 #1156]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:28:21.367999 #1156]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:28:21.368999 #1156]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:28:21.369999 #1156]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:28:21.370999 #1156]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:28:21.371999 #1156]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:28:21.373000 #1156]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:28:47.226478 #1156] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:38:29.940808 #1156]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:38:29.943808 #1156]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:38:29.948808 #1156]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:38:29.951808 #1156]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:38:29.954808 #1156]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:38:29.958809 #1156]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:38:29.960809 #1156]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:38:29.963809 #1156]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:38:29.967809 #1156]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:38:29.973809 #1156]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:38:29.977810 #1156]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:38:29.981810 #1156]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:38:29.984810 #1156]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:38:29.987810 #1156]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:38:29.990810 #1156]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:38:29.993811 #1156]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:38:29.996811 #1156]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:38:29.999811 #1156]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:38:30.003811 #1156]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:38:30.007811 #1156]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:38:30.012812 #1156]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:38:30.016812 #1156]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:38:30.020812 #1156]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:38:56.087303 #1156] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:39:47.406238 #1404]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:39:47.408238 #1404]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:39:47.410239 #1404]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:39:47.413239 #1404]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:39:47.415239 #1404]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:39:47.417239 #1404]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:39:47.419239 #1404]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:39:47.422239 #1404]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:39:47.424239 #1404]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:39:47.426240 #1404]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:39:47.429240 #1404]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:39:47.431240 #1404]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:39:47.433240 #1404]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:39:47.436240 #1404]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:39:47.438240 #1404]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:39:47.440240 #1404]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:39:47.442240 #1404]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:39:47.445241 #1404]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:39:47.447241 #1404]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:39:47.449241 #1404]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:39:47.452241 #1404]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:39:47.455241 #1404]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:39:47.457241 #1404]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:40:08.733458 #1404] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:43:41.937653 #2648]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:43:41.940653 #2648]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:43:41.944653 #2648]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:43:41.949653 #2648]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:43:41.952654 #2648]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:43:41.954654 #2648]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:43:41.960654 #2648]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:43:41.963654 #2648]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:43:41.966654 #2648]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:43:41.968655 #2648]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:43:41.971655 #2648]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:43:41.975655 #2648]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:43:41.978655 #2648]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:43:41.980655 #2648]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:43:41.983655 #2648]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:43:41.985656 #2648]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:43:41.988656 #2648]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:43:41.991656 #2648]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:43:41.993656 #2648]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:43:41.996656 #2648]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:43:41.998656 #2648]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:43:42.000656 #2648]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:43:42.003657 #2648]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+I, [2013-12-28T01:43:45.721869 #2648]  INFO -- : 0:  mysql2 (0.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mysql2-0.2.6-x86-mingw32.gemspec
+I, [2013-12-28T01:43:45.723869 #2648]  INFO -- : 0:  activerecord-mysql2-adapter (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-mysql2-adapter-0.0.3.gemspec
+I, [2013-12-28T01:43:45.726870 #2648]  INFO -- : 0:  activeresource (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activeresource-3.2.8.gemspec
+I, [2013-12-28T01:43:45.728870 #2648]  INFO -- : 0:  atomic (1.1.14) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/atomic-1.1.14.gemspec
+I, [2013-12-28T01:43:45.731870 #2648]  INFO -- : 0:  bcrypt-ruby (3.1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bcrypt-ruby-3.1.2-x86-mingw32.gemspec
+I, [2013-12-28T01:43:45.733870 #2648]  INFO -- : 0:  bigdecimal (1.1.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bigdecimal-1.1.0.gemspec
+I, [2013-12-28T01:43:45.737870 #2648]  INFO -- : 0:  will_paginate (3.0.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/will_paginate-3.0.5.gemspec
+I, [2013-12-28T01:43:45.740870 #2648]  INFO -- : 0:  bootstrap-will_paginate (0.0.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bootstrap-will_paginate-0.0.10.gemspec
+I, [2013-12-28T01:43:45.744871 #2648]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bundler-1.5.1.gemspec
+I, [2013-12-28T01:43:45.747871 #2648]  INFO -- : 0:  climate_control (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/climate_control-0.0.3.gemspec
+I, [2013-12-28T01:43:45.750871 #2648]  INFO -- : 0:  cocaine (0.5.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/cocaine-0.5.3.gemspec
+I, [2013-12-28T01:43:45.755871 #2648]  INFO -- : 0:  coffee-script-source (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-source-1.3.3.gemspec
+I, [2013-12-28T01:43:45.757871 #2648]  INFO -- : 0:  execjs (1.4.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/execjs-1.4.0.gemspec
+I, [2013-12-28T01:43:45.760871 #2648]  INFO -- : 0:  coffee-script (2.2.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-2.2.0.gemspec
+I, [2013-12-28T01:43:45.762872 #2648]  INFO -- : 0:  rack-ssl (1.3.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-ssl-1.3.2.gemspec
+I, [2013-12-28T01:43:45.765872 #2648]  INFO -- : 0:  json (1.7.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/json-1.7.3.gemspec
+I, [2013-12-28T01:43:45.769872 #2648]  INFO -- : 0:  rdoc (3.12) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rdoc-3.12.gemspec
+I, [2013-12-28T01:43:45.772872 #2648]  INFO -- : 0:  thor (0.15.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thor-0.15.4.gemspec
+I, [2013-12-28T01:43:45.774872 #2648]  INFO -- : 0:  railties (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/railties-3.2.8.gemspec
+I, [2013-12-28T01:43:45.776872 #2648]  INFO -- : 0:  coffee-rails (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-rails-3.2.2.gemspec
+I, [2013-12-28T01:43:45.779873 #2648]  INFO -- : 0:  date_validator (0.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/date_validator-0.7.0.gemspec
+I, [2013-12-28T01:43:45.781873 #2648]  INFO -- : 0:  orm_adapter (0.5.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/orm_adapter-0.5.0.gemspec
+I, [2013-12-28T01:43:45.783873 #2648]  INFO -- : 0:  thread_safe (0.1.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thread_safe-0.1.3.gemspec
+I, [2013-12-28T01:43:45.786873 #2648]  INFO -- : 0:  warden (1.2.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/warden-1.2.3.gemspec
+I, [2013-12-28T01:43:45.788873 #2648]  INFO -- : 0:  devise (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/devise-3.2.2.gemspec
+I, [2013-12-28T01:43:45.790873 #2648]  INFO -- : 0:  font-awesome-rails (4.0.3.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/font-awesome-rails-4.0.3.0.gemspec
+I, [2013-12-28T01:43:45.792873 #2648]  INFO -- : 0:  jquery-rails (2.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/jquery-rails-2.0.2.gemspec
+I, [2013-12-28T01:43:50.634150 #2648]  INFO -- : 0:  mysql (2.9.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mysql-2.9.1-x86-mingw32.gemspec
+I, [2013-12-28T01:43:50.636150 #2648]  INFO -- : 0:  paperclip (3.5.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/paperclip-3.5.2.gemspec
+I, [2013-12-28T01:43:50.638150 #2648]  INFO -- : 0:  rails (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rails-3.2.8.gemspec
+I, [2013-12-28T01:43:50.640151 #2648]  INFO -- : 0:  sass (3.1.20) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-3.1.20.gemspec
+I, [2013-12-28T01:43:50.642151 #2648]  INFO -- : 0:  sass-rails (3.2.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-rails-3.2.5.gemspec
+I, [2013-12-28T01:43:50.644151 #2648]  INFO -- : 0:  simple_form (2.1.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/simple_form-2.1.1.gemspec
+I, [2013-12-28T01:43:50.646151 #2648]  INFO -- : 0:  uglifier (1.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/uglifier-1.2.6.gemspec
+I, [2013-12-28T01:45:16.233046 #3916]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:45:16.235046 #3916]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:45:16.237046 #3916]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:45:16.239047 #3916]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:45:16.243047 #3916]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:45:16.246047 #3916]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:45:16.249047 #3916]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:45:16.251047 #3916]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:45:16.253047 #3916]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:45:16.256047 #3916]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:45:16.259048 #3916]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:45:16.263048 #3916]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:45:16.268048 #3916]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:45:16.271048 #3916]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:45:16.274049 #3916]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:45:16.278049 #3916]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:45:16.281049 #3916]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:45:16.283049 #3916]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:45:16.286049 #3916]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:45:16.288049 #3916]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:45:16.290049 #3916]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:45:16.294050 #3916]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:45:16.296050 #3916]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+I, [2013-12-28T01:45:16.299050 #3916]  INFO -- : 0:  mysql2 (0.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mysql2-0.2.6-x86-mingw32.gemspec
+I, [2013-12-28T01:45:16.302050 #3916]  INFO -- : 0:  activerecord-mysql2-adapter (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-mysql2-adapter-0.0.3.gemspec
+I, [2013-12-28T01:45:16.304050 #3916]  INFO -- : 0:  activeresource (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activeresource-3.2.8.gemspec
+I, [2013-12-28T01:45:16.307050 #3916]  INFO -- : 0:  atomic (1.1.14) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/atomic-1.1.14.gemspec
+I, [2013-12-28T01:45:16.310051 #3916]  INFO -- : 0:  bcrypt-ruby (3.1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bcrypt-ruby-3.1.2-x86-mingw32.gemspec
+I, [2013-12-28T01:45:16.312051 #3916]  INFO -- : 0:  bigdecimal (1.1.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bigdecimal-1.1.0.gemspec
+I, [2013-12-28T01:45:16.314051 #3916]  INFO -- : 0:  will_paginate (3.0.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/will_paginate-3.0.5.gemspec
+I, [2013-12-28T01:45:16.317051 #3916]  INFO -- : 0:  bootstrap-will_paginate (0.0.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bootstrap-will_paginate-0.0.10.gemspec
+I, [2013-12-28T01:45:16.320051 #3916]  INFO -- : 0:  climate_control (0.0.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/climate_control-0.0.3.gemspec
+I, [2013-12-28T01:45:16.322051 #3916]  INFO -- : 0:  cocaine (0.5.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/cocaine-0.5.3.gemspec
+I, [2013-12-28T01:45:16.325051 #3916]  INFO -- : 0:  coffee-script-source (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-source-1.3.3.gemspec
+I, [2013-12-28T01:45:16.329052 #3916]  INFO -- : 0:  execjs (1.4.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/execjs-1.4.0.gemspec
+I, [2013-12-28T01:45:16.333052 #3916]  INFO -- : 0:  coffee-script (2.2.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-script-2.2.0.gemspec
+I, [2013-12-28T01:45:16.342052 #3916]  INFO -- : 0:  rack-ssl (1.3.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-ssl-1.3.2.gemspec
+I, [2013-12-28T01:45:16.346053 #3916]  INFO -- : 0:  json (1.7.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/json-1.7.3.gemspec
+I, [2013-12-28T01:45:16.348053 #3916]  INFO -- : 0:  rdoc (3.12) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rdoc-3.12.gemspec
+I, [2013-12-28T01:45:16.350053 #3916]  INFO -- : 0:  thor (0.15.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thor-0.15.4.gemspec
+I, [2013-12-28T01:45:16.353053 #3916]  INFO -- : 0:  railties (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/railties-3.2.8.gemspec
+I, [2013-12-28T01:45:16.355053 #3916]  INFO -- : 0:  coffee-rails (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/coffee-rails-3.2.2.gemspec
+I, [2013-12-28T01:45:16.357053 #3916]  INFO -- : 0:  date_validator (0.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/date_validator-0.7.0.gemspec
+I, [2013-12-28T01:45:16.362054 #3916]  INFO -- : 0:  orm_adapter (0.5.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/orm_adapter-0.5.0.gemspec
+I, [2013-12-28T01:45:16.364054 #3916]  INFO -- : 0:  thread_safe (0.1.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/thread_safe-0.1.3.gemspec
+I, [2013-12-28T01:45:16.367054 #3916]  INFO -- : 0:  warden (1.2.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/warden-1.2.3.gemspec
+I, [2013-12-28T01:45:16.369054 #3916]  INFO -- : 0:  devise (3.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/devise-3.2.2.gemspec
+I, [2013-12-28T01:45:16.371054 #3916]  INFO -- : 0:  font-awesome-rails (4.0.3.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/font-awesome-rails-4.0.3.0.gemspec
+I, [2013-12-28T01:45:16.373054 #3916]  INFO -- : 0:  jquery-rails (2.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/jquery-rails-2.0.2.gemspec
+I, [2013-12-28T01:45:16.375054 #3916]  INFO -- : 0:  mysql (2.9.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mysql-2.9.1-x86-mingw32.gemspec
+I, [2013-12-28T01:45:16.377054 #3916]  INFO -- : 0:  paperclip (3.5.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/paperclip-3.5.2.gemspec
+I, [2013-12-28T01:45:16.379055 #3916]  INFO -- : 0:  bundler (1.5.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/bundler-1.5.1.gemspec
+I, [2013-12-28T01:45:16.381055 #3916]  INFO -- : 0:  rails (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rails-3.2.8.gemspec
+I, [2013-12-28T01:45:16.383055 #3916]  INFO -- : 0:  sass (3.1.20) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-3.1.20.gemspec
+I, [2013-12-28T01:45:16.385055 #3916]  INFO -- : 0:  sass-rails (3.2.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sass-rails-3.2.5.gemspec
+I, [2013-12-28T01:45:16.387055 #3916]  INFO -- : 0:  simple_form (2.1.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/simple_form-2.1.1.gemspec
+I, [2013-12-28T01:45:16.389055 #3916]  INFO -- : 0:  uglifier (1.2.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/uglifier-1.2.6.gemspec
+I, [2013-12-28T01:51:10.284297 #3124]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:51:10.286297 #3124]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:51:10.288297 #3124]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:51:10.291297 #3124]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:51:10.295297 #3124]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:51:10.298298 #3124]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:51:10.302298 #3124]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:51:10.305298 #3124]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:51:10.308298 #3124]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:51:10.311298 #3124]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:51:10.314298 #3124]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:51:10.317299 #3124]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:51:10.319299 #3124]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:51:10.322299 #3124]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:51:10.324299 #3124]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:51:10.326299 #3124]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:51:10.329299 #3124]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:51:10.331299 #3124]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:51:10.333300 #3124]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:51:10.336300 #3124]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:51:10.338300 #3124]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:51:10.340300 #3124]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:51:10.344300 #3124]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:51:33.375617 #3124] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'
+I, [2013-12-28T01:52:58.678497 #2152]  INFO -- : 0:  rake (0.9.2.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rake-0.9.2.2.gemspec
+I, [2013-12-28T01:52:58.680497 #2152]  INFO -- : 0:  i18n (0.6.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/i18n-0.6.0.gemspec
+I, [2013-12-28T01:52:58.682497 #2152]  INFO -- : 0:  multi_json (1.3.6) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/multi_json-1.3.6.gemspec
+I, [2013-12-28T01:52:58.686497 #2152]  INFO -- : 0:  activesupport (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activesupport-3.2.8.gemspec
+I, [2013-12-28T01:52:58.690497 #2152]  INFO -- : 0:  builder (3.0.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/builder-3.0.0.gemspec
+I, [2013-12-28T01:52:58.694497 #2152]  INFO -- : 0:  activemodel (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activemodel-3.2.8.gemspec
+I, [2013-12-28T01:52:58.698498 #2152]  INFO -- : 0:  erubis (2.7.0) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/erubis-2.7.0.gemspec
+I, [2013-12-28T01:52:58.701498 #2152]  INFO -- : 0:  journey (1.0.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/journey-1.0.4.gemspec
+I, [2013-12-28T01:52:58.726499 #2152]  INFO -- : 0:  rack (1.4.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-1.4.1.gemspec
+I, [2013-12-28T01:52:58.728499 #2152]  INFO -- : 0:  rack-cache (1.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-cache-1.2.gemspec
+I, [2013-12-28T01:52:58.730500 #2152]  INFO -- : 0:  rack-test (0.6.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/rack-test-0.6.1.gemspec
+I, [2013-12-28T01:52:58.732500 #2152]  INFO -- : 0:  hike (1.2.1) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/hike-1.2.1.gemspec
+I, [2013-12-28T01:52:58.736500 #2152]  INFO -- : 0:  tilt (1.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tilt-1.3.3.gemspec
+I, [2013-12-28T01:52:58.738500 #2152]  INFO -- : 0:  sprockets (2.4.5) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/sprockets-2.4.5.gemspec
+I, [2013-12-28T01:52:58.741500 #2152]  INFO -- : 0:  actionpack (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionpack-3.2.8.gemspec
+I, [2013-12-28T01:52:58.743500 #2152]  INFO -- : 0:  mime-types (1.19) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mime-types-1.19.gemspec
+I, [2013-12-28T01:52:58.745500 #2152]  INFO -- : 0:  polyglot (0.3.3) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/polyglot-0.3.3.gemspec
+I, [2013-12-28T01:52:58.747500 #2152]  INFO -- : 0:  treetop (1.4.10) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/treetop-1.4.10.gemspec
+I, [2013-12-28T01:52:58.749501 #2152]  INFO -- : 0:  mail (2.4.4) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/mail-2.4.4.gemspec
+I, [2013-12-28T01:52:58.752501 #2152]  INFO -- : 0:  actionmailer (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/actionmailer-3.2.8.gemspec
+I, [2013-12-28T01:52:58.756501 #2152]  INFO -- : 0:  arel (3.0.2) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/arel-3.0.2.gemspec
+I, [2013-12-28T01:52:58.762501 #2152]  INFO -- : 0:  tzinfo (0.3.33) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/tzinfo-0.3.33.gemspec
+I, [2013-12-28T01:52:58.765502 #2152]  INFO -- : 0:  activerecord (3.2.8) from c:/Ruby193/lib/ruby/gems/1.9.1/specifications/activerecord-3.2.8.gemspec
+E, [2013-12-28T01:53:20.256731 #2152] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        c:/Ruby193/bin/ruby.exe extconf.rb 
+checking for ruby/thread.h... no
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lm... yes
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lz... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lsocket... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lnsl... no
+checking for mysql_query() in -lmysqlclient... no
+checking for main() in -lmygcc... no
+checking for mysql_query() in -lmysqlclient... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=c:/Ruby193/bin/ruby
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysql-config
+	--without-mysql-config
+	--with-mysql-dir
+	--without-mysql-dir
+	--with-mysql-include
+	--without-mysql-include=${mysql-dir}/include
+	--with-mysql-lib
+	--without-mysql-lib=${mysql-dir}/lib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mlib
+	--without-mlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-zlib
+	--without-zlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-socketlib
+	--without-socketlib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-nsllib
+	--without-nsllib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+	--with-mygcclib
+	--without-mygcclib
+	--with-mysqlclientlib
+	--without-mysqlclientlib
+
+
+Gem files will remain installed in c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14 for inspection.
+Results logged to c:/Ruby193/lib/ruby/gems/1.9.1/gems/mysql2-0.3.14/ext/mysql2/gem_make.out
+
+c:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:564:in `rescue in block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:540:in `block in build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `each'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:515:in `build_extensions'  \nc:/Ruby193/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:180:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:336:in `update'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \nc:/Ruby193/lib/ruby/gems/1.9.1/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \nc:/Ruby193/bin/bundle:23:in `load'  \nc:/Ruby193/bin/bundle:23:in `<main>'

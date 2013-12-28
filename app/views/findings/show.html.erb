@@ -1,0 +1,38 @@
+
+
+<p>
+  <b>Department:</b>
+  <%= @finding.audit.department_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @finding.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @finding.category %>
+</p>
+
+<p>
+  <b>Risk rating:</b>
+  <%= @finding.risk_rating %>
+</p>
+
+<p>
+  <b>Corrective action:</b>
+  <%= @finding.corrective_action %>
+</p>
+
+<p>
+  <b>Preventive action:</b>
+  <%= @finding.preventive_action %>
+</p>
+
+      <% if @finding.document && @finding.document.attachment? %>
+      <span class="label label-info">Attachment</span>
+      <%= link_to @finding.document.attachment_file_name, @finding.document.attachment.url %>
+      <% end %>
+
+

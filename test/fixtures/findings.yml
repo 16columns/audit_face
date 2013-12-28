@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyText
+  category: MyString
+  risk_rating: MyString
+  date_created: 2013-12-03
+  corrective_action: MyText
+  preventive_action: MyText
+
+two:
+  description: MyText
+  category: MyString
+  risk_rating: MyString
+  date_created: 2013-12-03
+  corrective_action: MyText
+  preventive_action: MyText

@@ -1,0 +1,120 @@
+   
+   
+   <div class="container">
+    <div class="row-fluid">
+    <div class="col-lg-12">
+    <%= link_to 'New Audit', new_audit_path, class: "btn btn-success btn-sm" %>
+    
+    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"> Upload Finding </button>
+    
+     <%= link_to 'Preview Schedule', new_audit_path, class: "btn btn-info btn-sm" %>
+    
+    </div>
+    </div>
+    </div>
+   
+    <div class="container">
+    <div class="row-fluid"> 
+    <div class="col-lg-12">
+    <%= will_paginate @audits %>
+    </div>
+    </div>
+    </div>
+ 
+   <% @audits.each do |audit| %>
+   <div class="container">
+   <div class="row-fluid">
+   <div class="col-lg-7">
+   
+    <small>
+      <div class="panel panel-default">
+      
+      <div class="panel-heading"><span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong></div>
+      <div class="panel-body">
+        <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
+      </div>
+
+            <div class="panel-footer">  
+                    <div class="meta">
+                   <p>
+                   <%= time_ago_in_words(audit.created_at) + " ago" %>    |
+                    <%= link_to " Modify", edit_audit_path(audit) %>  |  
+       
+                   <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, method: :delete, data: { Confirm: "Are you sure"} %> |
+                    <%= link_to " View Finding", audit, class: "btn btn-info btn-xs" %> |
+                    <i class="fa fa-share fa-lg"></i>
+                    
+                    <%= link_to " Create Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right" %>  
+                     </p>
+                         
+                     </div>
+                     </div>
+               </div> 
+    
+        </div>
+
+
+    </small>
+ </div>
+ </div>
+ </div>
+    <% end %>
+   
+
+ </div> 
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background:#2980b9">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Upload findings to audits</h4>
+      </div>
+      <div class="modal-body">
+     <form class="form-horizontal" role="form">
+     <div class="form-group">
+        <div class="col-sm-8">
+            <select class="form-control">
+            <option>Select Audit</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+       </div>
+       <br/><br/><br/>
+        
+        <div class="col-sm-8">
+        
+        <button type="button" class="btn btn-info btn-block">Download template</button>
+        </div>
+      <br/><br/><br/>
+         <div class="col-sm-8">
+
+        <button type="button" class="btn btn-success btn-block">Upload Findings</button>
+        </div>
+         <br/><br/><br/>
+        <div class="col-sm-8">
+       
+       <ul>
+           <li> Upload finding in provided template only</li>
+           <li> Avoid blank rows and duplicate uploads</li>
+           
+       </ul>
+        </div>
+ 
+     </div>
+    
+     </form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
