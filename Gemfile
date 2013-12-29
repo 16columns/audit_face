@@ -13,7 +13,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
-gem 'activerecord-mysql2-adapter'
+#gem 'activerecord-mysql2-adapter'
 
 
 # Gems used only for assets and not required
