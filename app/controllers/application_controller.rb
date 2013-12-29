@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
       "devise"
     else
       "application"
+      puts "this is my application on cloud9"
     end
   
 end
