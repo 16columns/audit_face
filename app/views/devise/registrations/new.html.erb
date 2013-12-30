@@ -1,21 +1,94 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<div class="container">
+<h1 style="font-family: 'Open Sans', sans-serif"> Forget spreadsheet. Focus on audits </h1>
+</div>
+<br/>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
   <%= devise_error_messages! %>
-  
- <div><%= f.label :profile_name %><br />
-  <%= f.text_field :profile_name, :autofocus => true %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<div class="row-fluid">
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="col-lg-4 col-lg-offset-1">
+        
+            <div class="media">
+            <a class="pull-left" href="#">
+            <i class="fa fa-briefcase fa-4x"></i>
+            </a>
+            <div class="media-body">
+            <h4 class="media-heading">Create Audits and findings</h4>
+             Add audits and link findings instantly. Create audits less than a minute
+            </div>
+            </div>
+            <br/>
+            <div class="media">
+            <a class="pull-left" href="#">
+            <i class="fa fa-upload fa-4x"></i>
+            </a>
+            <div class="media-body">
+            <h4 class="media-heading">Excel upload</h4>
+             Upload your findings in microsoft excel format, just in case you need to upload multiple findings
+            </div>
+            </div>
+            
+            
+        </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+        <div class="col-lg-4 col-lg-offset-1">
+            <div class="panel panel-default">
+             <div class="panel-heading"><span class="col-lg-offset-4"><i class="fa fa-user fa-lg"></i> Start your free trail</span></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                    
+                     <div class="form-group">
+                       <small> <label for="inputPassword3" class="col-sm-3 control-label">
+                            Profile name</label></small>
+                        <div class="col-sm-8">
+                            <%= f.input :profile_name, label: false %>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <small> <label for="inputEmail3" class="col-sm-3 control-label">
+                            Email</label></small>
+                        <div class="col-sm-8">
+                            <%= f.input :email, :autofocus => true, class: "form-control input-lg", label: false  %>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                       <small> <label for="inputPassword3" class="col-sm-3 control-label">
+                            Password</label></small>
+                        <div class="col-sm-8">
+                            <%= f.input :password, label: false %>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <small><label for="inputPassword3" class="col-sm-3 control-label">
+                            Confirm Password</label></small>
+                        <div class="col-sm-8">
+                            <%= f.input :password_confirmation, label: false %>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                              <%= f.button :submit, 'Sign up',  class: "btn btn-success btn-lg btn-block" %>
+                              <br/>
+                               <%= render "devise/shared/links" %>
 
-  <div><%= f.submit "Sign up" %></div>
+                            
+
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
 <% end %>
+<br/>
 
-<%= render "devise/shared/links" %>
+
+
+   
+
