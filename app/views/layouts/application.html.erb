@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>77comply</title>
+  <title>Manage audits</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
- 
+  
+  
   <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
   <%= javascript_include_tag "application" %>
+  
   <%= csrf_meta_tags %>
+  
 </head>
+
+<style>
+    
+  .badge-success {
+  background-color: #e74c3c;
+  
+}
+    
+    
+</style>
+
 <body style="padding-top:50px; font-family: 'Open Sans', sans-serif">
 
 
@@ -22,7 +37,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <span class="navbar-brand" href="#" style="font-family: 'Lato', sans-serif; color:#2980b9"> 77comply </span>
+    <span class="navbar-brand" href="#" style="font-family: 'Lato', sans-serif; color:#2980b9"> <span class="badge badge-success"><strong>77comply </strong></span></span>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
