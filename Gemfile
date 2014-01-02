@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -13,8 +13,6 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
-gem 'activerecord-mysql2-adapter'
-
 
 # Gems used only for assets and not required
 # in production environments by default.

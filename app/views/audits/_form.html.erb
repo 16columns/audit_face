@@ -5,6 +5,9 @@
     <div class="col-lg-5 col-lg-offset-3">
     <div class="well well-sm">
       <p><%= pluralize(@audit.errors.count, "error") %> prohibited this audit from being saved</p>
+      <% @audit.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
     </div>
      
     </div>
@@ -47,15 +50,18 @@
       </div>
    <br/><br/>
    
-   <div class="input-sm">
-    <%= f.input :start_date %>
+   <div>
+    
+    <%= f.label "Start Date" %>
+    <%= f.text_field :start_date, :class =>"datepicker" %>
      </div>
    <br/><br/><br/><br/><br/>
    
-   <div class="input-sm">
-    <%= f.input :end_date %>
+   <div>
+   <%= f.label "End Date" %>
+    <%= f.text_field :end_date, :class =>"datepicker" %>
      </div>
-   <br/><br/>
+   
     
   </div>
   
@@ -64,7 +70,17 @@
    
 
 </div>
-<br/><br/><br/><br/>
+
+<script type="text/javascript">
+            // When the document is ready
+            $(document).ready(function () {
+                
+                $('.datepicker').datepicker({
+                    format: "yyyy-mm-dd"
+                });  
+            
+            });
+        </script>
    <div class="panel-footer">
       
       <div class="form-actions">

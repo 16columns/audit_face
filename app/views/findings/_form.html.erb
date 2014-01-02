@@ -19,13 +19,13 @@
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
         <div class="col-xs-12">
-        <%= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
+        <%#= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
         <br/><br/>
-        <%= f.input :description, :input_html=>{:rows=>8} %>
+        <%= f.input :description, :input_html=>{:rows=>8}, length: 10 %>
         </div>
          <br/>
          <div class="col-xs-4">
-         <%= f.input :iso_clause %>
+         <%#= f.input :iso_clause %>
          </div>
       
       </div>

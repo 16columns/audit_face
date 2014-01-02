@@ -6,7 +6,7 @@ class Audit < ActiveRecord::Base
   validates :department_name, :auditee_name, :auditee_email, :auditor_name, 
             :auditor_email, :presence => true
             
-  validates :start_date, :date => {:before => :end_date, :message => 'Start date must be before end date' }
+  validates :start_date, :date => {:before_or_equal_to => :end_date, :message => 'must be before or same as end date' }
   
   self.per_page = 3
   

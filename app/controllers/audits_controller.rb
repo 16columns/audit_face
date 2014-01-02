@@ -21,6 +21,7 @@ class AuditsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @audit }
+     
     end
   end
 
@@ -45,9 +46,24 @@ class AuditsController < ApplicationController
   # POST /audits.json
   def create
     @audit = current_user.audits.new(params[:audit])
-
+    audit = params[:audit]
+    start_date = params[:audit][:start_date]
+    end_date = params[:audit][:end_date]
+    @all_audits = Audit.where("auditor_email = ? or auditee_email = ?",params[:audit][:auditor_email], params[:audit][:auditee_email])
+    
+     @all_audits.each do |audit|
+            if (audit.start_date..audit.end_date).include?(start_date||end_date)
+                @audit.errors[:base] << "date is already assigned,please select another date "
+                break
+            end 
+        end 
+    
     respond_to do |format|
-      if @audit.save
+       if  @audit.errors.any?
+           puts "*************error ouccured object wont be saved****************"
+            format.html { render action: "new" }
+            format.json { render json: @audit.errors, status: :unprocessable_entity }       
+       elsif @audit.save
         format.html { redirect_to audits_path, notice: 'Audit was successfully created.' }
         format.json { render json: @audit, status: :created, location: @audit }
       else

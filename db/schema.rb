@@ -40,12 +40,6 @@ ActiveRecord::Schema.define(:version => 20131224034745) do
 
   add_index "audits", ["user_id"], :name => "index_audits_on_user_id"
 
-  create_table "categories", :force => true do |t|
-    t.string   "type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "documents", :force => true do |t|
     t.integer  "finding_id"
     t.datetime "created_at",              :null => false
@@ -67,7 +61,6 @@ ActiveRecord::Schema.define(:version => 20131224034745) do
 
   create_table "finding_types", :force => true do |t|
     t.string   "category_name"
-    t.string   "string"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -82,24 +75,17 @@ ActiveRecord::Schema.define(:version => 20131224034745) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "audit_id"
-    t.integer  "department_name"
     t.string   "status_id"
     t.integer  "document_id"
     t.string   "iso_clause"
-    t.string   "string"
   end
 
   add_index "findings", ["audit_id"], :name => "index_findings_on_audit_id"
-  add_index "findings", ["department_name"], :name => "index_findings_on_department_name"
+  add_index "findings", ["iso_clause"], :name => "index_findings_on_iso_clause"
   add_index "findings", ["status_id"], :name => "index_findings_on_status_id"
 
   create_table "risks", :force => true do |t|
     t.string   "risk_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "statuses", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

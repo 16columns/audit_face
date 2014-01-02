@@ -1,5 +1,13 @@
 
 
+<div class="container">
+    <div class="row-fluid"> 
+    <div class="col-lg-12">
+    <%= will_paginate @findings %>
+    </div>
+    </div>
+    </div>
+
 <% @findings.each do |finding| %>
 
 <div class="container">
