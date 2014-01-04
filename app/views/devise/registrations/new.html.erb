@@ -1,5 +1,54 @@
+<style>
+body { 
+
+  
+  background-color: #34495e;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+.panel-default {
+opacity: 0.9;
+margin-top:15px;
+
+}
+.form-group.last { margin-bottom:0px; }
+
+ .badge-success {
+  background-color: #e74c3c; }
+  
+  .media-heading {
+   font-family: 'Lato', sans-serif;
+   color: #ffffff; }
+
+</style>
+<nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #34495e;">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <span class="navbar-brand" href="#" style="font-family: 'Lato', sans-serif; color:#2980b9"> <span class="badge badge-success"><strong>77comply </strong></span></span>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <span class="pull-right"><%= render "devise/shared/links" %> </span>
+
+   
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
 <div class="container">
-<h1 style="font-family: 'Open Sans', sans-serif"> Forget spreadsheet. Focus on audits </h1>
+<h1 style="font-family: 'Open Sans', sans-serif; color: #3498db"> Manage audits with speed </h1>
 </div>
 <br/>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
@@ -14,24 +63,37 @@
             <i class="fa fa-briefcase fa-4x"></i>
             </a>
             <div class="media-body">
-            <h4 class="media-heading">Create Audits and findings</h4>
-             Add audits and link findings instantly. Create audits less than a minute
+            <h4 class="media-heading">InstaAudits</h4>
+             <label style="color:#bdc3c7">Create audits and assign findings instantly. Audits less than a minute to create</label>
             </div>
             </div>
             <br/>
+            
             <div class="media">
             <a class="pull-left" href="#">
             <i class="fa fa-upload fa-4x"></i>
             </a>
             <div class="media-body">
-            <h4 class="media-heading">Excel upload</h4>
-             Upload your findings in microsoft excel format, just in case you need to upload multiple findings
+            <h4 class="media-heading">DirectUpload</h4>
+             <label style="color:#bdc3c7">Upload your findings in microsoft excel format, just in case you need to upload multiple findings </label>
             </div>
             </div>
+            <br/>
             
+            <div class="media">
+            <a class="pull-left" href="#">
+            <i class="fa fa-search-plus fa-4x"></i>
+            </a>
+            <div class="media-body">
+            <h4 class="media-heading">SearchSpeed</h4>
+             <label style="color:#bdc3c7">Search by Audits, findings, auditors or auditees easily </label>
+            </div>
+            </div>
+            <br/>
             
         </div>
-
+        
+        
         <div class="col-lg-4 col-lg-offset-1">
             <div class="panel panel-default">
              <div class="panel-heading"><span class="col-lg-offset-4"><i class="fa fa-user fa-lg"></i> Start your free trail</span></div>
@@ -71,8 +133,8 @@
                     <div class="form-group last">
                         <div class="col-sm-offset-3 col-sm-9">
                               <%= f.button :submit, 'Sign up',  class: "btn btn-success btn-lg btn-block" %>
-                              <br/>
-                               <%= render "devise/shared/links" %>
+                            
+                               
 
                             
 
