@@ -51,15 +51,23 @@
    <br/><br/>
    
    <div>
-    
-    <%= f.label "Start Date" %>
-    <%= f.text_field :start_date, :class =>"datepicker" %>
+    <div class="well">
+  <div id="datetimepicker2" class="input-append">
+    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      </i>
+    </span>
+  </div>
+</div>
+    <%#= f.label "Start Date" %>
+    <%#= f.text_field :start_date, :class =>"datepicker" %>
      </div>
    <br/><br/><br/><br/><br/>
    
    <div>
    <%= f.label "End Date" %>
-    <%= f.text_field :end_date, :class =>"datepicker" %>
+    <%#= f.text_field :end_date, :class =>"datepicker" %>
      </div>
    
     
@@ -74,10 +82,12 @@
 <script type="text/javascript">
             // When the document is ready
             $(document).ready(function () {
-                
-                $('.datepicker').datepicker({
-                    format: "yyyy-mm-dd"
-                });  
+                alert("this is working on load");
+                 $('#datetimepicker2').datetimepicker({
+                     alert("inside date and time picker");
+      language: 'en',
+      pick12HourFormat: true
+    }); 
             
             });
         </script>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131224034745) do
+ActiveRecord::Schema.define(:version => 20140103093229) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20131224034745) do
     t.string   "auditee_email"
     t.string   "auditor_name"
     t.string   "auditor_email"
-    t.date     "start_date"
-    t.date     "end_date"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "user_id"

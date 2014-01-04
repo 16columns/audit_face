@@ -1,3 +1,4 @@
+require 'prawn'
 class AuditsController < ApplicationController
     before_filter :authenticate_user!, only: [:new]
   # GET /audits
@@ -16,8 +17,7 @@ class AuditsController < ApplicationController
   # GET /audits/1.json
   def show
     @audit = Audit.find(params[:id])
- 
-    
+    @findings= @audit.findings.paginate(:page => params[:page], :per_page => 7).order('id DESC')
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @audit }
@@ -102,4 +102,32 @@ class AuditsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def export_findings
+#     @audits= Audit.paginate(:page => params[:page], :per_page => 3).order('id DESC')
+#     respond_to do |format|
+#       format.html # index.html.erb
+#       format.json { render json: @audits }
+#     end
+    # respond_to do |format|
+    #     format.pdf { render :layout => false }
+    # end    
+      Prawn::Document.generate("test.pdf") do |pdf|
+     table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
+                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
+                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>3. Row example text</b>", :inline_format => true), "342"],                    
+                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>4. Row example text</b>", :inline_format => true), "36"]]
+
+    pdf.table(table_data,:width => 500)
+end
+    send_data("test.pdf", :filename => "output.pdf", :type => "application/pdf") 
+   end
+   
+   private 
+    def generate_pdf
+        # Prawn::Document.new do
+        #     text "Hello World"
+        # end.render 
+      
+    end
 end
