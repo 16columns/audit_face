@@ -1,3 +1,5 @@
+background: url(<%= asset_path 'grain2.jpg' %>) no-repeat fixed center;
+
 <p id="notice"><%= notice %></p>
 
 <p>
