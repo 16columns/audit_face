@@ -13,7 +13,9 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
-gem 'high_voltage', '~> 2.1.0'
+gem 'prawn'
+gem 'prawn-rails'
+gem 'bootstrap-datetimepicker-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

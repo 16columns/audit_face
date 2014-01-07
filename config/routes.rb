@@ -4,11 +4,13 @@ AuditFace::Application.routes.draw do
 
   devise_for :users
 
+  get "audits/export_findings"
+  post "audits/export_findings"
+
   resources :audits do
   resources :findings
   
   end
-  
  resources :findings
 
 
