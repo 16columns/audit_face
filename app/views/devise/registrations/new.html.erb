@@ -108,14 +108,14 @@ margin-top:15px;
                        <small> <label for="inputPassword3" class="col-sm-3 control-label">
                             Profile name</label></small>
                         <div class="col-sm-8">
-                            <%= f.input :profile_name, label: false %>
+                            <%= f.input :profile_name, :autofocus => true, label: false %>
                         </div>
                     </div>
                     <div class="form-group">
                        <small> <label for="inputEmail3" class="col-sm-3 control-label">
                             Email</label></small>
                         <div class="col-sm-8">
-                            <%= f.input :email, :autofocus => true, class: "form-control input-lg", label: false  %>
+                            <%= f.input :email,  class: "form-control input-lg", label: false  %>
                         </div>
                     </div>
                     <div class="form-group">

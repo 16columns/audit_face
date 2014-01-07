@@ -13,6 +13,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
+gem 'high_voltage', '~> 2.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
