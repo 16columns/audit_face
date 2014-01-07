@@ -1,5 +1,5 @@
 class Audit < ActiveRecord::Base
-  attr_accessible :auditee_email, :auditee_name, :auditor_email, :auditor_name, :department_name, :end_date, :start_date, :user_id
+  attr_accessible :auditee_email, :auditee_name, :auditor_email, :auditor_name, :department_name, :end_date, :start_date, :user_id, :audit_type
   belongs_to :user
   has_many :findings, :dependent => :destroy
   
@@ -10,5 +10,4 @@ class Audit < ActiveRecord::Base
   
   self.per_page = 3
   
-
 end

@@ -25,23 +25,23 @@
   <div class="col-xs-12">
  <div class="form-inputs">
    <div class="input-sm">
-    <%= f.input :department_name %>
+    <%= f.input :department_name, placeholder: 'The department name to be audited' %>
     </div>
     <br/><br/>
     
    <div class="input-sm">
-    <%= f.input :auditee_name %>
+    <%= f.input :auditee_name, placeholder: 'Your awesome name' %>
    </div>
    <br/><br/>
    
    <div class="input-sm">
-    <%= f.input :auditee_email %>
+    <%= f.input :auditee_email, placeholder: 'awesomeauditee@domain.com' %>
      </div>
    <br/><br/>
    
    
     <div class="input-sm">
-    <%= f.input :auditor_name %>
+    <%= f.input :auditor_name, placeholder: 'Your awesome name' %>
     </div>
    <br/><br/>
    
@@ -50,6 +50,7 @@
       </div>
    <br/><br/>
    
+<<<<<<< HEAD
    <div>
     <div class="well">
   <div id="datetimepicker2" class="input-append">
@@ -70,6 +71,12 @@
     <%#= f.text_field :end_date, :class =>"datepicker" %>
      </div>
 
+
+   <div class="input-sm">
+    <%= f.input :audit_type, placeholder: 'ISO 9001 or Statutory audit or SOX or Process audit' %>
+      </div>
+   <br/><br/>
+   
    </div>
     
    
