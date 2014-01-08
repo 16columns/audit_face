@@ -1,5 +1,8 @@
 AuditFace::Application.routes.draw do
   
+  resources :dashboards
+
+
   resources :activities, only: [:index]
 
   devise_for :users

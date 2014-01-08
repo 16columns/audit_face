@@ -4,7 +4,7 @@
 body { 
 
   
-  background-color: #ecf0f1;
+  background-color: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,7 +34,11 @@ margin-top:15px;
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <span class="navbar-brand" href="#" style="font-family: 'Lato', sans-serif; color:#2980b9"> <span class="badge badge-success"><strong>77comply </strong></span></span>
+     <div class="container">
+    <h2 class="col-lg-offset-5 col-md-offset-5" href="#" style="font-family: 'Lato', sans-serif;">77comply</h2>
+     
+   </div>
+
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,11 +59,11 @@ margin-top:15px;
 
 
     <div class="row">
-        <div class="col-lg-4 col-lg-offset-4">
-            <div class="panel panel-default" style="background:#8DC9DE">
-             <div class="panel-heading"><span class="col-lg-offset-4"><i class="fa fa-user fa-lg"></i> Secure sign in</span></div>
+        <div class="col-lg-5 col-md-5 col-lg-offset-4">
+            <div class="panel panel-default">
+             <div class="panel-heading" style="background:#4F575D; color:#ffffff" ><span><i class="fa fa-user fa-lg"></i> <strong> Sign in</strong></span></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form">
+                    <form class="form-inline" role="form">
                     <div class="form-group">
                         <small><label for="inputEmail3" class="col-sm-3 control-label">
                             Email</label></small>
@@ -83,7 +87,7 @@ margin-top:15px;
                     </div>
                     <div class="form-group last">
                         <div class="col-sm-offset-3 col-sm-9">
-                              <%= f.button :submit, 'Sign in',  class: "btn btn-success btn-lg btn-block" %>
+                              <%= f.button :submit, 'Sign in',  class: "btn btn-default pull-left" %>
                              
 
                         </div>
