@@ -17,7 +17,7 @@ gem 'prawn'
 gem 'prawn-rails'
 gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
-
+gem "jquery-fileupload-rails"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

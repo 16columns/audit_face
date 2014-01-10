@@ -7,11 +7,12 @@ class Finding < ActiveRecord::Base
   belongs_to :finding_type
   belongs_to :risk
   belongs_to :finding_status
-  belongs_to :document
+  # belongs_to :document
+   has_many :documents
 
-  has_attached_file :avatar #, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  # has_attached_file :avatar #, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   
-  accepts_nested_attributes_for :document
+  accepts_nested_attributes_for :documents
   
 end
 
