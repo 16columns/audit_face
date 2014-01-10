@@ -156,12 +156,13 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-datetimepicker-rails
   bootstrap-will_paginate
+  cocaine
   coffee-rails (~> 3.2.1)
   date_validator
   devise
   font-awesome-rails
   jquery-rails
-  mysql2 (~> 0.3.11)
+  mysql2
   paperclip
   prawn
   prawn-rails
