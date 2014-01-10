@@ -29,6 +29,7 @@
   <b>Preventive action:</b>
   <%= @finding.preventive_action %>
 </p>
+<%= image_tag @finding.avatar.url %>
 
       <% if @finding.document && @finding.document.attachment? %>
       <span class="label label-info">Attachment</span>

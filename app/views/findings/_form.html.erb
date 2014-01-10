@@ -1,7 +1,22 @@
 <%= simple_form_for(@finding, html: {class: "form-horizontal", multipart: true}) do |f| %>
 <%= f.error_notification %>
-
-
+<% if @finding.errors.any? %>
+    <div class="container" id="error_explanation">
+    <div class="row-fluid">
+    <div class="col-lg-5 col-lg-offset-3">
+    <div class="well well-sm">
+      <p><%= pluralize(@finding.errors.count, "error") %> prohibited this audit from being saved</p>
+      <% @finding.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+     
+    </div>
+    </div>
+    </div>
+  <% end %>
+ 
+  
 <div class="container">
 <div class="col-lg-5">
 <ul class="nav nav-tabs">
@@ -34,7 +49,7 @@
       </div>
       </div>
       
-        
+        <br/><br/>
            
       <div class="col-xs-6">
       <div class="input-sm">
@@ -86,7 +101,7 @@
       <div class="input-sm">
     <%= f.fields_for :document do |document_fields| %>
         
-    <%= document_fields.input :attachment, as: :file, label: false %>
+    <%#= document_fields.input :attachment, as: :file, label: false %>
     
     <% end %>
     
@@ -96,6 +111,11 @@
     <li><a href="#"> File 3 </a></li>
     </ul>
     
+
+  <%= f.file_field :avatar %>
+
+
+
     
     </div>
     </div>
