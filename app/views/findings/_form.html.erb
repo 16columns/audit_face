@@ -21,7 +21,7 @@
     <div class="form-input">
      <div class="col-xs-12">
     
-      <%#= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
+      <%= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
       <%= f.input :description, :input_html=>{:rows=>10}, length: 12, :autofocus => true %>
       
      </div>

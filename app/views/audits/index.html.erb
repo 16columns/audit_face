@@ -34,10 +34,10 @@
           <span class="label label-info pull-right">
           <%= audit.start_date %>
           <%= audit.end_date %>
-          <%= (audit.start_date..audit.end_date).include? Time.now.strftime("%Y-%d-%m").to_i %>
-          <% if (audit.start_date..audit.end_date).include?Time.now.strftime("%Y-%d-%m").to_i %>
-            "In Process"
-            <% end %>
+          <%#= (audit.start_date..audit.end_date).include? Time.now.strftime("%Y-%d-%m").to_i %>
+          <!--<%# if (audit.start_date..audit.end_date).include?Time.now.strftime("%Y-%d-%m").to_i %>-->
+          <!--  "In Process"-->
+          <!--  <%# end %>-->
          </span>
       </div>
       <div class="panel-body">
