@@ -13,7 +13,7 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active" id="home">
+   <div class="tab-pane active" id="home">
     
     
     <br/>
@@ -34,14 +34,19 @@
       </div>
       </div>
       
+        
+           
       <div class="col-xs-6">
       <div class="input-sm">
       <%= f.input :risk_rating, collection: Risk.all, label_method: :risk_name, value_method: :risk_name %>
-     </div>
       </div>
+     
+      </div>
+      
       </div>
    
-     <br/><br/><br/>
+      <p></p>
+     
       <div class="form-input">
       <div class="col-xs-9">
       <div class="input-sm">

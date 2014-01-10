@@ -1,25 +1,106 @@
 <div class="container">
-    
-    <div class="row-fluid">
+    <div class="well">
+    <div class="row">
         
       
         
-         <div class="col-lg-2 col-md-3">
+         <div class="col-lg-2">
            <div id='chart_div'></div>
-            </div> 
+         </div> 
           
-        </div>
+       
         
-         <div class="col-lg-2 col-md-3">
+         <div class="col-lg-2">
            <div id='chart_div1'></div>
-            </div> 
+         </div>
+         
+         <div class="col-lg-2">
+           <div id='chart_div2'></div>
+         </div> 
+         
+         
+          <div class="col-lg-2">
+           <div id='chart_div3'></div>
+         </div>  
           
-        </div>
-        
-        
-
+    </div>
     </div>
   
+</div>
+<p></p>
+<p></p><br/>
+
+<div class="container">
+
+<div class="row-fluid">
+
+<div class="col-lg-6">
+
+<h5>Upcoming audits</h5>
+
+<table class="table table-hover table-responsive">
+        <thead>
+		
+            <tr style="background:#ecf0f1">
+		    <th> Audit ID</th>
+		    <th>Department name</th>
+            <th>Created Date</th>
+            <th>Auditor</th>
+            <th>Begins on</th>
+ 	        </tr>
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+		<td> 1 </td>
+        <td>Finance</td>
+        <td>23 Dec 2013</td>
+		<td>Vishant Pai</td>
+        <td>27 Jan 2014</td>
+        </tr>
+
+	    
+        </tbody>
+      </table>
+      
+
+</div>
+
+
+<div class="col-lg-6">
+
+<h5>Open Audits (Greater than 30 days) </h5>
+
+<table class="table table-hover table-responsive">
+        <thead>
+		
+            <tr style="background:#ecf0f1">
+		    <th> Audit ID</th>
+		    <th>Department name</th>
+            <th>Created Date</th>
+            <th>Auditor</th>
+            <th>Begins on</th>
+ 	        </tr>
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+		<td> 1 </td>
+        <td>Finance</td>
+        <td>23 Dec 2013</td>
+		<td>Vishant Pai</td>
+        <td>27 Jan 2014</td>
+        </tr>
+
+	    
+        </tbody>
+      </table>
+      
+
+</div>
+</div>
 </div>
 
 
@@ -55,7 +136,6 @@
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
           ['Finding', <%= Finding.count %>],
-          
          
         ]);
 
@@ -67,6 +147,52 @@
         };
 
         var chart = new google.visualization.Gauge(document.getElementById('chart_div1'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+      <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['gauge']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['CAPA Pending', <%= Finding.count %>],
+         
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div2'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+        </script>
+    
+      <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['gauge']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Open Audits', <%= Finding.count %>],
+         
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div3'));
         chart.draw(data, options);
       }
     </script>
