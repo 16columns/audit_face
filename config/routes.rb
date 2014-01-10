@@ -1,5 +1,8 @@
 AuditFace::Application.routes.draw do
   
+  resources :dashboards
+
+
   resources :activities, only: [:index]
 
   devise_for :users
@@ -12,8 +15,14 @@ AuditFace::Application.routes.draw do
   
   end
  resources :findings
+
+
   
   root :to => "audits#index"
+  
+ match '/landing' => 'high_voltage/pages#show', :id => 'landing'
+ 
+ match "/pages/*id" => 'pages#show', as: :page, format: false
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

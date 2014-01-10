@@ -51,7 +51,7 @@
                     <%= link_to " Modify", edit_audit_path(audit) %>  |  
        
                    <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, method: :delete, data: { Confirm: "Are you sure"} %> |
-                    <%= link_to " View Finding", audit, class: "btn btn-info btn-xs" %> |
+                    <%= link_to " View Finding", audit, class: "btn btn-info btn-xs" %>
                     <i class="fa fa-share-square-o fa-lg"></i>
                     
                     <%= link_to " Create Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right" %>  

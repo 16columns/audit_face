@@ -2,7 +2,7 @@
 body { 
 
   
-  background-color: #ecf0f1;
+  background-color: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,12 +35,16 @@ margin-top:15px;
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <span class="navbar-brand" href="#" style="font-family: 'Lato', sans-serif;"> <span class="badge badge-success"><strong>77comply </strong></span></span>
+    <div class="container">
+    <h2 class="col-lg-offset-5 col-md-offset-5" href="#" style="font-family: 'Lato', sans-serif;">77comply</h2>
+    
+   </div>
+   
   </div>
-
+  
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <span class="pull-right"><%= render "devise/shared/links" %> </span>
+   <span class="pull-right" style="margin-top:10px;"><%= render "devise/shared/links" %></span> 
 
    
   </div><!-- /.navbar-collapse -->
@@ -48,19 +52,26 @@ margin-top:15px;
 
 
 <div class="container">
+
+
 <div class="row-fluid">
-<div class="col-lg-12 col-lg-offset-3">
+
+<div class="col-lg-12 col-lg-offset-5">
+
 <h3 style="font-family: 'Lato', sans-serif; color: #2c3e50"> Eliminate stress from audits </h3>
+
 </div>
 </div>
 </div>
+
 <br/>
+
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
   <%= devise_error_messages! %>
-
+<div class="container">
 <div class="row-fluid">
 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-lg-4">
         
             <div class="media">
             <a class="pull-left" href="#">
@@ -68,7 +79,7 @@ margin-top:15px;
             </a>
             <div class="media-body">
             <h4 class="media-heading">InstaAudits</h4>
-             <label style="color:#bdc3c7">Create audits and assign findings instantly. Audits less than a minute to create</label>
+             <label style="color:#bdc3c7">Create audits and assign findings instantly. Audits takes less than a minute to create</label>
             </div>
             </div>
             <br/>
@@ -97,25 +108,26 @@ margin-top:15px;
             
         </div>
         
-        
-        <div class="col-lg-4 col-lg-offset-1">
+             
+        <div class="col-lg-5 col-md-5 col-lg-offset-1">
             <div class="panel panel-default">
-             <div class="panel-heading" ><span class="col-lg-offset-4"><i class="fa fa-user fa-lg"></i> Start your free trail</span></div>
-                <div class="panel-body" style="background:#8DC9DE">
+       
+             <div class="panel-heading" style="background:#4F575D; color:#ffffff" ><span><i class="fa fa-user fa-lg"></i> <strong> Start your free trail </strong></span></div>
+                <div class="panel-body">
                     <form class="form-horizontal" role="form">
                     
                      <div class="form-group">
                        <small> <label for="inputPassword3" class="col-sm-3 control-label">
                             Profile name</label></small>
                         <div class="col-sm-8">
-                            <%= f.input :profile_name, label: false %>
+                            <%= f.input :profile_name, :autofocus => true, label: false %>
                         </div>
                     </div>
                     <div class="form-group">
                        <small> <label for="inputEmail3" class="col-sm-3 control-label">
                             Email</label></small>
                         <div class="col-sm-8">
-                            <%= f.input :email, :autofocus => true, class: "form-control input-lg", label: false  %>
+                            <%= f.input :email,  class: "form-control input-lg", label: false  %>
                         </div>
                     </div>
                     <div class="form-group">
@@ -136,12 +148,9 @@ margin-top:15px;
                     
                     <div class="form-group last">
                         <div class="col-sm-offset-3 col-sm-9">
-                              <%= f.button :submit, 'Sign up',  class: "btn btn-success btn-lg btn-block" %>
+                              <%= f.button :submit, 'Sign up',  class: "btn btn-success btn-default" %>
+                             
                             
-                               
-
-                            
-
                         </div>
                     </div>
                     </form>
@@ -150,6 +159,7 @@ margin-top:15px;
             </div>
         </div>
     </div>
+</div>
 </div>
 <% end %>
 <br/>

@@ -16,6 +16,7 @@ gem 'date_validator'
 gem 'prawn'
 gem 'prawn-rails'
 gem 'bootstrap-datetimepicker-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
