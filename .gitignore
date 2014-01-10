@@ -1,4 +1,4 @@
-db/
+database.yml
 development.log
 log/
 test/
