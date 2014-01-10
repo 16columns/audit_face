@@ -51,12 +51,12 @@ class AuditsController < ApplicationController
     end_date = params[:audit][:end_date]
     @all_audits = Audit.where("auditor_email = ? or auditee_email = ?",params[:audit][:auditor_email], params[:audit][:auditee_email])
     
-     @all_audits.each do |audit|
-            if (audit.start_date..audit.end_date).include?(start_date||end_date)
-                @audit.errors[:base] << "date is already assigned,please select another date "
-                break
-            end 
-        end 
+    #  @all_audits.each do |audit|
+    #         if (audit.start_date..audit.end_date).include?(start_date||end_date)
+    #             @audit.errors[:base] << "date is already assigned,please select another date "
+    #             break
+    #         end 
+    #     end 
     
     respond_to do |format|
        if  @audit.errors.any?

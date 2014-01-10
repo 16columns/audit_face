@@ -1080,6 +1080,7 @@
       data = $this.data('datetimepicker'),
       options = typeof option === 'object' && option;
       if (!data) {
+          alert(data);
         $this.data('datetimepicker', (data = new DateTimePicker(
           this, $.extend({}, $.fn.datetimepicker.defaults,options))));
       }

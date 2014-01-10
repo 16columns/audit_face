@@ -16,109 +16,96 @@
   <% end %>
  
 <div class="container">
-<div class="row-fluid">
-<div class="col-lg-5 col-lg-offset-3">
+    <div class="row-fluid">
+        <div class="col-lg-5 col-lg-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Create New Audit</strong></div>
+                    <div class="panel-body">
+                        <div class="col-xs-12">
+                            <div class="form-inputs">
+                                <div class="input-sm">
+                                    <%= f.input :department_name, placeholder: 'The department name to be audited' %>
+                                </div>
+                                 <br/><br/>
+                                <div class="input-sm">
+                                    <%= f.input :auditee_name, placeholder: 'Your awesome name' %>
+                                </div>
+                                 <br/><br/>
+                                <div class="input-sm">
+                                    <%= f.input :auditee_email, placeholder: 'awesomeauditee@domain.com' %>
+                                </div>
+                                 <br/><br/>
+                                <div class="input-sm">
+                                    <%= f.input :auditor_name, placeholder: 'Your awesome name' %>
+                                </div>
+                                 <br/><br/>
+                                <div class="input-sm">
+                                    <%= f.input :auditor_email, placeholder: 'awesomeauditor@domain.com' %>
+                                </div>
+                                 <br/><br/>
+                                
 
-<div class="panel panel-default">
-  <div class="panel-heading"><strong>Create New Audit</strong></div>
-  <div class="panel-body">
-  <div class="col-xs-12">
- <div class="form-inputs">
-   <div class="input-sm">
-    <%= f.input :department_name, placeholder: 'The department name to be audited' %>
-    </div>
-    <br/><br/>
     
-   <div class="input-sm">
-    <%= f.input :auditee_name, placeholder: 'Your awesome name' %>
-   </div>
-   <br/><br/>
-   
-   <div class="input-sm">
-    <%= f.input :auditee_email, placeholder: 'awesomeauditee@domain.com' %>
-     </div>
-   <br/><br/>
-   
-   
-    <div class="input-sm">
-    <%= f.input :auditor_name, placeholder: 'Your awesome name' %>
-    </div>
-   <br/><br/>
-   
-    <div class="input-sm">
-    <%= f.input :auditor_email, placeholder: 'awesomeauditor@domain.com' %>
-      </div>
-   <br/><br/>
-   
-<<<<<<< HEAD
-   <div>
-    <div class="well">
-  <div id="datetimepicker2" class="input-append">
-    <input data-format="MM/dd/yyyy HH:mm:ss PP" type="text"></input>
-    <span class="add-on">
-      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-      </i>
-    </span>
-  </div>
-</div>
-    <%#= f.label "Start Date" %>
-    <%#= f.text_field :start_date, :class =>"datepicker" %>
-     </div>
-   <br/><br/><br/><br/><br/>
-   
-   <div>
-   <%= f.label "End Date" %>
-    <%#= f.text_field :end_date, :class =>"datepicker" %>
-     </div>
-
-
-   <div class="input-sm">
-    <%= f.input :audit_type, placeholder: 'ISO 9001 or Statutory audit or SOX or Process audit' %>
-      </div>
-   <br/><br/>
-   
-   </div>
     
-   
-    <%= f.label :start_date %>
-    <%= f.text_field :start_date, :class =>"datepicker" %>
     
-   <br/> <br/>
+                               
+                                  <div class="well">
+                                  <div id="datetimepicker2" class="input-append date">
+                                    <input  type="text" data-format="MM/dd/yyyy hh:mm:ss" />
+                                    <span class="add-on">
+                                      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                                      </i>
+                                    </span>
+                                  </div>
+                                </div>
+                                <script type="text/javascript">
+                                  $(function() {
+                                    $('#datetimepicker2').datetimepicker({
+                                      language: 'en',
+                                    //   pick12HourFormat: true
+                                    });
+                                  });
+                                </script>
+                                   
+   
+   
+<!--   <div class="well">-->
+<!--  <div id="datetimepicker1" class="input-append date">-->
+<!--    <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>-->
+<!--    <span class="add-on">-->
+<!--      <i data-time-icon="icon-time" data-date-icon="icon-calendar">-->
+<!--      </i>-->
+<!--    </span>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<script type="text/javascript">-->
+<!--  $(function() {-->
+<!--    $('#datetimepicker1').datetimepicker({-->
+<!--      language: 'pt-BR'-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
    
   
-  
-    <%= f.label :end_date %>
-    <%= f.text_field :end_date, :class =>"datepicker" %>
-
-   
+    
    
     
-</div>
-</div>
 
-<script type="text/javascript">
-            // When the document is ready
-            $(document).ready(function () {
-                alert("this is working on load");
-                 $('#datetimepicker2').datetimepicker({
-                     alert("inside date and time picker");
-      language: 'en',
-      pick12HourFormat: true
-    }); 
-            
-            });
-        </script>
-   <div class="panel-footer">
       
-      <div class="form-actions">
-    <%= f.submit class: "btn btn-success btn-lg btn-block" %>
-  </div>
-</div> 
-  
- </div>
-   
- </div>
- </div>
+ 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-actions">
+                            <%= f.submit class: "btn btn-success btn-lg btn-block" %>
+                        </div>
+                    </div> 
+                </div>
+           </div>
+         </div>
+    </div>
+</div>
 
 <% end %>
 
