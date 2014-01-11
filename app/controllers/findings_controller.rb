@@ -32,7 +32,7 @@ class FindingsController < ApplicationController
     
      @finding = Finding.new(:audit_id => params[:audit_id])
      #@finding.build_document
-      @finding.documents.build
+      6.times { @finding.documents.build }
 
     respond_to do |format|
       format.html # new.html.erb
