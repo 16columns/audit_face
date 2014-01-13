@@ -18,7 +18,7 @@ AuditFace::Application.routes.draw do
 
 
   
-  root :to => "audits#index"
+  root :to => "dashboards#index"
   
  match '/landing' => 'high_voltage/pages#show', :id => 'landing'
  
