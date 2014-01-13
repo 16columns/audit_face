@@ -1,32 +1,56 @@
 <div class="container">
-    <div class="well">
+    
     <div class="row">
         
       
-        
-         <div class="col-lg-2">
-           <div id='chart_div'></div>
-         </div> 
-          
-       
-        
-         <div class="col-lg-2">
-           <div id='chart_div1'></div>
+        <div class="col-lg-2">        
+         <div class="panel panel-primary">
+         <div class="panel-heading">
+         <h3 class="panel-title">All Audits</h3>
          </div>
-         
-         <div class="col-lg-2">
-           <div id='chart_div2'></div>
-         </div> 
-         
-         
-          <div class="col-lg-2">
-           <div id='chart_div3'></div>
-         </div>  
-          
+          <div class="panel-body">
+           <h1 class="col-lg-offset-5"><strong><%= Audit.count %></strong></h1>
+          </div>
+        </div>
+      </div>
+       
+        <div class="col-lg-2">  
+          <div class="panel panel-primary">
+         <div class="panel-heading">
+         <h3 class="panel-title">All Findings</h3>
+         </div>
+          <div class="panel-body">
+          <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+          </div>
+        </div>
+         </div>
+      
+      <div class="col-lg-2"> 
+          <div class="panel panel-danger">
+         <div class="panel-heading">
+         <h3 class="panel-title">CAPA Pending</h3>
+         </div>
+          <div class="panel-body">
+            <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+          </div>
+        </div>
+      </div>
+      
+         <div class="col-lg-2"> 
+          <div class="panel panel-danger">
+         <div class="panel-heading">
+         <h3 class="panel-title">Open Audits</h3>
+         </div>
+          <div class="panel-body">
+          <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+          </div>
+        </div>  
+      </div>
+           
     </div>
     </div>
   
-</div>
+
 <p></p>
 <p></p><br/>
 
