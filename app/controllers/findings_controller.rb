@@ -55,7 +55,7 @@ class FindingsController < ApplicationController
     respond_to do |format|
         
     if @finding.save
-        current_user.create_activity @finding, 'created'
+        # current_user.create_activity @finding, 'created'
         
         format.html { redirect_to audits_path, notice: 'Finding was successfully created.' }
         format.json { render json: @finding, status: :created, location: @finding }
