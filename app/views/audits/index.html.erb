@@ -28,24 +28,25 @@
    
     <small>
       <div class="panel panel-default">
-      <%= audit.findings.each do |finding| %>  
+      <% audit.findings.each do |finding| %>  
         <%if finding.status_id != "Closed"%>
           <% break %>
         <%end %>  
       <% end  %>
-
- <!-- (start_time..end_time).include?(Time.now) -->
-
+      <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
+      
       <div class="panel-heading">
       <span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
           <span class="label label-info pull-right">
 
-          <%= audit.start_date %>
-          <%= audit.end_date %>
-          <%#= (audit.start_date..audit.end_date).include? Time.now.strftime("%Y-%d-%m").to_i %>
-          <!--<%# if (audit.start_date..audit.end_date).include?Time.now.strftime("%Y-%d-%m").to_i %>-->
-          <!--  "In Process"-->
-          <!--  <%# end %>-->
+          <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
+          
+            <%= "In Progress" %> 
+            <%elsif audit.start_date.to_i > Time.now.to_i %>
+              <%= "Not Started"%>
+            <%elsif Time.now.to_i > audit.end_date.to_i   %>  
+              <%= "Audit Completed" %>
+          <%end%> 
          </span>
       </div>
       <div class="panel-body">
