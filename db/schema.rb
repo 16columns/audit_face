@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140108095823) do
+ActiveRecord::Schema.define(:version => 20140110094940) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -79,12 +79,16 @@ ActiveRecord::Schema.define(:version => 20140108095823) do
     t.date     "date_created"
     t.text     "corrective_action"
     t.text     "preventive_action"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "audit_id"
     t.string   "status_id"
     t.integer  "document_id"
     t.string   "iso_clause"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "findings", ["audit_id"], :name => "index_findings_on_audit_id"
