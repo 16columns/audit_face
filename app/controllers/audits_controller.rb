@@ -47,20 +47,22 @@ class AuditsController < ApplicationController
   def create
     @audit = current_user.audits.new(params[:audit])
     audit = params[:audit]
-    start_date = params[:audit][:start_date]
-    end_date = params[:audit][:end_date]
-    @all_audits = Audit.where("auditor_email = ? or auditee_email = ?",params[:audit][:auditor_email], params[:audit][:auditee_email])
+    start_date = DateTime.new(params["audit"]["start_date(1i)"].to_i, params["audit"]["start_date(2i)"].to_i,params["audit"]["start_date(3i)"].to_i,
+                                                                    params["audit"]["start_date(4i)"].to_i,params["audit"]["start_date(5i)"].to_i)
     
-    #  @all_audits.each do |audit|
-    #         if (audit.start_date..audit.end_date).include?(start_date||end_date)
-    #             @audit.errors[:base] << "date is already assigned,please select another date "
-    #             break
-    #         end 
-    #     end 
+    end_date = DateTime.new(params["audit"]["end_date(1i)"].to_i, params["audit"]["end_date(2i)"].to_i,params["audit"]["end_date(3i)"].to_i,
+                                                                    params["audit"]["end_date(4i)"].to_i,params["audit"]["end_date(5i)"].to_i)
+     @all_audits = Audit.where("auditor_email = ? or auditee_email = ?",params[:audit][:auditor_email], params[:audit][:auditee_email])
+    
+      @all_audits.each do |audit|
+             if (audit.start_date.to_i..audit.end_date.to_i).include?(start_date.to_i||end_date.to_i)
+                 @audit.errors[:base] << "Date is already assigned,please select another date "
+                 break
+             end 
+         end 
     
     respond_to do |format|
        if  @audit.errors.any?
-           puts "*************error ouccured object wont be saved****************"
             format.html { render action: "new" }
             format.json { render json: @audit.errors, status: :unprocessable_entity }       
        elsif @audit.save
