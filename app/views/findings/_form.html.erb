@@ -116,7 +116,7 @@
 <%= f.fields_for :documents do |document_fields| %>
     <p>
         <%= document_fields.label "File ##{number +=1}" %>
-        <%= document_fields.file_field :attachment %>
+        <%= document_fields.file_field :attachment, multiple: true, name: "document[attachments_attributes][][attachment]" %>
     </p>
 <% end %>
 <%#= f.submit %>

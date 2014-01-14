@@ -27,7 +27,10 @@
   <%= @finding.preventive_action %>
 </p>
 
-
+    <% @finding.documents.each do |document| %>
+    <%= link_to document.attachment_file_name, document.attachment.url %>
+<br/>
+        <% end %>
       <%# if @finding.document && @finding.document.attachment? %>
       <span class="label label-info">Attachment</span>
       <%#= link_to @finding.document.attachment_file_name, @finding.document.attachment.url %>

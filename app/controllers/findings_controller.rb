@@ -45,13 +45,14 @@ class FindingsController < ApplicationController
   # GET /findings/1/edit
   def edit
     @finding = Finding.find(params[:id])
+    #6.times { @finding.documents.build }
   end
 
   # POST /findings
   # POST /findings.json
   def create
     @finding = Finding.new(params[:finding])
-    6.times { @finding.documents.build }
+   # 6.times { @finding.documents.build }
     respond_to do |format|
         
     if @finding.save
