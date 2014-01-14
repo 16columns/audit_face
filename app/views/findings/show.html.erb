@@ -1,9 +1,6 @@
 
 
-<p>
-  <b>Department:</b>
-  <%= @finding.audit.department_name %>
-</p>
+
 
 <p>
   <b>Description:</b>
@@ -29,11 +26,11 @@
   <b>Preventive action:</b>
   <%= @finding.preventive_action %>
 </p>
-<%= image_tag @finding.avatar.url %>
 
-      <% if @finding.document && @finding.document.attachment? %>
+
+      <%# if @finding.document && @finding.document.attachment? %>
       <span class="label label-info">Attachment</span>
-      <%= link_to @finding.document.attachment_file_name, @finding.document.attachment.url %>
-      <% end %>
+      <%#= link_to @finding.document.attachment_file_name, @finding.document.attachment.url %>
+      <%# end %>
 
 

@@ -51,7 +51,7 @@ class FindingsController < ApplicationController
   # POST /findings.json
   def create
     @finding = Finding.new(params[:finding])
-   
+    6.times { @finding.documents.build }
     respond_to do |format|
         
     if @finding.save
