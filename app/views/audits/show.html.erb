@@ -2,7 +2,7 @@
     <div class="row-fluid">
     <div class="col-lg-2">
     <%= link_to "Export Findings", "export_findings", class: "btn btn-info btn-sm" %> 
-     </div>
+    </div>
     </div>
     </div>
     <br/>
@@ -11,97 +11,100 @@
     <div class="row-fluid">
     <div class="col-lg-8">
         
-    <small>
     
-    <%#=  @audit.findings %>
-         <%= will_paginate @findings %>
-        <% if @audit.findings!= [] %>  
+    
+          <%#=  @audit.findings %>
+          <%= will_paginate @findings %>
+              <% if @audit.findings!= [] %>  
             
-            <% @findings.each do |finding| %>
-                <div class="panel panel-default">
-                  <div class="panel-heading"><span class="label label-success">
-                  Finding # <%= finding.id %></span> | <%= finding.audit.department_name %> 
+              <% @findings.each do |finding| %>
+                  <small>
+                  <div class="panel panel-default">
+                       <div class="panel-heading">
+                         
+                          <span class="label label-success"> Finding # <%= finding.id %></span> | <%= finding.audit.department_name %> 
 
 
-                 <% if finding.status_id == "CAPA Pending"  %>
-                      <span class="label label-warning pull-right "> 
-                        <%= finding.status_id %>
-                      </span>
-                  <%elsif finding.status_id == "CAPA Submitted" %>    
-                    <span class="label label-success pull-right"> 
-                       <%= finding.status_id %>
-                      </span>
+                         <% if finding.status_id == "CAPA Pending"  %>
+                        <span class="label label-warning pull-right "> <%= finding.status_id %>  </span>
+                         
+                        <%elsif finding.status_id == "CAPA Submitted" %>    
+                        <span class="label label-success pull-right"> <%= finding.status_id %> </span>
                   
-                  <%elsif finding.risk_rating == "Closed" %>        
-                      <span class="label label-info pull-right"> 
-                       <%= finding.status_id %>
-                      </span>
+                        <%elsif finding.risk_rating == "Closed" %>       
+                        <span class="label label-info pull-right"> <%= finding.status_id %> </span>
                   
-                  <%else %>        
-                      <span class="label label-primary pull-right"> 
-                        <%= finding.status_id %>
-                      </span>
-                  <%end%>    
-                  <div class="panel-body">
-                    <%= finding.description %>
+                        <%else %>        
+                        <span class="label label-primary pull-right"> <%= finding.status_id %> </span>
+                        <%end%>  
+                    </div>
+                    
+                   <div class="panel-body">
+                   <%= finding.description %>
+                   </div>
+                    
+                  <div class="panel-footer">
+                    
+                    <%= link_to time_ago_in_words(finding.created_at) + " ago" , finding %>  | 
+                    <span class="label label-warning"><%= finding.category %></span>         |
+                    
+                   <% if finding.risk_rating == "Critical"  %>
+                   <span class="label label-danger "> 
+                   <%= finding.risk_rating + " risk" %>
+                   </span>
+                   <%elsif finding.risk_rating == "High" %>    
+                   <span class="label label-warning"> 
+                   <%= finding.risk_rating + " risk" %>
+                   </span>
+                   <%elsif finding.risk_rating == "Medium" %>    
+                   <span class="label label-primary "> 
+                   <%= finding.risk_rating + " risk" %>
+                   </span>
+                   <%elsif finding.risk_rating == "Low" %>        
+                   <span class="label label-info "> 
+                   <%= finding.risk_rating + " risk" %>
+                   </span>
+                   <%elsif finding.risk_rating == "No Risk" %>        
+                   <span class="label label-default "> 
+                   <%= finding.risk_rating + " risk" %>
+                   </span>
+                   <%else %>        
+                   
+                    <span class="label label-primary "> 
+                    <%= finding.risk_rating + " risk" %>
+                    </span>
+                    <%end%>    
+                
+                      
+                   <span class="pull-right">
+                   <%= link_to 'Edit', edit_finding_path(finding) %> |
+                   <%= link_to 'Destroy', finding, method: :delete, data: { confirm: 'This action is permanent, are you sure?' } %>
+                   </span>
+                      
+                  </div>  
+                      
                   </div>
-                  <div class="panel-footer"><%= link_to time_ago_in_words(finding.created_at) + " ago" , finding %>  | 
-                  <span class="label label-warning"><%= finding.category %></span>
-                  | 
-                  <% if finding.risk_rating == "Critical"  %>
-                      <span class="label label-danger "> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%elsif finding.risk_rating == "High" %>    
-                    <span class="label label-warning"> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%elsif finding.risk_rating == "Medium" %>    
-                      <span class="label label-primary "> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%elsif finding.risk_rating == "Low" %>        
-                      <span class="label label-info "> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%elsif finding.risk_rating == "No Risk" %>        
-                      <span class="label label-default "> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%else %>        
-                      <span class="label label-primary "> 
-                        <%= finding.risk_rating + " risk" %>
-                      </span>
-                  <%end%>    
-
-                      
-                     <span class="pull-right">
-                      <%= link_to 'Edit', edit_finding_path(finding) %> |
-                      <%= link_to 'Destroy', finding, method: :delete, data: { confirm: 'Are you sure?' } %>
-                      </span>
-                      
-                      
-                      
-                  </div>
-                </div>
+             </small>
+               
              <% end %> 
              <% else %>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    There are No findings.
                     
-                   </div>
-                
-                 </div>  
-                    <%= link_to " Create Finding", new_audit_finding_path(@audit.id), class: "btn btn-primary btn-sm pull-right" %>  
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                 No findings. <%= link_to " Create Finding", new_audit_finding_path(@audit.id), class: "btn btn-success btn-sm pull-right" %>
+                 <br/><br/>
+                </div>
+               
+
         <%end%>
-    </small>
     
+    
+    </div>
+    </div>
+    </div>
+
       
-    </div>
-    </div>
-    </div>
-    </div>
+   
     
    
 
