@@ -1,6 +1,7 @@
-require 'prawn'
+
 class AuditsController < ApplicationController
     before_filter :authenticate_user!, only: [:new]
+    require 'prawn'
   # GET /audits
   # GET /audits.json
   def index
@@ -115,22 +116,31 @@ class AuditsController < ApplicationController
     #     format.pdf { render :layout => false }
     # end    
     puts "**********action working********************"
-      Prawn::Document.generate("test.pdf") do |pdf|
-     table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
-                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
-                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>3. Row example text</b>", :inline_format => true), "342"],                    
-                   [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>4. Row example text</b>", :inline_format => true), "36"]]
+#       Prawn::Document.generate("test.pdf") do |pdf|
+#      table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
+#                    [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
+#                    [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>3. Row example text</b>", :inline_format => true), "342"],                    
+#                    [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>4. Row example text</b>", :inline_format => true), "36"]]
 
-    pdf.table(table_data,:width => 500)
-end
-    send_data("test.pdf", :filename => "test.pdf", :type => "application/pdf") 
+#     pdf.table(table_data,:width => 500)
+# end
+#     send_data("test.pdf", :filename => "test.pdf", :type => "application/pdf") 
+# # item = Consolidation.find_all_by_customer_id_and_status(params[:customer_id],true).map do |item|
+# #         [
+# #           item.settlement_date.strftime("%m/%d/%Y"),
+# #           item.settlement_amount,
+# #           item.ach_conf_code,
+# #         ]
+# #       end
+#       item.unshift(["Date","Settlement Amount","ACH Reference"])
+ pdf = Prawn::Document.new
+      pdf.text "Settlement Statement"
+      # pdf.table item,  row_colors: ['DDDDDD','EFEFEF'], header: true
+      filename = File.join(Rails.root, "/public", "Settlement_statement.pdf")
+      pdf.render_file filename
+      #Code for direct download
+      send_data pdf.render, :filename => "Settlement_statement.pdf", :type => "application/pdf"        
    end
    
-   private 
-    def generate_pdf
-        # Prawn::Document.new do
-        #     text "Hello World"
-        # end.render 
-      
-    end
+  
 end
