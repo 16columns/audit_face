@@ -15,14 +15,13 @@ AuditFace::Application.routes.draw do
   
   end
  resources :findings
-
+  resources :search
 
   
   root :to => "dashboards#index"
   
- match '/landing' => 'high_voltage/pages#show', :id => 'landing'
- 
- match "/pages/*id" => 'pages#show', as: :page, format: false
+get "/pages/*id" => 'pages#show', as: :page, format: false
+  get 'pages/landing' => 'high_voltage/pages#show', id: 'landing'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
