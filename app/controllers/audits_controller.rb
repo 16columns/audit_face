@@ -114,6 +114,7 @@ class AuditsController < ApplicationController
     # respond_to do |format|
     #     format.pdf { render :layout => false }
     # end    
+    puts "**********action working********************"
       Prawn::Document.generate("test.pdf") do |pdf|
      table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
                    [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
@@ -122,7 +123,7 @@ class AuditsController < ApplicationController
 
     pdf.table(table_data,:width => 500)
 end
-    send_data("test.pdf", :filename => "output.pdf", :type => "application/pdf") 
+    send_data("test.pdf", :filename => "test.pdf", :type => "application/pdf") 
    end
    
    private 
