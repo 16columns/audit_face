@@ -1,56 +1,65 @@
 <div class="container">
     
-    <div class="row">
+    <div class="row-fluid">
         
-      
-        <div class="col-lg-2">        
-         <div class="panel panel-primary">
-         <div class="panel-heading">
-         <h3 class="panel-title">All Audits</h3>
-         </div>
-          <div class="panel-body">
-           <h1 class="col-lg-offset-5"><strong><%= Audit.count %></strong></h1>
-          </div>
+        
+        <div class="col-lg-2">  
+        <small>
+         <div class="panel panel-info">
+         <div class="panel-heading">         All Audits          </div>
+           <div class="panel-body">
+           <span class="col-lg-offset-5"><strong><%= Audit.count %></strong></span>
+           </div>
         </div>
+        </small>
       </div>
        
         <div class="col-lg-2">  
-          <div class="panel panel-primary">
+          <small>
+         <div class="panel panel-info">
          <div class="panel-heading">
-         <h3 class="panel-title">All Findings</h3>
+         All Findings
          </div>
           <div class="panel-body">
-          <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
           </div>
-        </div>
+          </div>
+          </small> 
          </div>
-      
-      <div class="col-lg-2"> 
-          <div class="panel panel-danger">
+          
+         <div class="col-lg-2"> 
+           <small>
+           <div class="panel panel-info">
          <div class="panel-heading">
-         <h3 class="panel-title">CAPA Pending</h3>
+         CAPA Pending
          </div>
           <div class="panel-body">
-            <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
           </div>
         </div>
+           </small>
       </div>
       
-         <div class="col-lg-2"> 
-          <div class="panel panel-danger">
+         <div class="col-lg-2">
+           <small>
+           <div class="panel panel-info">
          <div class="panel-heading">
-         <h3 class="panel-title">Open Audits</h3>
+         Open Audits
          </div>
           <div class="panel-body">
-          <h1 class="col-lg-offset-5"><strong><%= Finding.count %></strong></h1>
+           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
           </div>
-        </div>  
+        </div>
+             </small>
       </div>
            
-    </div>
-    </div>
-  
+      </div>
+          
+  </div>
+     
 
+  
+ 
 <p></p>
 <p></p><br/>
 

@@ -62,6 +62,7 @@ GEM
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
     hashery (2.1.1)
+    high_voltage (2.1.0)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -164,6 +165,7 @@ DEPENDENCIES
   date_validator
   devise
   font-awesome-rails
+  high_voltage (~> 2.1.0)
   jquery-fileupload-rails
   jquery-rails
   mysql2

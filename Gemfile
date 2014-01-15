@@ -18,6 +18,8 @@ gem 'prawn-rails'
 gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
 gem "jquery-fileupload-rails"
+gem 'high_voltage', '~> 2.1.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
