@@ -36,7 +36,7 @@
       <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
       
       <div class="panel-heading">
-      <span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
+      <span class="label label-default">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
           <span class="label label-info pull-right">
 
           <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>

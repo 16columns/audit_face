@@ -1,5 +1,5 @@
  <div class="container">
-   <span class="label label-info">Matching Results for Audits</span>
+   <span class="label label-danger">Matching Results for Audits</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12">
@@ -9,7 +9,11 @@
     </div>
  <br/>
   <% if  @audits == [] %>
+  <div class="container">
+   
   <div class="panel-heading">Search result yielded zero audits </div>
+  
+</div>
   <%else %>
     <% @audits.each do |audit| %>
      <div class="container">
@@ -26,7 +30,7 @@
         <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
         
         <div class="panel-heading">
-        <span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
+        <span class="label label-default">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
             <span class="label label-info pull-right">
   
             <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
@@ -39,6 +43,7 @@
             <%end%> 
            </span>
         </div>
+       
         <div class="panel-body">
           <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
         </div>
@@ -67,7 +72,7 @@
  </div> 
 
 <div class="container">
-   <span class="label label-info">Matching Results for Findings</span>
+   <span class="label label-warning"> Matching results for Findings</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12">
@@ -77,7 +82,11 @@
     </div>
  <br/>
   <% if  @findings == [] %>
-    <div class="panel-heading">Search result yielded zero findings </div>
+      <div class="container">
+   
+  <div class="panel-heading">Search result yielded zero findings </div>
+  
+</div>
   <%else %>
    <% @findings.each do |finding| %>
     <div class="container">
