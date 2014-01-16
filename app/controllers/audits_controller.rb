@@ -107,27 +107,8 @@ class AuditsController < ApplicationController
   end
   
   def export_findings
-# @audits= Audit.paginate(:page => params[:page], :per_page => 3).order('id DESC')
-# respond_to do |format|
-# format.html # index.html.erb
-# format.json { render json: @audits }
-# end
-    # respond_to do |format|
-    # format.pdf { render :layout => false }
-    # end
-    puts "**********action working********************"
-    puts params.inspect
-    puts "***********************************************"
     audit = Audit.find(params[:audit_id].to_i)
-# Prawn::Document.generate("test.pdf") do |pdf|
-# table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
-# [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
-# [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>3. Row example text</b>", :inline_format => true), "342"],
-# [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>4. Row example text</b>", :inline_format => true), "36"]]
 
-# pdf.table(table_data,:width => 500)
-# end
-# send_data("test.pdf", :filename => "test.pdf", :type => "application/pdf")
 # # item = Consolidation.find_all_by_customer_id_and_status(params[:customer_id],true).map do |item|
 # # [
 # # item.settlement_date.strftime("%m/%d/%Y"),
@@ -138,14 +119,27 @@ class AuditsController < ApplicationController
 # item.unshift(["Date","Settlement Amount","ACH Reference"])
  pdf = Prawn::Document.new
     pdf.text "#{audit.department_name}"
-    pdf.move_down 50
-    pdf.text "Start Date" +  audit.start_date.strftime('%Y-%m-%d') + "   End Date" + audit.start_date.strftime('%Y-%m-%d') + "  Audit Risk Rating "+ "    "+ "Status "+ "Not Started" 
+    pdf.move_down 15
+    pdf.font_size 8
+    pdf.text "Start Date : " +  audit.start_date.strftime('%Y-%m-%d') + "   End Date : " + audit.start_date.strftime('%Y-%m-%d') + "  Audit Risk Rating :"+ "    "+ "Status : "+ "Not Started" 
       # pdf.table item, row_colors: ['DDDDDD','EFEFEF'], header: true
-      filename = File.join(Rails.root, "/public", "Settlement_statement.pdf")
+    pdf.move_down 20
+    number=0
+    audit.findings.each do |finding|
+      pdf.text "Finding #{number += 1}"
+      pdf.move_down 5
+      pdf.text "Description: " + finding.description
+      pdf.move_down 5
+      pdf.text "Corrective Action : " + finding.corrective_action
+      pdf.move_down 5
+      pdf.text "Preventive Action : " + finding.preventive_action
+      pdf.move_down 5
+      pdf.text "Finding Risk : " + finding.risk_rating + "      Finding Status : " + finding.status_id
+      pdf.move_down 10
+    end  
+      filename = File.join(Rails.root, "/public", "findings.pdf")
       pdf.render_file filename
-      #Code for direct download
-      send_data pdf.render, :filename => "Settlement_statement.pdf", :type => "application/pdf"
+      
+      send_data pdf.render, :filename => "findings.pdf", :type => "application/pdf"
    end
-   
-  
-end
+ end
