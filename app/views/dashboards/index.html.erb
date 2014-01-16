@@ -40,37 +40,102 @@
            </small>
       </div>
       
-         <div class="col-lg-2">
+  </div>
+</div>
+
+<div class="container">
+    
+    <div class="row-fluid">
+         <div class="col-lg-3">
            <small>
            <div class="panel panel-info">
          <div class="panel-heading">
-         Open Audits
+         Open Audits (30 days +)
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
+           <span class="col-lg-offset-5">
+           <a href class="btn btn-link" data-toggle="modal" data-target="#openaudits">
+           <strong><%= Finding.count %></strong></a>
+            </span>
           </div>
         </div>
              </small>
       </div>
+      
+       <div class="col-lg-3">
+           <small>
+           <div class="panel panel-info">
+         <div class="panel-heading">
+         Upcoming Audits
+         </div>
+          <div class="panel-body">
+           <span class="col-lg-offset-5">
+           <a href class="btn btn-link" data-toggle="modal" data-target="#upcomingaudits">
+           <strong><%= Finding.count %></strong></a>
+            </span>
+          </div>
+        </div>
+             </small>
+      </div>
+      
+             
            
       </div>
           
   </div>
      
+<div class="modal fade" id="openaudits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Open Audits (Greater than 30 days)</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover table-responsive">
+        <thead>
+		
+            <tr style="background:#ecf0f1">
+		    <th> Audit ID</th>
+		    <th>Department name</th>
+            <th>Created Date</th>
+            <th>Auditor</th>
+            <th>Ageing</th>
+ 	        </tr>
+        </thead>
+        
+        <tbody>
+        
+        <tr>
+		<td> 1 </td>
+        <td>Finance</td>
+        <td>23 Dec 2013</td>
+		<td>Vishant Pai</td>
+        <td>38</td>
+        </tr>
 
-  
- 
-<p></p>
-<p></p><br/>
+	    
+        </tbody>
+      </table>
 
-<div class="container">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-<div class="row-fluid">
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-<div class="col-lg-6">
 
-<h5>Upcoming audits</h5>
-
+<div class="modal fade" id="upcomingaudits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Upcoming audits</h4>
+      </div>
+      <div class="modal-body">
 <table class="table table-hover table-responsive">
         <thead>
 		
@@ -96,43 +161,12 @@
 	    
         </tbody>
       </table>
-      
 
-</div>
-
-
-<div class="col-lg-6">
-
-<h5>Open Audits (Greater than 30 days) </h5>
-
-<table class="table table-hover table-responsive">
-        <thead>
-		
-            <tr style="background:#ecf0f1">
-		    <th> Audit ID</th>
-		    <th>Department name</th>
-            <th>Created Date</th>
-            <th>Auditor</th>
-            <th>Ageing</th>
- 	        </tr>
-        </thead>
-        
-        <tbody>
-        
-        <tr>
-		<td> 1 </td>
-        <td>Finance</td>
-        <td>23 Dec 2013</td>
-		<td>Vishant Pai</td>
-        <td>38</td>
-        </tr>
-
-	    
-        </tbody>
-      </table>
-      
-
-</div>
-</div>
-</div>
-
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

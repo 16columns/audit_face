@@ -116,6 +116,9 @@ class AuditsController < ApplicationController
     # format.pdf { render :layout => false }
     # end
     puts "**********action working********************"
+    puts params.inspect
+    puts "***********************************************"
+    audit = Audit.find(params[:audit_id].to_i)
 # Prawn::Document.generate("test.pdf") do |pdf|
 # table_data = [[Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>1. Row example text</b> \n\nExample Text Not Bolded", :inline_format => true), "433"],
 # [Prawn::Table::Cell::Text.new( pdf, [0,0], :content => "<b>2. Row example text</b>", :inline_format => true), "2343"],
@@ -134,7 +137,9 @@ class AuditsController < ApplicationController
 # # end
 # item.unshift(["Date","Settlement Amount","ACH Reference"])
  pdf = Prawn::Document.new
-      pdf.text "Settlement Statement"
+    pdf.text "#{audit.department_name}"
+    pdf.move_down 50
+    pdf.text "Start Date" +  audit.start_date.strftime('%Y-%m-%d') + "   End Date" + audit.start_date.strftime('%Y-%m-%d') + "  Audit Risk Rating "+ "    "+ "Status "+ "Not Started" 
       # pdf.table item, row_colors: ['DDDDDD','EFEFEF'], header: true
       filename = File.join(Rails.root, "/public", "Settlement_statement.pdf")
       pdf.render_file filename
