@@ -57,7 +57,7 @@ class AuditsController < ApplicationController
     
       @all_audits.each do |audit|
              if (audit.start_date.to_i..audit.end_date.to_i).include?(start_date.to_i||end_date.to_i)
-                 @audit.errors[:base] << "Date is already assigned,please select another date "
+               @audit.errors[:base] << "Auditor or auditee is already assigned, please select another date "
                  break
              end
          end
