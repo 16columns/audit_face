@@ -13,7 +13,10 @@ class Audit < ActiveRecord::Base
   validate :cannot_audit_self
 
   def cannot_audit_self
-    self.errors[:base] << "Auditor or Auditee is already assigned, please choose another date." if self.auditee_email == self.auditor_email
+    self.errors[:base] << "You can not audit yourself." if self.auditee_email == self.auditor_email
   end
   
 end
+
+
+
