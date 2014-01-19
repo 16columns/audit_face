@@ -1,12 +1,12 @@
 
 class AuditsController < ApplicationController
-    before_filter :authenticate_user!, only: [:new]
-    require 'prawn'
+    
+      require 'prawn'
   # GET /audits
   # GET /audits.json
   def index
       
-    @audits= Audit.paginate(:page => params[:page], :per_page => 3).order('id DESC')
+    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 3).order('id DESC')
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }
@@ -17,7 +17,7 @@ class AuditsController < ApplicationController
   # GET /audits/1
   # GET /audits/1.json
   def show
-    @audit = Audit.find(params[:id])
+    @audit = current_user.audits.find(params[:id])
     @findings= @audit.findings.paginate(:page => params[:page], :per_page => 7).order('id DESC')
     respond_to do |format|
       format.html # show.html.erb
@@ -29,7 +29,7 @@ class AuditsController < ApplicationController
   # GET /audits/new
   # GET /audits/new.json
   def new
-    @audit = Audit.new
+    @audit = current_user.audits.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,7 +39,7 @@ class AuditsController < ApplicationController
 
   # GET /audits/1/edit
   def edit
-    @audit = Audit.find(params[:id])
+    @audit = current_user.audits.find(params[:id])
     
   end
 
@@ -79,11 +79,11 @@ class AuditsController < ApplicationController
   # PUT /audits/1
   # PUT /audits/1.json
   def update
-    @audit = Audit.find(params[:id])
+    @audit = current_user.audits.find(params[:id])
 
     respond_to do |format|
       if @audit.update_attributes(params[:audit])
-        format.html { redirect_to @audit, notice: 'Audit was successfully updated.' }
+        format.html { redirect_to audits_path, notice: 'Audit was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -96,7 +96,7 @@ class AuditsController < ApplicationController
   # DELETE /audits/1.json
   def destroy
  
-    @audit = Audit.find(params[:id])
+    @audit = current_user.audits.find(params[:id])
     @audit.destroy
   
 
@@ -107,7 +107,7 @@ class AuditsController < ApplicationController
   end
   
   def export_findings
-    audit = Audit.find(params[:audit_id].to_i)
+    audit = current_user.audits.find(params[:audit_id].to_i)
 
 # # item = Consolidation.find_all_by_customer_id_and_status(params[:customer_id],true).map do |item|
 # # [
