@@ -9,5 +9,11 @@ class Audit < ActiveRecord::Base
   validates :start_date, :date => {:before_or_equal_to => :end_date, :message => 'must be before or same as end date' }
   
   self.per_page = 3
+
+  validate :cannot_audit_self
+
+  def cannot_audit_self
+    self.errors[:base] << "Auditor or Auditee is already assigned, please choose another date." if self.auditee_email == self.auditor_email
+  end
   
 end
