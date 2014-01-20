@@ -82,13 +82,10 @@
                    <%= link_to 'Destroy', finding, method: :delete, data: { confirm: 'This action is permanent, are you sure?' } %>
                    </span>
                     <br/><br/>
-                    <p> <label class="badge">
-                      <%= finding.documents%>
-                      <% finding.documents.each do |document| %>
+                    <p> <label class="badge"> Show files here 1 </label> <label class="badge"> Show second file here </label></p>
+                     <% finding.documents.each do |document| %>
                         <%= link_to document.attachment_file_name, document.attachment.url %>
-                      <%end%>
-                      </p>
-                      
+                      <%end%> 
                   </div>  
                       
                   </div>
