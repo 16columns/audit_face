@@ -38,7 +38,6 @@
       <div class="panel-heading">
           <span class="label label-default">Audit  # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
           <span class="label label-success pull-right">
-
           <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
           
             <%= "In Progress" %> 
