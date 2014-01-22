@@ -1,22 +1,21 @@
 <div class="container">
-    
+  
     <div class="row-fluid">
-        
-        
-        <div class="col-lg-2">  
+        <div class="col-lg-2"> 
+   
         <small>
-         <div class="panel panel-info">
-         <div class="panel-heading">         Audits Created         </div>
-           <div class="panel-body">
-           <span class="col-lg-offset-5"><strong><%= current_user.audits.count %></strong></span>
-           </div>
+        <div class="panel panel-default">
+        <div class="panel-heading">         Audits Created         </div>
+        <div class="panel-body">
+        <span class="col-lg-offset-5"><strong><%= current_user.audits.count %></strong></span>
+        </div>
         </div>
         </small>
-      </div>
+    </div>
        
         <div class="col-lg-2">  
           <small>
-         <div class="panel panel-info">
+         <div class="panel panel-default">
          <div class="panel-heading">
          Findings created
          </div>
@@ -29,7 +28,7 @@
           
          <div class="col-lg-2"> 
            <small>
-           <div class="panel panel-info">
+           <div class="panel panel-default">
          <div class="panel-heading">
          CAPA Pending
          </div>
@@ -40,15 +39,9 @@
            </small>
       </div>
       
-  </div>
-</div>
-
-<div class="container">
-    
-    <div class="row-fluid">
-         <div class="col-lg-3">
+      <div class="col-lg-3">
            <small>
-           <div class="panel panel-info">
+           <div class="panel panel-default">
          <div class="panel-heading">
          Open Audits (30 days +)
          </div>
@@ -64,25 +57,24 @@
       
        <div class="col-lg-3">
            <small>
-           <div class="panel panel-info">
+           <div class="panel panel-default">
          <div class="panel-heading">
          Upcoming Audits
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-5">
+           <span class="col-lg-offset-3">
            <a href class="btn btn-link" data-toggle="modal" data-target="#upcomingaudits">
-           <strong><%= Finding.count %></strong></a>
+           <%= Finding.count %></a>
             </span>
           </div>
         </div>
              </small>
       </div>
       
-             
-           
-      </div>
-          
   </div>
+</div>
+
+                                                                           
      
 <div class="modal fade" id="openaudits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

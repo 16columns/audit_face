@@ -75252,3 +75252,3022 @@ Served asset /Alerts.png - 200 OK (93ms)
 
 Started GET "/assets/twitter.png" for 202.87.39.242 at 2014-01-22 09:18:01 +0000
 Served asset /twitter.png - 200 OK (37ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 202.87.39.242 at 2014-01-22 09:37:20 +0000
+Processing by DashboardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` 
+  [1m[36mFinding Load (0.2ms)[0m  [1mSELECT `findings`.* FROM `findings` [0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  Rendered dashboards/index.html.erb within layouts/application (66.4ms)
+Completed 200 OK in 608.1ms (Views: 398.0ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /bootstrap.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (2ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /audits.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /bootstrap.css.map - 200 OK (3ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /dashboards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:21 +0000
+Served asset /findings.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /search.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (116ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /audits.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /moment.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /dashboards.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /search.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:22 +0000
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/audits" for 202.87.39.242 at 2014-01-22 09:37:29 +0000
+Processing by AuditsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1
+  [1m[36mAudit Load (0.3ms)[0m  [1mSELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 ORDER BY id DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mFinding Load (0.3ms)[0m  SELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25
+  Rendered audits/index.html.erb within layouts/application (115.4ms)
+Completed 200 OK in 145.3ms (Views: 141.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /bootstrap.css.map - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:30 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/audits/25" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Processing by AuditsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (9.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mAudit Load (6.8ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 AND `audits`.`id` = 25 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `findings` WHERE `findings`.`audit_id` = 25[0m
+  [1m[35mFinding Load (0.3ms)[0m  SELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25
+  [1m[36mFinding Load (0.3ms)[0m  [1mSELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25 ORDER BY id DESC LIMIT 7 OFFSET 0[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`id` = 25 LIMIT 1
+  [1m[36mDocument Load (0.3ms)[0m  [1mSELECT `documents`.* FROM `documents` WHERE `documents`.`finding_id` = 23[0m
+  Rendered audits/show.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 136.1ms (Views: 113.4ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:42 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:43 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/audits" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Processing by AuditsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 ORDER BY id DESC LIMIT 3 OFFSET 0
+  [1m[36mFinding Load (0.3ms)[0m  [1mSELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25[0m
+  Rendered audits/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 30.0ms (Views: 26.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:51 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:37:52 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/audits" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Processing by AuditsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 ORDER BY id DESC LIMIT 3 OFFSET 0
+  [1m[36mFinding Load (5.6ms)[0m  [1mSELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25[0m
+  Rendered audits/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 63.0ms (Views: 49.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:42 +0000
+Served asset /dashboards.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:40:43 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/audits" for 202.87.39.242 at 2014-01-22 09:41:50 +0000
+Processing by AuditsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (5.0ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 ORDER BY id DESC LIMIT 3 OFFSET 0
+  [1m[36mFinding Load (0.3ms)[0m  [1mSELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25[0m
+  Rendered audits/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 155.5ms (Views: 147.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:50 +0000
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:50 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:41:50 +0000
+Served asset /bootstrap.css.map - 200 OK (3ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (94ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:41:51 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/audits" for 202.87.39.242 at 2014-01-22 09:42:09 +0000
+Processing by AuditsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (7.1ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35mAudit Load (0.3ms)[0m  SELECT `audits`.* FROM `audits` WHERE `audits`.`user_id` = 1 ORDER BY id DESC LIMIT 3 OFFSET 0
+  [1m[36mFinding Load (0.3ms)[0m  [1mSELECT `findings`.* FROM `findings` WHERE `findings`.`audit_id` = 25[0m
+  Rendered audits/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 38.0ms (Views: 27.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:09 +0000
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:09 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /bootstrap.css.map - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /pages.css - 304 Not Modified (81ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:42:10 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 09:44:26 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.3ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.3ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 173.1ms (Views: 153.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:26 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:44:27 +0000
+Served asset /application.js - 304 Not Modified (53ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 09:45:09 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.3ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30.8ms (Views: 26.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:10 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:45:11 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.3ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 34.9ms (Views: 25.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:36 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 09:48:37 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 86.4ms (Views: 81.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:53 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:54 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:54 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:54 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:54 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:00:54 +0000
+Served asset /application.js - 304 Not Modified (112ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:01:07 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.3ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31.4ms (Views: 26.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:08 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:09 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 50.6ms (Views: 46.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /dashboards.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:44 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:01:45 +0000
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 79.1ms (Views: 74.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:04 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:05 +0000
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:02:12 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 35.0ms (Views: 30.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /bootstrap.css.map - 200 OK (11ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:13 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:02:25 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33.6ms (Views: 29.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /bootstrap.css - 200 OK (13ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /dashboards.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:26 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:02:27 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:03:04 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 75.7ms (Views: 71.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:04 +0000
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /bootstrap.css.map - 200 OK (2ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /bootstrap.js - 200 OK (5ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:05 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:03:26 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (4.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 62.9ms (Views: 53.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /dashboards.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:27 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:03:28 +0000
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30.1ms (Views: 26.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:18 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:04:32 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (5.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.3ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.3ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 131.4ms (Views: 118.6ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:33 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:04:34 +0000
+Served asset /application.js - 304 Not Modified (64ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35.7ms (Views: 31.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (43ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:08 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/dashboards" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mAudit Load (0.2ms)[0m  [1mSELECT `audits`.* FROM `audits` [0m
+  [1m[35mFinding Load (0.2ms)[0m  SELECT `findings`.* FROM `findings` 
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `audits` WHERE `audits`.`user_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `findings` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `findings` [0m
+  Rendered dashboards/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 59.7ms (Views: 51.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /bootstrap.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /jquery.fileupload-ui.css - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /dashboards.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /bootstrap-datetimepicker.css - 200 OK (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/findings.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /findings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css.map?body=1" for 202.87.39.242 at 2014-01-22 10:06:34 +0000
+Served asset /bootstrap.css.map - 200 OK (0ms)
+
+
+Started GET "/assets/audits.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /audits.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.css?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /search.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /bootstrap-datetimepicker.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/load-image.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/vendor/load-image.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/vendor/tmpl.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/jquery.iframe-transport.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/jquery.fileupload.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/index.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /jquery-fileupload/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/audits.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /audits.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/moment.min.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /moment.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/search.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /search.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 202.87.39.242 at 2014-01-22 10:06:35 +0000
+Served asset /application.js - 304 Not Modified (4ms)
