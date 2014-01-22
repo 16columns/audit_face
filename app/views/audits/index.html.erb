@@ -5,9 +5,9 @@
     <div class="col-lg-12">
     <%= link_to 'New Audit', new_audit_path, class: "btn btn-success btn-sm" %>
     
-    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"> Import Findings </button>
+    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>
     
-     <%= link_to 'Preview Schedule', new_audit_path, class: "btn btn-info btn-sm", disabled: "disabled" %>
+     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal1"> Preview Schedule </button>
     
     </div>
     </div>
@@ -35,8 +35,8 @@
       <% end  %>
       <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
       
-      <div class="panel-heading">
-          <span class="label label-default">Audit  # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
+         <div class="panel-heading">
+          <span class="label label-default">Audit   # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
           <span class="label label-success pull-right">
           <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
           
@@ -46,7 +46,7 @@
             <%elsif Time.now.to_i > audit.end_date.to_i   %>  
               <%= "Audit Completed" %>
           <%end%> 
-         </span>
+      </span>
       </div>
       <div class="panel-body">
         <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
@@ -85,7 +85,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background:#2980b9">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Upload findings to audits</h4>
       </div>
@@ -134,5 +134,59 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Share audit schedule</h4>
+      </div>
+      <div class="modal-body">
+        <small>
+      <table class="table table-hover table-responsive table-condensed">
+            <thead>
+		
+            <tr style="background:#ecf0f1">
+		        <th> Audit ID</th>
+		        <th>Department</th>
+          
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Auditor</th>
+            <th>Auditee</th>
+            <th>Location</th>
+ 	          </tr>
+            </thead>
+        
+        <tbody>
+        
+        <tr>
+		    <td> 1 </td>
+        <td>Finance</td>
+        
+        <td>23 Dec 2013</td>
+        <td>23 Dec 2013</td>
+		    <td>Vishant Pai</td>
+        <td>Vishal Agarwal</td>
+        <td>Goregoan</td>
+        </tr>
 
+	    
+        </tbody>
+       
+        
+      </table>
+          
+      </small>
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email address, seperate by comma to enter multiple email address">
+      </div>
+      
+      
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">Share</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
