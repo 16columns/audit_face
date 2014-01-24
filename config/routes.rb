@@ -18,7 +18,8 @@ AuditFace::Application.routes.draw do
   resources :search
 
   
-  root :to => "dashboards#index"
+  #root :to => "dashboards#index"
+  root :to => "pages#landing"
   
 get "/pages/*id" => 'pages#show', as: :page, format: false
   get 'pages/landing' => 'high_voltage/pages#show', id: 'landing'

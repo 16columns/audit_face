@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
+  skip_filter :authenticate_user!
   include HighVoltage::StaticPage
 
-  layout :layout_for_page
+ def landing
+   render :layout => 'landing'
+  end  
 
   private
 
