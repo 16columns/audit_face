@@ -67,7 +67,8 @@ class AuditsController < ApplicationController
             format.html { render action: "new" }
             format.json { render json: @audit.errors, status: :unprocessable_entity }
        elsif @audit.save
-         UserMailer.assign_audit(@audit).deliver!
+         UserMailer.assign_audit(@audit,current_user).deliver
+         UserMailer.assign_auditee(@audit,current_user).deliver
         format.html { redirect_to audits_path, notice: 'Audit was successfully created.' }
         format.json { render json: @audit, status: :created, location: @audit }
       else
@@ -99,8 +100,9 @@ class AuditsController < ApplicationController
  
     @audit = current_user.audits.find(params[:id])
     @audit.destroy
-  
-
+    
+    UserMailer.audit_deleted_auditor(@audit,current_user).deliver
+    UserMailer.audit_deleted_auditee(@audit,current_user).deliver
     respond_to do |format|
       format.html { redirect_to audits_url }
       format.json { head :no_content }

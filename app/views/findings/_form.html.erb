@@ -104,7 +104,7 @@
       <div class="input-sm">
     <%#= f.fields_for :document do |document_fields| %>
         
-    <%#= document_fields.input :attachment, as: :file, label: false %>
+      <%#= document_fields.file_field :attachment,name:"attachment", id:"attachment",onchange:"document.getElementById('moreUploadsLink').style.display = 'block';"%>
     
     <%# end %>
     
@@ -113,20 +113,26 @@
     <li><a href="#"> File 2 </a></li>
     <li><a href="#"> File 3 </a></li>
     </ul> -->
-    <% number = 0 %>
+  <% number = 0 %>
     
-
- <%= f.fields_for :documents, @documents do |at_form| %>
-
-      <%= at_form.file_field :attachment %>
-
-    <% end %>
-<%= form_tag "",class:"dropzone",id:"my-awesome-dropzone", multipart: true do |fo|%>
-  <input type="file" name="file" />
-  <%end%>
-
-
+<input type="file" name="attachment" id="attachment" onchange="document.getElementById('moreUploadsLink').style.display = 'block';" />
+<div id="moreUploads"></div>
+<div id="moreUploadsLink" style="display:none;"><a href="javascript:addFileInput();">Attach another File</a></div>
  
+<script type="text/javascript">
+var upload_number = 2;
+function addFileInput() {
+ 	var d = document.createElement("div");
+ 	var file = document.createElement("input");
+ 	file.setAttribute("type", "file");
+ 	file.setAttribute("name", "attachment"+upload_number);
+ 	d.appendChild(file);
+ 	document.getElementById("moreUploads").appendChild(d);
+ 	upload_number++;
+}
+</script>
+
+
   <%#= f.submit %>
    
 

@@ -1,5 +1,5 @@
 class Audit < ActiveRecord::Base
-  attr_accessible :auditee_email, :auditee_name, :auditor_email, :auditor_name, :department_name, :end_date, :start_date, :user_id, :audit_type
+  attr_accessible :auditee_email, :auditee_name, :auditor_email, :auditor_name, :department_name, :end_date, :start_date, :user_id, :audit_type,:location
   belongs_to :user
   has_many :findings, :dependent => :destroy
   

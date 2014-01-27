@@ -54,10 +54,14 @@ class FindingsController < ApplicationController
     @finding = Finding.new(params[:finding])
    # 6.times { @finding.documents.build }
     respond_to do |format|
-      puts "*********finding**************#{@finding.inspect}"    
+      puts "*********finding**************#{@finding.inspect}" 
+      puts "*********attachments**************#{params[:attachment]}" 
     if @finding.save
         # current_user.create_activity @finding, 'created'
-        
+      #  params[:attachment].each do |file|
+      #      @document = Document.new(:document => file)
+      #      @document.save
+      # end
         format.html { redirect_to audits_path, notice: 'Finding was successfully created.' }
         format.json { render json: @finding, status: :created, location: @finding }
       else

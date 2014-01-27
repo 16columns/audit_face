@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   after_create :send_welcome_email
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :profile_name,:mobile_number
   # attr_accessible :title, :body
   has_many :audits
   has_many :activities
