@@ -67,6 +67,7 @@ class AuditsController < ApplicationController
             format.html { render action: "new" }
             format.json { render json: @audit.errors, status: :unprocessable_entity }
        elsif @audit.save
+         UserMailer.assign_audit(@audit).deliver!
         format.html { redirect_to audits_path, notice: 'Audit was successfully created.' }
         format.json { render json: @audit, status: :created, location: @audit }
       else

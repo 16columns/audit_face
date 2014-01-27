@@ -32,7 +32,7 @@ class FindingsController < ApplicationController
     
      @finding = Finding.new(:audit_id => params[:audit_id])
      #@finding.build_document
-      6.times { @finding.documents.build }
+      #5.times { @finding.documents.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,7 +45,7 @@ class FindingsController < ApplicationController
   # GET /findings/1/edit
   def edit
     @finding = Finding.find(params[:id])
-    #6.times { @finding.documents.build }
+ #  5.times { @finding.documents.build }
   end
 
   # POST /findings
@@ -54,7 +54,7 @@ class FindingsController < ApplicationController
     @finding = Finding.new(params[:finding])
    # 6.times { @finding.documents.build }
     respond_to do |format|
-        
+      puts "*********finding**************#{@finding.inspect}"    
     if @finding.save
         # current_user.create_activity @finding, 'created'
         

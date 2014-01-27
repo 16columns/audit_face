@@ -1,3 +1,4 @@
+<%# @documents = @finding.documents.build %>
 <%= simple_form_for(@finding, html: {class: "form-horizontal", multipart: true}) do |f| %>
 <%= f.error_notification %>
 <% if @finding.errors.any? %>
@@ -113,14 +114,21 @@
     <li><a href="#"> File 3 </a></li>
     </ul> -->
     <% number = 0 %>
-<%= f.fields_for :documents do |document_fields| %>
-    <p>
-        <%= document_fields.label "File ##{number +=1}" %>
-        <%= document_fields.file_field :attachment, multiple: true, name: "document[attachments_attributes][][attachment]" %>
-    </p>
-<% end %>
-<%#= f.submit %>
     
+
+ <%= f.fields_for :documents, @documents do |at_form| %>
+
+      <%= at_form.file_field :attachment %>
+
+    <% end %>
+<%= form_tag "",class:"dropzone",id:"my-awesome-dropzone", multipart: true do |fo|%>
+  <input type="file" name="file" />
+  <%end%>
+
+
+ 
+  <%#= f.submit %>
+   
 
 
   <%#= f.file_field :avatar %>
@@ -138,5 +146,6 @@
 </div> 
 </div>
 
-
+        
+      
 <% end %>
