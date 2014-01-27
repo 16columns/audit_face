@@ -1,12 +1,16 @@
 AuditFace::Application.routes.draw do
   
-  resources :dashboards
+  
 
 
   resources :activities, only: [:index]
 
-  devise_for :users
+  devise_for :users 
 
+  #resources :users do 
+  #  resources :dashboards 
+  #end 
+  resources :dashboards
   get "audits/export_findings"
   post "audits/export_findings"
 

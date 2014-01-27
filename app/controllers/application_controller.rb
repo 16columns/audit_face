@@ -12,10 +12,13 @@ class ApplicationController < ActionController::Base
     else
       "application"
       puts "this is my application on cloud9"
-      
-    end
-    
-    
+     end
+   end
+  
+  def after_sign_in_path_for(resource)
+    #user_dashboard_path(resource)
+    #new_audit_finding_path(@audit.id)
+    dashboards_path
     end
   
 
