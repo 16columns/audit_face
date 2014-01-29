@@ -1,44 +1,45 @@
+ <script type="text/javascript" src="//www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
 
 <div class="container">
   
     <div class="row-fluid">
-        <div class="col-lg-2"> 
-   
-        <small>
-        <div class="panel panel-default">
-        <div class="panel-heading">         Audits Created         </div>
-        <div class="panel-body">
-        <span class="col-lg-offset-5"><strong><%= current_user.audits.count %></strong></span>
-        </div>
-        </div>
-        </small>
-    </div>
        
-        <div class="col-lg-2">  
-          <small>
-         <div class="panel panel-default">
-         <div class="panel-heading">
-         Findings created
-         </div>
-          <div class="panel-body">
-           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
-          </div>
-          </div>
-          </small> 
-         </div>
-          
-         <div class="col-lg-2"> 
+       
+        <div class="col-lg-2 col-lg-offset-1">
            <small>
            <div class="panel panel-default">
          <div class="panel-heading">
-         CAPA Pending
+         Audits Created
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-5"><strong><%= Finding.count %></strong></span>
+           <span class="col-lg-offset-3">
+                  <%= Audit.count %>
+            </span>
           </div>
         </div>
-           </small>
+             </small>
       </div>
+      
+      <div class="col-lg-2">
+           <small>
+           <div class="panel panel-default">
+         <div class="panel-heading">
+         Findings Created
+         </div>
+          <div class="panel-body">
+           <span class="col-lg-offset-3">
+           
+             <%= Finding.count %>
+            </span>
+          </div>
+        </div>
+             </small>
+      </div>
+          
+       
       
       <div class="col-lg-3">
            <small>
@@ -75,7 +76,13 @@
   </div>
 </div>
 
-                                                                           
+<div class="container">
+  <div class="row-fluid">
+    <div class="col-lg-5 col-md-5">
+     <div id="visualization" style="width: 400px; height: 200px;"></div> 
+    </div>
+  </div>
+</div>                                                                           
      
 <div class="modal fade" id="openaudits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -163,3 +170,30 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+
+<script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Open', 'InProcess', 'Closed'],
+          ['Jan',  4,   2,       1],
+          ['Feb',  3,  13,      3],
+          ['Mar',  9,   12,      6],
+          ['Apr',  7,   8,       1]
+        ]);
+      
+        // Create and draw the visualization.
+        new google.visualization.ColumnChart(document.getElementById('visualization')).
+            draw(data,
+                 {title:"Audit status(monthly)",
+                  width:700, height:300,
+                  
+                  hAxis: {title: "Month"}}
+            );
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+    </script>
