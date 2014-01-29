@@ -32,6 +32,12 @@ class User < ActiveRecord::Base
       activity
   
   end
+  def self.weekly_update
+      @user = User.all
+      @user.each do |u|
+        UsersMailer.weekly_mail(u).deliver
+    end
+  end
    private
 
     def send_welcome_email

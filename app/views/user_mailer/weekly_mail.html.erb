@@ -1,0 +1,35 @@
+<h3>
+  Dear <%= @user.profile_name %> </h3>
+<div>
+   Here are the details of audit action happening in your 77comply account.
+</div> 
+  
+<div><b>Number of audits:</b> <%= @user.audits.count %></div>
+<div><b>Number of findings:</b> <%= @user.audits.count %></div>
+<div><b>Capa Pending For:</b> <%= @user.audits.count %></div>
+<div><b>Open Audits:</b> <%= @user.audits.count %></div>
+<div><b>Upcoming Audits for next week:</b></div>
+
+  <table>
+    <tr>
+      <th>Audit Id</th>
+      <th>Department Name</th>
+      <th>Location</th>
+      <th>Auditee</th>
+      <th>Auditor</th>
+      <th>Starts on </th>
+    </tr>
+    <tr>
+      <td>row 1, cell 1</td>
+      <td>row 1, cell 2</td>
+      <td>row 1, cell 1</td>
+      <td>row 1, cell 1</td>
+      <td>row 1, cell 1</td>
+      <td>row 1, cell 1</td>
+     </tr>
+    </table>
+
+<div>  
+  <p>From,</p>
+  <p>77 Comply</p>
+ </div> 

@@ -28,4 +28,9 @@ class UserMailer < ActionMailer::Base
     @user = current_user
     mail(:to => audit.auditee_email, :subject => "Notification: Audit cancelled")  
   end
+  
+  def weekly_mail(user)
+    @user = user
+    mail(:to => user.email,  :subject => "Notification: 77comply: Last week status")
+  end
 end
