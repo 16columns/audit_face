@@ -30,7 +30,32 @@ class UserMailer < ActionMailer::Base
   end
   
   def weekly_mail(user)
+    @findings = []
+    @capa_pending_findigs = []
+    last_day_of_week = Time.now - 12.hours
+    first_day_of_week = last_day_of_week - 7.days
+    @audits = user.audits.where('start_date >= ? and start_date <= ?',first_day_of_week, last_day_of_week)
+    user.audits.each do |audit|                 
+		  audit.findings.each do |finding|
+			  findings << finding                     
+		  end
+	  end		
+    findings.each do |finding|
+      if finding.status_id == "CAPA Pending"
+        capa_pending_findigs << finding
+      end
+    end 
+    start_of_next_week = Time.now.beginning_of_day
+    end_of_next_week = start_of_next_week +  7.days
+    @upcoming_audits = user.audits.where('start_date >= ? and start_date <= ?',start_of_next_week, end_of_next_week)
+    
     @user = user
     mail(:to => user.email,  :subject => "Notification: 77comply: Last week status")
+  end
+  def share_audit_schedule(email,current_user)
+    #@audit = audit
+    @user = current_user
+    @audits = current_user.audits.where('start_date > ?',Time.now)
+    mail(:to => email, :subject => "Audit schedule")  
   end
 end

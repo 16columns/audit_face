@@ -133,7 +133,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+<%= simple_form_for("", :url => url_for(:controller => 'audits', :action => 'share_schedule')) do |f| %>
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -151,7 +151,6 @@
             <tr style="background:#ecf0f1">
 		        <th> Audit ID</th>
 		        <th>Department</th>
-          
             <th>Start Date</th>
             <th>End Date</th>
             <th>Auditor</th>
@@ -161,18 +160,18 @@
             </thead>
         
         <tbody>
-        
+          <% @audits_not_started.each do |audit| %>
         <tr>
-		    <td> 1 </td>
-        <td>Finance</td>
+		    <td> <%= audit.id %> </td>
+        <td><%= audit.department_name %></td>
         
-        <td>23 Dec 2013</td>
-        <td>23 Dec 2013</td>
-		    <td>Vishant Pai</td>
-        <td>Vishal Agarwal</td>
-        <td>Goregoan</td>
+        <td><%= audit.start_date.strftime("%d-%m-%y")%></td>
+        <td><%= audit.end_date.strftime("%d-%m-%y")%></td>
+		    <td><%= audit.auditor_name%></td>
+        <td><%= audit.auditee_name%></td>
+        <td><%= audit.location%></td>
         </tr>
-
+        <%end%>
 	    
         </tbody>
        
@@ -180,15 +179,15 @@
       </table>
           
       </small>
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email address, seperate by comma to enter multiple email address">
+        <%= f.text_field :email, :class => 'form-control',:id=>"inputEmail3",:placeholder=>"Email address, seperate by comma to enter multiple email address" %>
       </div>
       
       
       <div class="modal-footer">
-        
-        <button type="button" class="btn btn-primary">Share</button>
+          <%= f.button :submit,"Share", :class => 'btn btn-primary' %>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<% end %>

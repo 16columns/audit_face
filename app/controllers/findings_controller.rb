@@ -55,7 +55,7 @@ class FindingsController < ApplicationController
    # 6.times { @finding.documents.build }
     respond_to do |format|
       puts "*********finding**************#{@finding.inspect}" 
-      puts "*********attachments**************#{params[:attachment]}" 
+      puts "*********attachments**************#{params[:attachment].inspect}" 
     if @finding.save
         # current_user.create_activity @finding, 'created'
       #  params[:attachment].each do |file|

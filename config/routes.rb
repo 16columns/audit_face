@@ -13,7 +13,8 @@ AuditFace::Application.routes.draw do
   resources :dashboards
   get "audits/export_findings"
   post "audits/export_findings"
-
+  get "audits/share_schedule"
+  post "audits/share_schedule"
   resources :audits do
   resources :findings
   

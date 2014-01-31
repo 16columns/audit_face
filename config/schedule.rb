@@ -18,6 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-  every :monday, :at => "10:00pm" do
+  every :monday, :at => "11:59am" do
           runner "User.weekly_update"
   end

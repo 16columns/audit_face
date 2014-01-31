@@ -5,7 +5,7 @@ class AuditsController < ApplicationController
   # GET /audits
   # GET /audits.json
   def index
-      
+    @audits_not_started = current_user.audits.where('start_date > ?',Time.now)      
     @audits= current_user.audits.paginate(:page => params[:page], :per_page => 3).order('id DESC')
     respond_to do |format|
       format.html # index.html.erb
@@ -111,7 +111,7 @@ class AuditsController < ApplicationController
   
   def export_findings
     audit = current_user.audits.find(params[:audit_id].to_i)
-
+   
 # # item = Consolidation.find_all_by_customer_id_and_status(params[:customer_id],true).map do |item|
 # # [
 # # item.settlement_date.strftime("%m/%d/%Y"),
@@ -120,29 +120,85 @@ class AuditsController < ApplicationController
 # # ]
 # # end
 # item.unshift(["Date","Settlement Amount","ACH Reference"])
- pdf = Prawn::Document.new
-    pdf.text "#{audit.department_name}"
-    pdf.move_down 15
-    pdf.font_size 8
-    pdf.text "Start Date : " +  audit.start_date.strftime('%Y-%m-%d') + "   End Date : " + audit.start_date.strftime('%Y-%m-%d') + "  Audit Risk Rating :"+ "    "+ "Status : "+ "Not Started" 
-      # pdf.table item, row_colors: ['DDDDDD','EFEFEF'], header: true
-    pdf.move_down 20
+    pdf = Prawn::Document.new 
+    pdf.font_size 8 
     number=0
+    point = -50
+ #   pdf.bounding_box pdf.bounds.top_left, :width => 500 do
+    
+       pdf.bounding_box [point+50, pdf.cursor+10], :width => 500  do
+         pdf.transparent(1.0) {pdf.stroke_bounds }
+         #pdf.total_left_padding 10                
+         pdf.move_down 5
+       #pdf.pad(60) do 
+         #  pdf.text.margin 0.5
+        # pdf.margin_left (10) do
+         pdf.text "Department Name :"+ audit.department_name 
+         pdf.move_down 5
+         pdf.text "Created On: " + audit.created_at.strftime("%d-%m-%y")
+         pdf.move_down 5
+         pdf.text "Audit Rating : " + "No Rating"
+         pdf.move_down 5
+         pdf.text "Start date: : " + audit.start_date.strftime("%d-%m-%y")
+         pdf.move_down 5
+         pdf.text "End date:  : " + audit.end_date.strftime("%d-%m-%y")
+         pdf.move_down 5
+         pdf.text "Auditor : " + audit.auditor_name
+         pdf.move_down 5
+         pdf.text "Auditee : " + audit.auditee_name
+         pdf.move_down 5
+         pdf.text "Location : " + audit.location.to_s
+         pdf.move_down 5
+         pdf.text "Status : " + ""
+        
+        pdf.transparent(1.0) {pdf.stroke_bounds }
+        pdf.move_down 30
+       #end
+      end
+
     audit.findings.each do |finding|
-      pdf.text "Finding #{number += 1}"
-      pdf.move_down 5
-      pdf.text "Description: " + finding.description
-      pdf.move_down 5
-      pdf.text "Corrective Action : " + finding.corrective_action
-      pdf.move_down 5
-      pdf.text "Preventive Action : " + finding.preventive_action
-      pdf.move_down 5
-      pdf.text "Finding Risk : " + finding.risk_rating + "      Finding Status : " + finding.status_id
-      pdf.move_down 10
+       pdf.text "Finding #{number += 1}"  
+       pdf.move_down 10
+       pdf.bounding_box [point+50, pdf.cursor+1], :width => 500,:padding => 50  do
+        pdf.stroke_bounds 
+        pdf.move_down 5
+        pdf.text "Observation: " + finding.description
+        pdf.move_down 5
+        pdf.text "Corrective Action : " + finding.corrective_action
+        pdf.move_down 5
+        pdf.text "Preventive Action : " + finding.preventive_action
+        pdf.move_down 5
+        pdf.text "Risk Rating : " + finding.risk_rating 
+        pdf.move_down 5 
+        pdf.text "Status : " + finding.status_id
+        pdf.move_down 5
+         pdf.text "Closed On : " + ""
+        pdf.move_down 10
+        #pdf.stroke_bounds 
+        pdf.stroke_bounds 
+        pdf.move_down 30
     end  
+    end
+
+     
+  #  end
+    
       filename = File.join(Rails.root, "/public", "findings.pdf")
       pdf.render_file filename
       
       send_data pdf.render, :filename => "findings.pdf", :type => "application/pdf"
    end
+  
+  def share_schedule
+    puts "************inside desired action*************"
+    puts params.inspect
+    puts "******************************************"
+    emails = params[:email].split(',')
+    emails.each do |email|
+      puts "#{email}"
+      UserMailer.share_audit_schedule(email,current_user).deliver
+    end
+    
+    redirect_to audits_path
+  end
  end
