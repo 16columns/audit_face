@@ -2,9 +2,19 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.json
   def index
-    @audits = Audit.find(:all)
+    @audits = current_user.audits.find(:all)
+    @finding_count =0
+    @open_audits = 0
+    
+    @audits.each do |audit|
+      audit.findings.each do|finding|
+       @finding_count += 1
+        
+      end
+    end
+        
     @findings = Finding.find(:all)
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }

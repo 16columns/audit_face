@@ -75,11 +75,11 @@ class FindingsController < ApplicationController
   # PUT /findings/1.json
   def update
     @finding = Finding.find(params[:id])
-
+    
     respond_to do |format|
-      if @finding.update_attributes(params[:finding])
+      if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
           current_user.create_activity @finding, 'updated'
-        format.html { redirect_to @finding, notice: 'Finding was successfully updated.' }
+        format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

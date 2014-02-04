@@ -16,7 +16,7 @@
          </div>
           <div class="panel-body">
            <span class="col-lg-offset-3">
-                  <%= Audit.count %>
+                  <%= current_user.audits.count %>
             </span>
           </div>
         </div>
@@ -32,7 +32,7 @@
           <div class="panel-body">
            <span class="col-lg-offset-3">
            
-             <%= Finding.count %>
+             <%= @finding_count %>
             </span>
           </div>
         </div>
@@ -50,7 +50,7 @@
           <div class="panel-body">
            <span class="col-lg-offset-5">
            <a href class="btn-link" data-toggle="modal" data-target="#openaudits">
-           <%= Finding.count %></a>
+           <%#= Finding.count %></a>
             </span>
           </div>
         </div>
