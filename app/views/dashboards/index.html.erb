@@ -66,7 +66,7 @@
           <div class="panel-body">
            <span class="col-lg-offset-3">
            <a href class="btn-link" data-toggle="modal" data-target="#upcomingaudits">
-           <%= Finding.count %></a>
+           <%= @upcoming_audits.count %></a>
             </span>
           </div>
         </div>
@@ -81,6 +81,13 @@
     <div class="col-lg-5 col-md-5">
      <div id="visualization" style="width: 400px; height: 200px;"></div> 
     </div>
+    
+  </div>
+  <div class="row-fluid">
+    <div class="col-lg-5 col-md-5">
+     <div id="pie-visualization" style="width: 400px; height: 200px;"></div> 
+    </div>
+    
   </div>
 </div>                                                                           
      
@@ -195,5 +202,24 @@
       }
       
 
+      function drawPieVisualization() {
+        var data = google.visualization.arrayToDataTable([
+          ['Findings', 'Months'],
+          ['CAPA Pending',     6],
+          ['CAPA Submitted',      5],
+          ['Closed',  4],
+        ]);
+
+        var options = {
+          title: 'Findings status(monthly)'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('pie-visualization'));
+        chart.draw(data, options);
+      }
+
+  
+  
       google.setOnLoadCallback(drawVisualization);
+      google.setOnLoadCallback(drawPieVisualization);
     </script>

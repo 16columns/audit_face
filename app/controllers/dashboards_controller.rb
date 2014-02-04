@@ -3,8 +3,10 @@ class DashboardsController < ApplicationController
   # GET /dashboards.json
   def index
     @audits = current_user.audits.find(:all)
+    
     @finding_count =0
     @open_audits_count = 0
+    @upcoming_audits = 0
     
     @audits.each do |audit|
       audit.findings.each do|finding|
@@ -20,6 +22,8 @@ class DashboardsController < ApplicationController
         end 
       end
     end
+    
+    @upcoming_audits = current_user.audits.where('start_date >= ?',Time.now)
     
     @findings = Finding.find(:all)
     
