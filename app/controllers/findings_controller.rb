@@ -96,7 +96,7 @@ class FindingsController < ApplicationController
 
     respond_to do |format|
         current_user.create_activity @finding, 'destroyed'
-      format.html { redirect_to findings_url }
+      format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -4,15 +4,23 @@ class DashboardsController < ApplicationController
   def index
     @audits = current_user.audits.find(:all)
     @finding_count =0
-    @open_audits = 0
+    @open_audits_count = 0
     
     @audits.each do |audit|
       audit.findings.each do|finding|
-       @finding_count += 1
-        
+        @finding_count += 1       
       end
     end
-        
+    
+    @audits.each do |audit|
+      audit.findings.each do|finding|
+        if finding.status_id != "Closed"
+          @open_audits_count += 1
+          break
+        end 
+      end
+    end
+    
     @findings = Finding.find(:all)
     
     respond_to do |format|
