@@ -39,8 +39,13 @@ margin-top:15px;
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 <div class="container">
+  <div class="panel panel-default">
+  <div class="panel-heading">Modify Profile</div>
+  <div class="panel-body">
+     <div><%= f.label :profile_name %><br />
+  <%= f.email_field :profile_name, :autofocus => true %></div>
   <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= f.email_field :email %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -58,11 +63,17 @@ margin-top:15px;
   <div><%= f.submit "Update" %></div>
 <% end %>
 </div>
+  </div>
+</div>
+ 
+<div class="page-header">
+  
+</div>
 
 <div class="container">
-<h3>Cancel my account</h3>
+<h5>Cancel my account</h5>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Terrible things may happen if You cancel your account, you risk loosing all your data" }, :method => :delete %></p>
 
 </div>
 <%= link_to "Back", :back %>

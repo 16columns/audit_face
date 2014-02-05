@@ -4,7 +4,7 @@ class Audit < ActiveRecord::Base
   has_many :findings, :dependent => :destroy
   
   validates :department_name, :auditee_name, :auditee_email, :auditor_name, 
-            :auditor_email, :presence => true
+            :auditor_email, :location, :presence => true
             
   validates :start_date, :date => {:before_or_equal_to => :end_date, :message => 'must be before or same as end date' }
   

@@ -12,10 +12,10 @@
            <small>
            <div class="panel panel-default">
          <div class="panel-heading">
-         My Audits
+           <strong> My Audits </strong>
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-3">
+           <span class="col-lg-offset-4">
                   <%= current_user.audits.count %>
             </span>
           </div>
@@ -27,10 +27,10 @@
            <small>
            <div class="panel panel-default">
          <div class="panel-heading">
-         My Findings
+           <strong>My Findings</strong>
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-3">
+           <span class="col-lg-offset-4">
            
              <%= @finding_count %>
             </span>
@@ -48,7 +48,7 @@
          Open Audits (30 days +)
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-5">
+           <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#openaudits">
            <%= @open_audits_count %></a>
             </span>
@@ -64,7 +64,7 @@
          Upcoming Audits
          </div>
           <div class="panel-body">
-           <span class="col-lg-offset-3">
+           <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#upcomingaudits">
            <%= @upcoming_audits.count %></a>
             </span>
@@ -202,7 +202,7 @@
         // Create and draw the visualization.
         new google.visualization.ColumnChart(document.getElementById('visualization')).
             draw(data,
-                 {title:"Audit status(monthly)",
+                 {title:"Monthly Audit Status",
                   width:700, height:300,
                   
                   hAxis: {title: "Month"}}
@@ -219,7 +219,7 @@
         ]);
 
         var options = {
-          title: 'Findings status(monthly)'
+          title: 'Overall finding status'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('pie-visualization'));
