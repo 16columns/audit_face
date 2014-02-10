@@ -10,6 +10,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-1.11.0.js
 //= require jquery_ujs
 //= require bootstrap-datetimepicker
 //= require jquery-fileupload

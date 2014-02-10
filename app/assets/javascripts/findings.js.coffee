@@ -1,0 +1,43 @@
+$(document).delegate('.add-list', 'click', (evt) ->
+  date = new Date()
+  $('#list-table').append(template.replace(':id', Number(date)))
+  $('#list-' + Number(date)).fadeIn()
+)
+
+$(document).delegate('.remove-list', 'click', (evt) ->
+  $(this).parent().parent().parent().fadeOut((evt) ->
+    $(this).remove()
+  )
+)
+$(document).delegate('.change-file-list', 'click', (evt) ->
+  $(this).next().trigger('click')
+)
+
+$(document).delegate('.file-input-list', 'change', (evt) ->
+  if (this.files and this.files[0])
+    input = this
+    reader = new FileReader()
+    reader.onload = (e) ->
+      filename = input.value.split(/(\\|\/)/g).pop()
+      img = $(input).prev().prev()
+      $(img).attr('src', e.target.result)
+      $(img).attr('alt', filename)
+    reader.readAsDataURL(input.files[0])
+)
+
+
+template = "
+<tr id='list-:id' style='display: none;'>
+  <td style='width: 83px;'>
+    <div class='form-group' style='text-align: center;'>
+      <img src='/assets/default.png' width='83' height='83'>
+      <a href='javascript:void(0)' class='change-file-list btn btn-mini'>Choose File</a>
+      <input class='hidden file-input-list' id='widget_content_widget_lists_attributes_:id_img' name='widget_content[widget_lists_attributes][:id][img]' type='file'>
+    </div>
+  </td>
+  <td style='vertical-align: middle;' >
+    <div class='form-group'>
+      <a href='javascript:void(0)' class='remove-list'>Remove</a>
+    </div>
+  </td>
+ </tr>"
