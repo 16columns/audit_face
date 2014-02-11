@@ -51,11 +51,13 @@ class FindingsController < ApplicationController
   # POST /findings
   # POST /findings.json
   def create
+  #  @content = current_user.widget_contents.build(params[:widget_content])
     @finding = Finding.new(params[:finding])
-   # 6.times { @finding.documents.build }
+    @finding.documents.build
+    puts "*********params inspect**************#{params.inspect}" 
     respond_to do |format|
-      puts "*********finding**************#{@finding.inspect}" 
-      puts "*********attachments**************#{params[:attachment].inspect}" 
+    #  puts "*********finding**************#{@finding.inspect}" 
+    #  puts "*********attachments**************#{params[:attachment].inspect}" 
     if @finding.save
         # current_user.create_activity @finding, 'created'
       #  params[:attachment].each do |file|

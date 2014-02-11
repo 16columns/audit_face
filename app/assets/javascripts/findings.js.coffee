@@ -32,7 +32,7 @@ template = "
     <div class='form-group' style='text-align: center;'>
       <img src='/assets/default.png' width='83' height='83'>
       <a href='javascript:void(0)' class='change-file-list btn btn-mini'>Choose File</a>
-      <input class='hidden file-input-list' id='widget_content_widget_lists_attributes_:id_img' name='widget_content[widget_lists_attributes][:id][img]' type='file'>
+      <input class='hidden file-input-list' id='finding_documents_attributes_:id_attachment' name='finding[documents_attributes][:id][attachment]' type='file'>
     </div>
   </td>
   <td style='vertical-align: middle;' >
