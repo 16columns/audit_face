@@ -1,6 +1,6 @@
 $(document).delegate('.add-list', 'click', (evt) ->
   date = new Date()
-  $('#list-table').append(template.replace(':id', Number(date)))
+  $('#list-table').append(template.replaceAll(':id', Number(date)))
   $('#list-' + Number(date)).fadeIn()
 )
 
@@ -29,10 +29,11 @@ $(document).delegate('.file-input-list', 'change', (evt) ->
 template = "
 <tr id='list-:id' style='display: none;'>
   <td style='width: 83px;'>
-    <div class='form-group' style='text-align: center;'>
-      <img src='/assets/default.png' width='83' height='83'>
+    <div class='form-group' style='text-align: center;padding-right:50px'>
+      <img src='/assets/default.png' width='140' height='100'>
       <a href='javascript:void(0)' class='change-file-list btn btn-mini'>Choose File</a>
       <input class='hidden file-input-list' id='finding_documents_attributes_:id_attachment' name='finding[documents_attributes][:id][attachment]' type='file'>
+        
     </div>
   </td>
   <td style='vertical-align: middle;' >
@@ -41,3 +42,9 @@ template = "
     </div>
   </td>
  </tr>"
+  
+String.prototype.replaceAll = (search, replace) ->
+  if(!replace)
+      return this
+  return this.replace(new RegExp(search, 'g'), replace)
+  

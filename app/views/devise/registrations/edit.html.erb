@@ -45,8 +45,9 @@ margin-top:15px;
      <div><%= f.label :profile_name %><br />
   <%= f.email_field :profile_name, :autofocus => true %></div>
   <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
+    <%= f.email_field :email,:disabled => true %></div>
+    <div><%= f.label :Phone %><br />
+    <%= f.email_field :mobile_number %></div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

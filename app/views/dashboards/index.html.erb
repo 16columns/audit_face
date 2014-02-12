@@ -146,7 +146,7 @@
         <h4 class="modal-title" id="myModalLabel">Upcoming audits</h4>
       </div>
       <div class="modal-body">
-<table class="table table-hover table-responsive">
+        <table class="table table-hover table-responsive">
         <thead>
 		
             <tr style="background:#ecf0f1">
@@ -159,15 +159,15 @@
         </thead>
         
         <tbody>
-        
-        <tr>
-		<td> 1 </td>
-        <td>Finance</td>
-        <td>23 Dec 2013</td>
-		<td>Vishant Pai</td>
-        <td>27 Jan 2014</td>
-        </tr>
-
+        <% @upcoming_audits.each do |audit| %>
+          <tr>
+          <td><%= audit.id %> </td>
+          <td><%= audit.department_name %></td>
+          <td><%= audit.created_at.strftime("%d-%m-%y") %></td>
+          <td><%= audit.auditor_name %></td>
+          <td><%= audit.start_date.strftime("%d-%m-%y") %></td>
+          </tr>
+        <%end%>
 	    
         </tbody>
       </table>

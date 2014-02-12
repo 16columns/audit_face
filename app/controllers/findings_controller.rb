@@ -53,7 +53,8 @@ class FindingsController < ApplicationController
   def create
   #  @content = current_user.widget_contents.build(params[:widget_content])
     @finding = Finding.new(params[:finding])
-    @finding.documents.build
+    #@finding.documents.build
+    
     puts "*********params inspect**************#{params.inspect}" 
     respond_to do |format|
     #  puts "*********finding**************#{@finding.inspect}" 
@@ -77,7 +78,9 @@ class FindingsController < ApplicationController
   # PUT /findings/1.json
   def update
     @finding = Finding.find(params[:id])
-    
+    puts "***********update action************"
+    puts params.inspect
+    puts "***************************************"
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
           current_user.create_activity @finding, 'updated'
