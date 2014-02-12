@@ -115,15 +115,15 @@
         </thead>
         
         <tbody>
-        
+        <% @open_audits.each do |audit| %>
         <tr>
-		<td> 1 </td>
-        <td>Finance</td>
-        <td>23 Dec 2013</td>
-		<td>Vishant Pai</td>
-        <td>38</td>
+          <td><%= audit.id %> </td>
+          <td><%= audit.department_name %></td>
+          <td><%= audit.created_at.strftime("%d-%m-%y") %></td>
+          <td><%= audit.auditor_name %></td>
+          <td>38</td>
         </tr>
-
+        <%end%>
 	    
         </tbody>
       </table>
