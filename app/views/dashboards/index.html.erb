@@ -188,7 +188,8 @@
         // Create and populate the data table.
         //   alert("<%= current_user.audits %>")
         var dataTable = new google.visualization.DataTable();
-         var newData = [['Year', 'Sales', 'Expenses' , 'Other'],
+        months = ['Jan','Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct', 'Nov','Dec']
+         var newData = [['Month', 'Open', 'In Progress' , 'Closed'],
             ['2004',  1000,      400     ,  232   ],
             ['2005',  1170,      460    ,  421   ],
             ['2006',  660,       1120    ,  4324  ],
@@ -197,8 +198,9 @@
         
           // determine the number of rows and columns.
           var numRows = newData.length;
+        //alert("number of rows"+ numRows );
           var numCols = newData[0].length;
-        
+        //alert("number of cols"+ numCols );
           // in this case the first column is of type 'string'.
           dataTable.addColumn('string', newData[0][0]);
         
@@ -208,9 +210,7 @@
         
           // now add the rows.
           for (var i = 1; i < numRows; i++) 
-            dataTable.addRow(newData[i]);
-         
-        
+            dataTable.addRow(newData[i]);     
         
         var data = google.visualization.arrayToDataTable([
           ['month', 'open', 'in progress', 'closed'],   
@@ -229,8 +229,16 @@
         ]);
       
         // Create and draw the visualization.
+        var dataTable1 = new google.visualization.DataTable();
+        dataTable1.addColumn('string', 'Month')
+        dataTable1.addColumn('number', 'Open')
+        dataTable1.addColumn('number', 'In Progress')
+        dataTable1.addColumn('number', 'Closed')
+        for (var i = 0; i < months.length; i++) 
+            dataTable1.addRows([[months[i], 1,1,1]]);  
+        
         new google.visualization.ColumnChart(document.getElementById('visualization')).
-            draw(dataTable,
+            draw(dataTable1,
                  {title:"Monthly Audit Status",
                   width:1000, height:300,
                   
