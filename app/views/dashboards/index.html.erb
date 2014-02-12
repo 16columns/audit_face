@@ -121,7 +121,7 @@
           <td><%= audit.department_name %></td>
           <td><%= audit.created_at.strftime("%d-%m-%y") %></td>
           <td><%= audit.auditor_name %></td>
-          <td>38</td>
+          <td><%= (Time.now.to_date - finding.created_at.to_date).to_i %></td>
         </tr>
         <%end%>
 	    

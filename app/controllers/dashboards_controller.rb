@@ -17,7 +17,7 @@ class DashboardsController < ApplicationController
     
     @audits.each do |audit|
       audit.findings.each do|finding|
-        if finding.status_id != "Closed"
+        if finding.status_id != "Closed" && (Time.now.to_date - finding.created_at.to_date).to_i >=30
           @open_audits_count += 1
           @open_audits << audit
           break
