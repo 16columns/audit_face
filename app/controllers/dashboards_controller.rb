@@ -48,6 +48,7 @@ class DashboardsController < ApplicationController
     #audits.each do |audit|
     #  @data_table.add_row([audit.created_at, audit.start_date, audit.start_date, audit.start_date])
     #end
+   
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }
