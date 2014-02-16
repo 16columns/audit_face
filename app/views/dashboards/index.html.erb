@@ -87,8 +87,32 @@
   <div class="page-header"></div>
   <div class="container">
   <div class="row-fluid">
-    <div class="col-lg-5 col-md-5">
+    <div class="col-lg-6 col-md-6">
      <div id="pie-visualization" style="width: 500px; height: 300px;"></div> 
+    </div>
+    
+    <div class="col-lg-5 col-md-5">
+   <small>
+           <div class="panel panel-default">
+         <div class="panel-heading">
+         CAPA Pending
+         </div>
+          <div class="panel-body">
+            <select class="form-control">
+  <option>--Select Audit--</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+            
+           <span class="col-lg-offset-6">
+           <a href class="btn-link" data-toggle="modal" data-target="#capapending">
+            <h3> <%= @upcoming_audits.count %> CAPA yet to be submitted</h3></a>
+            </span>
+          </div>
+        </div>
+             </small> 
     </div>
     
   </div>
@@ -181,7 +205,48 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="capapending" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">CAPA pending</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover table-responsive">
+        <thead>
+		
+            <tr style="background:#ecf0f1">
+		    <th> Finding ID</th>
+		    <th>Auditor</th>
+             <th>Created date</th>
+            <th>Tentative closure date</th>
+ 	        </tr>
+        </thead>
+        
+        <tbody>
+        <% @upcoming_audits.each do |audit| %>
+          <tr>
+          <td><%= audit.id %> </td>
+          <td><%= audit.auditor_name %></td>
+          <td><%= audit.created_at.strftime("%d-%m-%y") %></td>
+          
+          <td><%= audit.start_date.strftime("%d-%m-%y") %></td>
+          </tr>
+        <%end%>
+	    
+        </tbody>
+      </table>
 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info">Follow up with auditee</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script type="text/javascript">
       function drawVisualization() {
