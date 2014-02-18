@@ -31,6 +31,7 @@ class FindingsController < ApplicationController
    
     
      @finding = Finding.new(:audit_id => params[:audit_id])
+ #  @finding.documents.build
      #@finding.build_document
       #5.times { @finding.documents.build }
 
@@ -83,7 +84,22 @@ class FindingsController < ApplicationController
     puts "***************************************"
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
-          current_user.create_activity @finding, 'updated'
+        updated_docs = []
+        if params[:finding][:documents_attributes] != nil
+          
+          doc_ids = @finding.documents.map{|x| x.id}
+          params[:finding][:documents_attributes].each do |index, value|
+             updated_docs << value[:id]
+          end  
+        updated_docs =updated_docs.map{|s| s.to_i}
+        puts "*****updated docs******#{updated_docs}"
+      end
+        deleted_docs = doc_ids - updated_docs
+        puts "*********these docs are removed***********#{deleted_docs}"
+       #Document.where(:id => deleted_docs.map(:id)).each { |object| object.destroy }  
+          Document.delete deleted_docs.map { |u| u }
+        
+        current_user.create_activity @finding, 'updated'
         format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully updated.' }
         format.json { head :no_content }
       else

@@ -41,8 +41,8 @@
       <%#= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
         
        <%= f.hidden_field :audit_id, :value => params[:audit_id].to_i %>
-      <%= f.input :description, :input_html=>{:rows=>10}, length: 12, :autofocus => true %>
-    
+       <%= f.input :description, :input_html=>{:rows=>10}, length: 12, :autofocus => true %>
+     <!--<textarea name="content" data-provide="markdown" rows="10"></textarea>-->
       
      </div>
       </div>
