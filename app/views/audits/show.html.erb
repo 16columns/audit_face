@@ -84,8 +84,9 @@
                      |
                      <%#= hidden_field_tag :audit_id , params[:id] %>
                       <%= link_to 'Modify', edit_finding_path(finding,:audit_id => params[:id]) %> |
-                   <%= link_to 'Destroy', finding, method: :delete, data: { confirm: 'This action is permanent, are you sure?' } %>
+                   <%= link_to 'Destroy', finding_path(finding,:audit_id => params[:id]), method: :delete, data: { confirm: 'This action is permanent, are you sure?' } %>
                    </span>
+                    
                     <br/><br/>
                     <p><% finding.documents.each do |document| %> <label class="badge">
                         <%= link_to document.attachment_file_name, document.attachment.url %>
