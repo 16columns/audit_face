@@ -1,6 +1,6 @@
 
 class AuditsController < ApplicationController
-    
+     before_filter :check_audit_status, :only => [:edit,:update]
       require 'prawn'
   # GET /audits
   # GET /audits.json
@@ -190,9 +190,6 @@ class AuditsController < ApplicationController
    end
   
   def share_schedule
-    puts "************inside desired action*************"
-    puts params.inspect
-    puts "******************************************"
     emails = params[:email].split(',')
     emails.each do |email|
       puts "#{email}"
@@ -201,4 +198,15 @@ class AuditsController < ApplicationController
     
     redirect_to audits_path
   end
+  
+  private
+      def check_audit_status
+        puts "**************check audit status called**********************"
+        audit = current_user.audits.find(params[:id])
+        puts "***********audit is *************#{audit.inspect}"
+        if  !(audit.start_date.to_i > Time.now.to_i)
+          redirect_to "/404.html"
+          
+        end
+      end
  end

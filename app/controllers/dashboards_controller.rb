@@ -2,7 +2,7 @@ class DashboardsController < ApplicationController
   # GET /dashboards
   # GET /dashboards.json
   def index
-    @audits = current_user.audits.find(:all)
+    @audits = current_user.audits.where("auditor_email = ? or secondry_auditor_email = ? ", current_user.email,current_user.email)
     
     @finding_count =0
     @open_audits_count = 0

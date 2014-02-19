@@ -1,5 +1,5 @@
 class FindingsController < ApplicationController
-    
+ 
  
   # GET /findings
   # GET /findings.json
@@ -52,21 +52,12 @@ class FindingsController < ApplicationController
   # POST /findings
   # POST /findings.json
   def create
-  #  @content = current_user.widget_contents.build(params[:widget_content])
     @finding = Finding.new(params[:finding])
-    #@finding.documents.build
-    
     puts "*********params inspect**************#{params.inspect}" 
     respond_to do |format|
-    #  puts "*********finding**************#{@finding.inspect}" 
-    #  puts "*********attachments**************#{params[:attachment].inspect}" 
     if @finding.save
         # current_user.create_activity @finding, 'created'
-      #  params[:attachment].each do |file|
-      #      @document = Document.new(:document => file)
-      #      @document.save
-      # end
-        format.html { redirect_to audits_path, notice: 'Finding was successfully created.' }
+          format.html { redirect_to "/audits/#{params[:finding][:audit_id]}", notice: 'Finding was successfully created.' }
         format.json { render json: @finding, status: :created, location: @finding }
       else
         format.html { render action: "new" }
@@ -116,11 +107,15 @@ class FindingsController < ApplicationController
   def destroy
     @finding = Finding.find(params[:id])
     @finding.destroy
-
+    puts "****************************"
+    puts params.inspect
+    puts "*******************************"
     respond_to do |format|
-        current_user.create_activity @finding, 'destroyed'
+        #current_user.create_activity @finding, 'destroyed'
       format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully deleted.' }
       format.json { head :no_content }
     end
   end
+  
+
 end
