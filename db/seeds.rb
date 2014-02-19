@@ -22,3 +22,6 @@ Risk.create(risk_name: 'No Risk')
 FindingStatus.create(status_name: 'CAPA Pending')
 FindingStatus.create(status_name: 'CAPA Submitted')
 FindingStatus.create(status_name: 'Closed')
+
+status = FindingStatus.find_by_status_name('CAPA Submitted')
+status.update_attributes!(:status_name => 'Under Review')
