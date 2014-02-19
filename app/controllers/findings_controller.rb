@@ -84,7 +84,7 @@ class FindingsController < ApplicationController
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
           current_user.create_activity @finding, 'updated'
-        format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully updated.' }
+        format.html { redirect_to "/audits/#{params[:finding][:audit_id]}", notice: 'Finding was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
