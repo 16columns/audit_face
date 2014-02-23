@@ -96,9 +96,9 @@
     
     <div class="form-input">
     <div class="col-xs-12">
-    
-     <%= f.input :corrective_action, :input_html=>{:rows=>6} %>
-     <%= f.input :preventive_action, :input_html=>{:rows=>6} %>
+     <%= f.label :corrective_action, "Corrective and Preventive Action" %>
+      <%= f.text_area :corrective_action, :rows => 10, :cols => 60 %>
+     <!--<%#= f.input :preventive_action, :input_html=>{:rows=>6} %>-->
       
     </div>
     </div>
