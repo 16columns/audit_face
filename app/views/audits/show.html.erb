@@ -132,7 +132,7 @@
     </div>
   </div>
 </div>   
-      <script type"text/javascript">
+ <script type"text/javascript">
   $(document).ready(function() {
 
   $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
@@ -142,26 +142,20 @@
     if (typeof $(this).data('id') !== 'undefined') {
   
       data_id = $(this).data('id');
-      alert(data_id)  ;
     }
     $.ajax({
         type: "POST",
         dataType: "json",
         url: "find_capa?finding_id="+data_id,
       success: function(data){
-      alert("getting success");
-        alert(data);
-        // var myJSONObject = JSON.parse(data);
-        //alert(myJSONObject);
-        //      document.getElementById('finding').innerHTML = data ;
-                               },
-  error: function(){
-    alert('failure');
+       document.getElementById('finding').innerHTML = data ;
+      },
+    error: function(){
+      document.getElementById('finding').innerHTML = "CAPA Missing Error" ;
   }
     }); 
    
   })
 });    
-   
-      </script>
+</script>
 
