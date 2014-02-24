@@ -198,7 +198,16 @@ class AuditsController < ApplicationController
     
     redirect_to audits_path
   end
-  
+  def find_capa
+    puts "action called*************************"
+    puts params.inspect
+    puts "********************************"
+    @capa = Finding.find(params[:finding_id])
+    respond_to do |format|
+     # format.html # show.html.erb
+      format.json { render json:  @capa }
+    end
+  end
   private
       def check_audit_status
         puts "**************check audit status called**********************"
