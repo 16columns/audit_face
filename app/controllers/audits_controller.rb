@@ -67,8 +67,8 @@ class AuditsController < ApplicationController
             format.html { render action: "new" }
             format.json { render json: @audit.errors, status: :unprocessable_entity }
        elsif @audit.save
-         UserMailer.assign_audit(@audit,current_user).deliver
-         UserMailer.assign_auditee(@audit,current_user).deliver
+         UserMailer.assign_audit(@audit,@audit.auditor_email,current_user).deliver
+         UserMailer.assign_auditee(@audit,@audit.auditee_email,current_user).deliver
         format.html { redirect_to audits_path, notice: 'Audit was successfully created.' }
         format.json { render json: @audit, status: :created, location: @audit }
       else
@@ -82,7 +82,15 @@ class AuditsController < ApplicationController
   # PUT /audits/1.json
   def update
     @audit = current_user.audits.find(params[:id])
-
+  
+    if @audit.auditor_email != params[:audit][:auditor_email]
+       UserMailer.audit_deleted_auditor(@audit,current_user).deliver
+       UserMailer.assign_audit(@audit,params[:audit][:auditor_email],current_user).deliver       
+    end  
+    if @audit.auditee_email != params[:audit][:auditee_email]
+      UserMailer.audit_deleted_auditee(@audit,current_user).deliver     
+      UserMailer.assign_auditee(@audit,params[:audit][:auditee_email],current_user).deliver
+    end  
     respond_to do |format|
       if @audit.update_attributes(params[:audit])
         format.html { redirect_to audits_path, notice: 'Audit was successfully updated.' }
@@ -196,25 +204,18 @@ class AuditsController < ApplicationController
       UserMailer.share_audit_schedule(email,current_user).deliver
     end
     
-    redirect_to audits_path
+    redirect_to audits_path,:notice => "Audit Schedule shared."
   end
   def find_capa
-    puts "action called*************************"
-    puts params.inspect
-    puts "********************************"
     @capa = Finding.find(params[:finding_id]).corrective_action
     respond_to do |format|
      # format.html # show.html.erb
-      puts "**************json***********start*********"
-      format.json { render json:  @capa.to_json }
-      puts "**************json***********end****#{@capa}*****"
+     format.json { render json:  @capa.to_json }
     end
   end
   private
       def check_audit_status
-        puts "**************check audit status called**********************"
         audit = current_user.audits.find(params[:id])
-        puts "***********audit is *************#{audit.inspect}"
         if  !(audit.start_date.to_i > Time.now.to_i)
           redirect_to "/404.html"
           
