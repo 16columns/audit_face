@@ -151,10 +151,13 @@
       success: function(data){
       alert("getting success");
         alert(data);
-     var myJSONObject = JSON.parse(data);
+        // var myJSONObject = JSON.parse(data);
         //alert(myJSONObject);
-                     document.getElementById('finding').innerHTML = data ;
-                               }
+        //      document.getElementById('finding').innerHTML = data ;
+                               },
+  error: function(){
+    alert('failure');
+  }
     }); 
    
   })

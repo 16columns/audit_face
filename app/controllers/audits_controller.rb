@@ -206,7 +206,7 @@ class AuditsController < ApplicationController
     respond_to do |format|
      # format.html # show.html.erb
       puts "**************json***********start*********"
-      format.json { render json:  @capa }
+      format.json { render json:  @capa.to_json }
       puts "**************json***********end****#{@capa}*****"
     end
   end
