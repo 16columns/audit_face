@@ -202,10 +202,12 @@ class AuditsController < ApplicationController
     puts "action called*************************"
     puts params.inspect
     puts "********************************"
-    @capa = Finding.find(params[:finding_id])
+    @capa = Finding.find(params[:finding_id]).corrective_action
     respond_to do |format|
      # format.html # show.html.erb
+      puts "**************json***********start*********"
       format.json { render json:  @capa }
+      puts "**************json***********end****#{@capa}*****"
     end
   end
   private

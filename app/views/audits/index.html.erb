@@ -3,13 +3,13 @@
    <div class="container">
     <div class="row-fluid">
     <div class="col-lg-12">
-    <%= link_to 'New Audit', new_audit_path, class: "btn btn-success btn-sm" %>
+    <%= link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
     
 
    <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
 
     
-     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal1"> Preview Schedule </button>
+     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1"> Preview Schedule </button>
     
     </div>
     </div>
@@ -26,7 +26,7 @@
    <% @audits.each do |audit| %>
    <div class="container">
    <div class="row-fluid">
-   <div class="col-lg-7">
+   <div class="col-lg-6 col-md-6">
    
     <small>
       <div class="panel panel-default">
@@ -64,26 +64,29 @@
                      <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn", method: :delete, data: { Confirm: "Are you sure"} %> |
                       <%= link_to " View Finding", audit, class: "btn btn-info btn-xs disabled" %>
                     <i class="fa fa-share-square-o fa-lg"></i>
-                      <%= link_to " Create Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
+                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
                     <% else %>  
                      <%= link_to " Modify", edit_audit_path(audit), class: "btn disabled" %>  |
                      <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
                       <%= link_to " View Finding", audit, class: "btn btn-info btn-xs" %>
                     <i class="fa fa-share-square-o fa-lg"></i>
-                      <%= link_to " Create Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right" %>  
+                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right" %>  
                     <%end%>  
                      </p>
                          
                      </div>
                      </div>
                </div> 
-    
+    <div class="page-header"></div>
         </div>
 
 
     </small>
+
  </div>
+
  </div>
+
  </div>
     <% end %>
    

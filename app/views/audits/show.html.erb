@@ -145,12 +145,16 @@
       alert(data_id)  ;
     }
     $.ajax({
-        type: "GET",
+        type: "POST",
         dataType: "json",
         url: "find_capa?finding_id="+data_id,
-        success: function(data){ 
-          alert(JSON.parse(data));
-          document.getElementById('finding').innerHTML = data ;}
+      success: function(data){
+      alert("getting success");
+        alert(data);
+     var myJSONObject = JSON.parse(data);
+        //alert(myJSONObject);
+                     document.getElementById('finding').innerHTML = data ;
+                               }
     }); 
    
   })

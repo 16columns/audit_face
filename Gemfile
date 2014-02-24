@@ -10,6 +10,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip'
 gem 'will_paginate', '~> 3.0'
+gem "json", "~> 1.8.1"
 gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
