@@ -4,6 +4,10 @@ class PagesController < ApplicationController
 
  def landing
    render :layout => 'landing'
+  end 
+  
+   def landing2
+   render :layout => 'landing'
   end  
 
   private
@@ -16,4 +20,6 @@ class PagesController < ApplicationController
       'application'
     end
   end
+
+  
 end

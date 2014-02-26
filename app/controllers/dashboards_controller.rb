@@ -7,7 +7,9 @@ class DashboardsController < ApplicationController
     @finding_count =0
     @open_audits_count = 0
     @open_audits = []
+    @in_progress_audits =[]
     @upcoming_audits = []
+    audit_closed =false
     
     @audits.each do |audit|
       audit.findings.each do|finding|
@@ -23,10 +25,13 @@ class DashboardsController < ApplicationController
           break
         end 
       end
+      if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i)
+        @in_progress_audits << audit
+      end  
     end
     
     @upcoming_audits = current_user.audits.where('start_date >= ?',Time.now)
-    
+   # @in_progress_audits = (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) 
     @findings = Finding.find(:all)
    # months = ['Jan','Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct', 'Nov','Dec']
    # col_chart = [[]]

@@ -31,6 +31,7 @@ AuditFace::Application.routes.draw do
 get "/pages/*id" => 'pages#show', as: :page, format: false
   get 'pages/landing' => 'high_voltage/pages#show', id: 'landing'
 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
