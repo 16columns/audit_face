@@ -34,61 +34,45 @@
     
     <br/>
     
-    <div class="form-group">
-     <div class="col-xs-12">
-     
-    
-      <%#= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
+   <div class="form-inputs">
+       <div class="input-sm">
+      
+       <%#= f.input :audit_id, collection: Audit.all, label_method: :department_name, label: false %>
         
        <%= f.hidden_field :audit_id, :value => params[:audit_id].to_i %>
        <%= f.input :description, :input_html=>{:rows=>10}, length: 12, :autofocus => true %>
-     <!--<textarea name="content" data-provide="markdown" rows="10"></textarea>-->
-      
-     </div>
-      </div>
-      
-     <div class="form-group">
-      <div class="col-xs-6">
+       <!--<textarea name="content" data-provide="markdown" rows="10"></textarea>-->
+       </div>
+    
+     <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+     
       <div class="input-sm">
+      <div class="col-lg-6">
       <%= f.input :category, collection: FindingType.all, label_method: :category_name, value_method: :category_name %>
       </div>
-      </div>
-      
-      <div class="col-xs-6">
-      <div class="input-sm">
+       
+      <div class="col-lg-6">
       <%= f.input :risk_rating, collection: Risk.all, label_method: :risk_name, value_method: :risk_name %>
       </div>
-     
       </div>
- 
-      </div>
-   
-      <br/>
+      <br/><br/>
      
-      <div class="form-group">
-      <div class="col-xs-9">
       <div class="input-sm">
       <%= f.input :status_id, collection: FindingStatus.all, label_method: :status_name, value_method: :status_name %>
+     
       </div>
-      </div>
-      
-      <div class="col-xs-3">
+      <br/><br/>
       <div class="input-sm">
       <%= f.input :iso_clause, :label => "Reference" %>
       </div>
       </div>
+      <br/><br/>
+      <div class="input-sm">
+      <%= f.label :closure_date , "Closure Date" %><br/>
+      <%= f.datetime_select(:closure_date) %>
       </div>
-     <br/> <br/>
-    <div class="form-group"> 
-     <div class="col-xs-12">
-       <div class="input-sm">
-         <%= f.label :closure_date , "Closure Date" %><br/>
-            <%= f.datetime_select(:closure_date) %>
-         </div>
-      </div>
-     </div>
-      
-</div>
+   
+  </div>
       
    <div class="tab-pane" id="profile">
   
