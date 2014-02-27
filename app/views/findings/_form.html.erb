@@ -19,12 +19,12 @@
  
   
 <div class="container">
-<div class="col-lg-5">
+<div class="col-lg-5 col-lg-offset-1">
 <ul class="nav nav-tabs">
-  <li><a href="#home" data-toggle="tab">Audit finding</a></li>
+  <li class="active"><a href="#home" data-toggle="tab">Audit finding</a></li>
   <li><a href="#profile" data-toggle="tab">CAPA</a></li>
   <li><a href="#settings" data-toggle="tab">Evidence</a></li>
-  <li><%= f.button :submit, 'Submit', class: "btn btn-success pull-right" %></li>
+  <li class="pull-right"><%= f.button :submit, 'Submit', class: "btn btn-success btn-sm" %></li>
 </ul>
 
 <!-- Tab panes -->

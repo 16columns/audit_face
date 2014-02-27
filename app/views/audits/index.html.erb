@@ -2,7 +2,7 @@
    
    <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-lg-offset-1">
     <%= link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
    <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
 
@@ -14,7 +14,7 @@
     </div>
     <div class="container">
     <div class="row-fluid"> 
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-lg-offset-1">
     <%= will_paginate @audits %>
     </div>
     </div>
@@ -23,7 +23,7 @@
    <% @audits.each do |audit| %>
    <div class="container">
    <div class="row-fluid">
-   <div class="col-lg-6 col-md-6">
+   <div class="col-lg-6 col-md-6 col-lg-offset-1">
    
     <small>
       <div class="panel panel-default">
