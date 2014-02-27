@@ -56,7 +56,14 @@
        <%= f.label :start_date , "Start Date" %>
        <%= f.datetime_select(:start_date, :default => { :hour => 23, :minute => 59 }) %>
        </div>
-      <div class="container">
+      
+       <div class="input-sm">
+       <%= f.label :end_date , "End Date" %>
+       <%= f.datetime_select(:end_date, :default => { :hour => 23, :minute => 59 }) %>
+       </div>
+      </div>    
+     
+  <div class="container">
     <div class="col-md-10">
         <div class='well'>
             <div class="form-group">
@@ -73,13 +80,10 @@
             });
         </script>
     </div>
-</div>
-       <div class="input-sm">
-       <%= f.label :end_date , "End Date" %>
-       <%= f.datetime_select(:end_date, :default => { :hour => 23, :minute => 59 }) %>
-       </div>
-      </div>    
   </div>
+    
+  </div>
+ 
   
   <div class="tab-pane" id="team">
     <div class="form-inputs">
