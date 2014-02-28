@@ -6,15 +6,28 @@
 <div class="container">
   
     <div class="row-fluid">
+      <div class="col-lg-2" style="margin-left:30px">
+           <small>
+           <div class="panel panel-default" >
+         <div class="panel-heading" style="background:#1abc9c;">
+           <strong> All Audits </strong>
+         </div>
+          <div class="panel-body" style="background:#ecf0f1;">
+           <span class="col-lg-offset-4">
+                  <%= @current_user.audits.count %>
+            </span>
+          </div>
+        </div>
+             </small>
+      </div>
        
-       
-        <div class="col-lg-2 col-lg-offset-1">
+        <div class="col-lg-2">
            <small>
            <div class="panel panel-default">
-         <div class="panel-heading">
+         <div class="panel-heading" style="background:#1abc9c;">
            <strong> My Audits </strong>
          </div>
-          <div class="panel-body">
+          <div class="panel-body" style="background:#ecf0f1;">
            <span class="col-lg-offset-4">
                   <%= @audits.count %>
             </span>
@@ -26,10 +39,10 @@
       <div class="col-lg-2">
            <small>
            <div class="panel panel-default">
-         <div class="panel-heading">
+         <div class="panel-heading" style="background:#1abc9c;">
            <strong>Findings</strong>
          </div>
-          <div class="panel-body">
+          <div class="panel-body" style="background:#ecf0f1;">
            <span class="col-lg-offset-4">
            
              <%= @finding_count %>
@@ -44,10 +57,10 @@
       <div class="col-lg-3">
            <small>
            <div class="panel panel-default">
-         <div class="panel-heading">
-         Open Audits (30 days +)
+         <div class="panel-heading" style="background:#1abc9c;">
+         Open Audits (+30 days)
          </div>
-          <div class="panel-body">
+          <div class="panel-body" style="background:#ecf0f1;">
            <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#openaudits">
            <%= @open_audits_count %></a>
@@ -57,13 +70,13 @@
              </small>
       </div>
       
-       <div class="col-lg-3">
+       <div class="col-lg-2">
            <small>
            <div class="panel panel-default">
-         <div class="panel-heading">
+         <div class="panel-heading" style="background:#1abc9c;">
          Upcoming Audits
          </div>
-          <div class="panel-body">
+          <div class="panel-body" style="background:#ecf0f1;">
            <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#upcomingaudits">
            <%= @upcoming_audits.count %></a>
