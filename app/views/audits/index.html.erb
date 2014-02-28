@@ -34,10 +34,11 @@
       <% end  %>
       <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
       
-         <div class="panel-heading">
-             <span class="label label-default">Audit   # <%= audit.id %></span>  <strong><%= audit.department_name %></strong>
-          <span class="label label-success pull-right">
-          <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
+          <div class="panel-heading" style="background:#ecf0f1">
+              <span class="label label-default">Audit   # <%= audit.id %></span> | <strong style="font-size:14px;"><%= audit.department_name %></strong>
+                
+                <span class="label label-success pull-right">
+               <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
           
             <%= "In Progress" %> 
             <%elsif audit.start_date.to_i > Time.now.to_i %>
@@ -47,11 +48,11 @@
           <%end%> 
       </span>
       </div>
-      <div class="panel-body">
+      <div class="panel-body" style="background:#ecf0f1">
         <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
       </div>
 
-            <div class="panel-footer">  
+            <div class="panel-footer" style="background:#ecf0f1">  
                     <div class="meta">
                    <p>
                    <%= time_ago_in_words(audit.created_at) + " ago" %>    |
@@ -59,15 +60,15 @@
                      <% if audit.start_date.to_i > Time.now.to_i %>
                      <%= link_to " Modify", edit_audit_path(audit), class: "btn" %>  | 
                      <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn", method: :delete, data: { Confirm: "Are you sure"} %> |
-                      <%= link_to " View Finding", audit, class: "btn btn-info btn-xs disabled" %>
+                      <%= link_to " View Finding", audit, class: "btn btn-link btn-sm disabled" %>
                     <i class="fa fa-share-square-o fa-lg"></i>
                       <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
                     <% else %>  
                      <%= link_to " Modify", edit_audit_path(audit), class: "btn disabled" %>  |
                      <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
-                      <%= link_to " View Finding", audit, class: "btn btn-info btn-xs" %>
+                      <%= link_to " View Finding", audit, class: "btn btn-link btn-sm" %>
                     <i class="fa fa-share-square-o fa-lg"></i>
-                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right" %>  
+                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" %>  
                     <%end%>  
                      </p>
                          
