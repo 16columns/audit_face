@@ -106,22 +106,15 @@
     <br/><br/>
     <div class="col-lg-5 col-md-5">
    <small>
-           <div class="panel panel-default">
-         <div class="panel-heading">
+     <div class="panel panel-default">
+       <div class="panel-heading">
          CAPA Pending
-         </div>
-          <div class="panel-body">
-            <select class="form-control">
-  <option>--Select Audit--</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-            
-           <span class="col-lg-offset-6">
+       </div>
+       <div class="panel-body">
+         <%=  collection_select(:capa_pending_audits, :id, @current_user.audits, :id,:id, {},{:class=>'form-control'})   %>
+         <span class="col-lg-offset-6" id="capa_pending_status" >
            <a href class="btn-link" data-toggle="modal" data-target="#capapending">
-            <h3> <%= @upcoming_audits.count %> CAPA yet to be submitted</h3></a>
+            <h3> <%= @current_user.audits.count %> CAPA yet to be submitted</h3></a>
             </span>
           </div>
         </div>
@@ -262,6 +255,17 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript">
+  
+  $(document).ready(function () {
+   $("#capa_pending_audits_id").on("change", function () {
+     alert("script called on change");
+     //if ($(this).val() === "opel") {
+     //    $("#myHiddenField").val($(this).val());
+     //    $(this).attr("disabled", "disabled");
+     // }
+   });
+  });
+  //capa_pending_audits_id
       function drawVisualization() {
         // Create and populate the data table.
         //   alert("<%= current_user.audits %>")
