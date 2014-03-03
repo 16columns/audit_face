@@ -15,7 +15,25 @@ class Audit < ActiveRecord::Base
   def cannot_audit_self
     self.errors[:base] << "You can not audit yourself." if self.auditee_email == self.auditor_email
   end
-  
+  def self.capa_pending_auto_follow_up
+    @audits_capa_pending = []
+    @audits = Audit.all
+    @audits.each do |audit|
+      audit.findings.each do |finding|
+        if finding.status_id == "CAPA Pending" || finding.status_id == ""
+          @audits_capa_pending << audit
+          break
+        end
+      end
+    end
+    @audits_capa_pending.each do |audit|
+      UserMailer.capa_pending_auto_follow_up(audit).deliver
+    end
+     #@user = User.all
+     # @user.each do |u|
+     #   UsersMailer.weekly_mail(u).deliver
+    #end
+  end
 end
 
 

@@ -1,9 +1,18 @@
     <div class="container">
+    <div class="col-lg-10 col-md-10 col-lg-offset-1">
+    <div class="alert alert-warning fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Need your attention!</strong> Follow-up alerts will stop the moment you select "Findings submitted"
+    </div>  
+    </div>
+    </div>
+
+    <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-7 col-md-7 col-lg-offset-1">
+    <div class="col-lg-10 col-md-10 col-lg-offset-1">
        <%= link_to "Create Findings", new_audit_finding_path(@audit.id), class: "btn btn-default btn-sm" %> 
       <%= link_to "Export Findings", "export_findings?audit_id=#{@audit.id}", class: "btn btn-info btn-sm" %>
-      <label class="pull-right">          <input type="checkbox"> All findings submitted        </label>
+      <label class="pull-right">          <input type="checkbox"> Findings submitted        </label>
      
     </div>
     </div>
@@ -12,7 +21,7 @@
     
     <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-7 col-md-7 col-lg-offset-1">
+    <div class="col-lg-10 col-md-10 col-lg-offset-1">
         
     
           <%#=  @audit.findings %>
@@ -22,7 +31,7 @@
               <% @findings.each do |finding| %>
                   <small>
                   <div class="panel panel-default">
-                       <div class="panel-heading">
+                       <div class="panel-heading" style="background:#ecf0f1">
                          
                           <span class="label label-success"> Finding # <%= finding.id %></span> | <%= finding.audit.department_name %> 
 
@@ -41,11 +50,11 @@
                         <%end%>  
                     </div>
                     
-                   <div class="panel-body">
+                   <div class="panel-body" style="background:#ecf0f1">
                    <%= finding.description %>
                    </div>
                     
-                  <div class="panel-footer">
+                  <div class="panel-footer" style="background:#ecf0f1">
                     
                     <%= link_to time_ago_in_words(finding.created_at) + " ago" , finding %>  |
                     

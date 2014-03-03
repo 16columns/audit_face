@@ -19,5 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
   every :monday, :at => "11:59am" do
-          runner "User.weekly_update"
+     runner "User.weekly_update"
+    runner "Audit.capa_pending_auto_follow_up"            
   end
+

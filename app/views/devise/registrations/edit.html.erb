@@ -39,6 +39,7 @@ margin-top:15px;
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 <div class="container">
+  <div class="col-lg-4 col-md-4 col-lg-offset-4">
   <div class="panel panel-default">
   <div class="panel-heading">Modify Profile</div>
   <div class="panel-body">
@@ -65,6 +66,7 @@ margin-top:15px;
 <% end %>
 </div>
   </div>
+</div>
 </div>
  
 <div class="page-header">

@@ -58,4 +58,9 @@ class UserMailer < ActionMailer::Base
     @audits = current_user.audits.where('start_date > ?',Time.now)
     mail(:to => email, :subject => "Audit schedule")  
   end
+  
+  def capa_pending_auto_follow_up(audit)
+    @audit = audit
+    mail(:to => @audit.auditee_email, :subject => "Audit schedule")  
+  end
 end

@@ -76,5 +76,22 @@ class DashboardsController < ApplicationController
 
   # GET /dashboards/1
   # GET /dashboards/1.json
- 
+  def capa_pending_audits
+    puts "**************************"
+    puts params[:audit_id]
+    puts "***************************"  
+    @capa_pending_findings = []
+    @audit = Audit.find(params[:audit_id])
+    @audit.findings.each do |finding|
+        if finding.status_id == "CAPA Pending"
+              @capa_pending_findings <<  finding
+        end
+      end
+     
+    respond_to do |format|
+     # format.html # show.html.erb
+     format.json { render json:  @capa_pending_findings.to_json }
+    end  
+  end
+  
  end
