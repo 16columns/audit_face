@@ -59,8 +59,9 @@ class UserMailer < ActionMailer::Base
     mail(:to => email, :subject => "Audit schedule")  
   end
   
-  def capa_pending_auto_follow_up(audit)
+  def capa_pending_auto_follow_up(audit,current_user)
     @audit = audit
-    mail(:to => @audit.auditee_email, :subject => "Audit schedule")  
+    @user = current_user
+    mail(:to => @audit.auditee_email, :subject => "CAPA Pending Auto Follow Up")  
   end
 end

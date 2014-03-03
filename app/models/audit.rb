@@ -27,7 +27,7 @@ class Audit < ActiveRecord::Base
       end
     end
     @audits_capa_pending.each do |audit|
-      UserMailer.capa_pending_auto_follow_up(audit).deliver
+      UserMailer.capa_pending_auto_follow_up(audit,current_user).deliver
     end
      #@user = User.all
      # @user.each do |u|

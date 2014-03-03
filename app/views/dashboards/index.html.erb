@@ -117,6 +117,7 @@
          <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#capapending">
             <h3 id="capa_pending_status"> </h3></a>
+           
             </span>
           </div>
         </div>
@@ -260,19 +261,16 @@
   
   $(document).ready(function () {
    $("#audits_id").on("change", function () {
-     alert("script called on change");
-     //$("#capa_pending_status").innerHtml = "text changed due to script called";
-       var audit_id = $(this).val();
+      var audit_id = $(this).val();
        $.ajax({
         type: "POST",
         dataType: "json",
          url: "dashboards/capa_pending_audits?audit_id="+audit_id,
       success: function(data){
-        alert(data);
-        //var obj = jQuery.parseJSON(data);
-        var returnedData = JSON.parse(data);
-        //  alert(JSON.parse(data));
-       document.getElementById('capa_pending_status').innerHTML = data + "CAPA yet to be submitted" ;
+       for (var i=0; i<data.length; i++) {
+         //alert(data[i]['audit_id']);
+        }
+        document.getElementById('capa_pending_status').innerHTML = data.length + "  CAPA yet to be submitted" ;
       },
     error: function(){
       document.getElementById('capa_pending_status').innerHTML = "CAPA Missing Error" ;

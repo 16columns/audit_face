@@ -87,7 +87,6 @@ class DashboardsController < ApplicationController
               @capa_pending_findings <<  finding
         end
       end
-     
     respond_to do |format|
      # format.html # show.html.erb
      format.json { render json:  @capa_pending_findings.to_json }
