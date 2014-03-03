@@ -18,9 +18,10 @@
 
 <div class="container">
   <div class="col-lg-5 col-lg-offset-1">
-
-    <h6>Provide information about your client and team details to quickly create an audit. </h6>
- 
+<div class="alert alert-warning fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>Need your attention!</strong> The below form requires few information about your client and team in order to generate an audit.
+    </div>
   </div>
 </div>
 <br/>
@@ -52,8 +53,11 @@
        <%= f.input :location %>
        </div>
        <br/><br/>
+      <div class="well">
        <div class="input-sm">
+     
        <%= f.label :start_date , "Start Date" %>
+        
        <%= f.datetime_select(:start_date, :default => { :hour => 23, :minute => 59 }) %>
        </div>
       
@@ -62,8 +66,9 @@
        <%= f.datetime_select(:end_date, :default => { :hour => 23, :minute => 59 }) %>
        </div>
       </div>    
-     
- <div class="container">
+    </div>
+    
+ <!--<div class="container">
     <div class="col-md-10">
         <div class='well'>
             <div class="form-group">
@@ -71,9 +76,9 @@
                     <input type='text' class="form-control" />
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                </div>
+                </div> 
             </div>
-        </div>
+        </div> 
         <script type="text/javascript">
             $(function () {
               //  alert("this is working");
@@ -81,9 +86,9 @@
             });
         </script>
     </div>
-</div>
+</div> -->
     
-  </div>
+  </div> 
  
   
   <div class="tab-pane" id="team">

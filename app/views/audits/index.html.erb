@@ -12,14 +12,7 @@
     </div>
     </div>
     </div>
-    <div class="container">
-    <div class="row-fluid"> 
-    <div class="col-lg-12 col-lg-offset-1">
-    <%= will_paginate @audits %>
-    </div>
-    </div>
-    </div>
- <br/>
+     <br/>
    <% @audits.each do |audit| %>
    <div class="container">
    <div class="row-fluid">
@@ -88,8 +81,15 @@
  </div>
     <% end %>
    
+<div class="container">
+    <div class="row-fluid"> 
+    <div class="col-lg-12 col-lg-offset-1">
+    <%= will_paginate @audits %>
+    </div>
+    </div>
+    </div>
 
- </div> 
+
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -205,3 +205,4 @@
 </div><!-- /.modal -->
 
 <% end %>
+

@@ -47,15 +47,15 @@
      <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
       <div class="form-inputs">     
       <div class="input-sm">
-      <div class="col-lg-6">
+      
       <%= f.input :category, collection: FindingType.all, label_method: :category_name, value_method: :category_name %>
-      </div>
-       
-      <div class="col-lg-6">
+        </div>
+        <br/><br/>
+        <div class="input-sm">
       <%= f.input :risk_rating, collection: Risk.all, label_method: :risk_name, value_method: :risk_name %>
+     
       </div>
-      </div>
-      <br/><br/>
+       <br/><br/>
      
       <div class="input-sm">
       <%= f.input :status_id, collection: FindingStatus.all, label_method: :status_name, value_method: :status_name %>
@@ -66,11 +66,8 @@
       <%= f.input :iso_clause, :label => "Reference" %>
       </div>
       </div>
-      <br/><br/>
-      <div class="input-sm">
-      <%= f.label :closure_date , "Closure Date" %><br/>
-      <%= f.datetime_select(:closure_date) %>
-      </div>
+     
+      
    
   </div>
       
@@ -80,11 +77,19 @@
     
     <div class="form-input">
     <div class="col-xs-12">
-     <%= f.label :corrective_action, "Corrective and Preventive Action" %>
-      <%= f.text_area :corrective_action, :rows => 10, :cols => 60 %>
+   <div class="input-sm">
+      <%= f.input :corrective_action, :input_html=>{:rows=>10}, length: 12, :autofocus => true, :label => "Enter corrective and preventive action" %>
+     
      <!--<%#= f.input :preventive_action, :input_html=>{:rows=>6} %>-->
-      
+      </div>
     </div>
+      <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/><br/><br/><br/>
+      <div class="well">
+      <div class="input-sm">
+      <%= f.label :closure_date , "Closure Date" %><br/>
+      <%= f.datetime_select(:closure_date) %>
+      </div>
+      </div>
     </div>
   
   </div>

@@ -9,6 +9,7 @@ class DashboardsController < ApplicationController
     @open_audits = []
     @in_progress_audits =[]
     @upcoming_audits = []
+    @capa_pending_audits = []
     audit_closed =false
     
     @audits.each do |audit|
@@ -22,14 +23,27 @@ class DashboardsController < ApplicationController
         if finding.status_id != "Closed" && (Time.now.to_date - finding.created_at.to_date).to_i >=30
           @open_audits_count += 1
           @open_audits << audit
-          break
+          break  
         end 
       end
       if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i)
         @in_progress_audits << audit
       end  
     end
-    
+    puts "*********audtis******#{@audits.inspect}"
+    @audits.each do |audit|
+      audit.findings.each do|finding|
+        if finding.status_id == "CAPA Pending" 
+          #@open_audits_count += 1
+          puts "****************************"
+     #     puts @capa_pending_audits.inspect
+          puts "****************************"
+          @capa_pending_audits << audit
+          break  
+        end 
+      end
+    end
+ puts "********capa_pending_audits*********#{@capa_pending_audits.inspect}"
     @upcoming_audits = current_user.audits.where('start_date >= ?',Time.now)
    # @in_progress_audits = (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) 
     @findings = Finding.find(:all)

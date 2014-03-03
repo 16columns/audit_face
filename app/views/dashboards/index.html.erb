@@ -111,10 +111,12 @@
          CAPA Pending
        </div>
        <div class="panel-body">
-         <%=  collection_select(:capa_pending_audits, :id, @current_user.audits, :id,:id, {},{:class=>'form-control'})   %>
+         <%#=  collection_select(:capa_pending_audits, :id,@capa_pending_audits, :id,:id, {},{:class=>'form-control'})   %>
+         <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'], obj['id']] }),:class=>'form-control' %>
+
          <span class="col-lg-offset-6" id="capa_pending_status" >
            <a href class="btn-link" data-toggle="modal" data-target="#capapending">
-            <h3> <%= @current_user.audits.count %> CAPA yet to be submitted</h3></a>
+            <h3> <%= @capa_pending_audits.count %> CAPA yet to be submitted</h3></a>
             </span>
           </div>
         </div>
