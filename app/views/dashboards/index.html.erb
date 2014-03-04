@@ -40,7 +40,7 @@
            <small>
            <div class="panel panel-default">
          <div class="panel-heading" style="background:#1abc9c;">
-           <strong>Findings</strong>
+           <strong>Findings issued by me</strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
            <span class="col-lg-offset-4">
@@ -116,8 +116,7 @@
 
          <span class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#capapending">
-            <h3 id="capa_pending_status"> </h3></a>
-           
+            <h3 id="capa_pending_status"> <%= @capa_pending_audits.count %> CAPA submissions pending</h3></a>
             </span>
           </div>
         </div>
@@ -261,16 +260,16 @@
   
   $(document).ready(function () {
    $("#audits_id").on("change", function () {
-      var audit_id = $(this).val();
+     alert("script called on change");
+     //$("#capa_pending_status").innerHtml = "text changed due to script called";
+       var audit_id = $(this).val();
        $.ajax({
         type: "POST",
         dataType: "json",
          url: "dashboards/capa_pending_audits?audit_id="+audit_id,
       success: function(data){
-       for (var i=0; i<data.length; i++) {
-         //alert(data[i]['audit_id']);
-        }
-        document.getElementById('capa_pending_status').innerHTML = data.length + "  CAPA yet to be submitted" ;
+        //  alert(JSON.parse(data));
+       document.getElementById('capa_pending_status').innerHTML = data + "CAPA yet to be submitted" ;
       },
     error: function(){
       document.getElementById('capa_pending_status').innerHTML = "CAPA Missing Error" ;
