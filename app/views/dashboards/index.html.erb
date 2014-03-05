@@ -221,27 +221,19 @@
         <h4 class="modal-title" id="myModalLabel">CAPA pending</h4>
       </div>
       <div class="modal-body">
-        <table class="table table-hover table-responsive">
+        <table class="table table-hover table-responsive" >
         <thead>
 		
             <tr style="background:#ecf0f1">
 		    <th> Finding ID</th>
-		    <th>Auditor</th>
+		    <th>Description</th>
              <th>Created date</th>
             <th>Tentative closure date</th>
  	        </tr>
         </thead>
         
-        <tbody>
-        <% @upcoming_audits.each do |audit| %>
-          <tr>
-          <td><%= audit.id %> </td>
-          <td><%= audit.auditor_name %></td>
-          <td><%= audit.created_at.strftime("%d-%m-%y") %></td>
-          
-          <td><%= audit.start_date.strftime("%d-%m-%y") %></td>
-          </tr>
-        <%end%>
+        <tbody id="pending_findings"  >
+       
 	    
         </tbody>
       </table>
@@ -359,21 +351,22 @@
 <script type"text/javascript">
   $(document).ready(function() {
 
-  $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+  $('#capa_pending_status').click(function () {
 
     var data_id = '';
     var audit_id = $('[name="audits[id]"] option:selected').val();
-    //$("#capa_pending_audit_id").val('hardcoded');
-    //$('#capa_pending_audit_id').attr('data-id' , 'hardcoded'); 
-    //$('#capa_pending_audit_id').data('id', 'Next');
-    //alert("audit_id"+audit_id);
+
+    $('#pending_findings').empty();
      $.ajax({
         type: "POST",
         dataType: "json",
         url: "dashboards/capa_pending_audits?audit_id="+audit_id,
       success: function(data){
-              alert(data);
-        // document.getElementById('capapending').innerHTML = data ;
+         $.each(data, function(i, item) {
+           $('<tr>').html("<td>" + data[i]['id'] + "</td><td>" + data[i]['description'] + "</td><td>"+new Date(data[i]['created_at'].toString("yyyy-MM-ddTHH:mm:ss")+"</td><td>"+data[i]['closure_date']+"</td>")
+           .appendTo('#pending_findings');
+        });
+       
       },
     error: function(){
       //document.getElementById('capapending').innerHTML = "Findings Error" ;
