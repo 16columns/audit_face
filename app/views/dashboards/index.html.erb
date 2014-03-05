@@ -363,7 +363,7 @@
         url: "dashboards/capa_pending_audits?audit_id="+audit_id,
       success: function(data){
          $.each(data, function(i, item) {
-           $('<tr>').html("<td>" + data[i]['id'] + "</td><td>" + data[i]['description'] + "</td><td>"+new Date(data[i]['created_at'].toString("yyyy-MM-ddTHH:mm:ss")+"</td><td>"+data[i]['closure_date']+"</td>")
+           $('<tr>').html("<td>" + data[i]['id'] + "</td><td>" + data[i]['description'] + "</td><td>"+new Date(data[i]['created_at']).toString("dd-MM-yy HH:mm")+"</td><td>"+new Date(data[i]['closure_date']).toString("dd-MM-yy HH:mm")+"</td>")
            .appendTo('#pending_findings');
         });
        
