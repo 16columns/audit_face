@@ -113,10 +113,10 @@
        <div class="panel-body">
          <%#=  collection_select(:capa_pending_audits, :id,@capa_pending_audits, :id,:id, {},{:class=>'form-control'})   %>
          <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'], obj['id']] }),:class=>'form-control' %>
-
+  
          <span class="col-lg-offset-6">
-           <a href class="btn-link" data-toggle="capa_modal" data-id="capa_pending_audit_id" data-target="#capapending">
-            <h3 id="capa_pending_status"> </h3></a>
+           <h3>  <a href="#" class="btn-link" data-toggle="modal"  data-target="#capapending" id="capa_pending_status">  </a></h3>
+           
             </span>
           </div>
         </div>
@@ -359,7 +359,7 @@
 <script type"text/javascript">
   $(document).ready(function() {
 
-  $('a[data-toggle=capa_modal], button[data-toggle=modal]').click(function () {
+  $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
 
     var data_id = '';
     var audit_id = $('[name="audits[id]"] option:selected').val();
@@ -372,11 +372,11 @@
         dataType: "json",
         url: "dashboards/capa_pending_audits?audit_id="+audit_id,
       success: function(data){
-        alert(data);
-        //  document.getElementById('capapending').innerHTML = data ;
+              alert(data);
+        // document.getElementById('capapending').innerHTML = data ;
       },
     error: function(){
-      // document.getElementById('capapending').innerHTML = "Findings Error" ;
+      //document.getElementById('capapending').innerHTML = "Findings Error" ;
   }
     }); 
    
