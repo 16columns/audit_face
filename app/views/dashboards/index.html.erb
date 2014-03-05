@@ -115,8 +115,8 @@
          <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'], obj['id']] }),:class=>'form-control' %>
 
          <span class="col-lg-offset-6">
-           <a href class="btn-link" data-toggle="modal" data-target="#capapending">
-            <h3 id="capa_pending_status"> <%= @capa_pending_audits.count %> CAPA submissions pending</h3></a>
+           <a href class="btn-link" data-toggle="capa_modal" data-id="capa_pending_audit_id" data-target="#capapending">
+            <h3 id="capa_pending_status"> </h3></a>
             </span>
           </div>
         </div>
@@ -260,17 +260,18 @@
   
   $(document).ready(function () {
    $("#audits_id").on("change", function () {
-     // alert("script called on change");
+     //   alert("script called on change");
      //$("#capa_pending_status").innerHtml = "text changed due to script called";
        var audit_id = $(this).val();
        $.ajax({
         type: "POST",
         dataType: "json",
          url: "dashboards/capa_pending_audits?audit_id="+audit_id,
-      success: function(data){
+        success: function(data){
            for (var i=0; i<data.length; i++) {
              //alert(data[i]['audit_id']);
          }
+       
        document.getElementById('capa_pending_status').innerHTML = data.length + "  CAPA yet to be submitted" ;
       },
     error: function(){
@@ -333,17 +334,18 @@
       
 
       function drawPieVisualization() {
-        var data = google.visualization.arrayToDataTable([
+           var data = google.visualization.arrayToDataTable([
           ['Findings', 'Months'],
-          ['Under review',     6],
-          ['CAPA Submitted',      5],
-          ['Closed',  4],
-        ]);
+          ['CAPA Pending',    <%= @findings_capa_pending.count%>],
+         ['Under Review',     <%= @findings_under_review.count%> ],
+          ['Closed',  <%= @findings_closed.count%>],
+         ]);
 
-        var options = {
+         var options = {
           title: 'Overall finding status'
          
         };
+       
 
         var chart = new google.visualization.PieChart(document.getElementById('pie-visualization'));
         chart.draw(data, options);
@@ -354,3 +356,30 @@
       google.setOnLoadCallback(drawVisualization);
       google.setOnLoadCallback(drawPieVisualization);
     </script>
+<script type"text/javascript">
+  $(document).ready(function() {
+
+  $('a[data-toggle=capa_modal], button[data-toggle=modal]').click(function () {
+
+    var data_id = '';
+    var audit_id = $('[name="audits[id]"] option:selected').val();
+    //$("#capa_pending_audit_id").val('hardcoded');
+    //$('#capa_pending_audit_id').attr('data-id' , 'hardcoded'); 
+    //$('#capa_pending_audit_id').data('id', 'Next');
+    //alert("audit_id"+audit_id);
+     $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "dashboards/capa_pending_audits?audit_id="+audit_id,
+      success: function(data){
+        alert(data);
+        //  document.getElementById('capapending').innerHTML = data ;
+      },
+    error: function(){
+      // document.getElementById('capapending').innerHTML = "Findings Error" ;
+  }
+    }); 
+   
+  })
+});    
+</script>

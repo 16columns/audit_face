@@ -141,15 +141,15 @@ class AuditsController < ApplicationController
        #pdf.pad(60) do 
          #  pdf.text.margin 0.5
         # pdf.margin_left (10) do
-         pdf.text "Department Name :"+ audit.department_name 
+         pdf.text "Department Name :"+ audit.department_name if audit.department_name
          pdf.move_down 5
          pdf.text "Created On: " + audit.created_at.strftime("%d-%m-%y")
          pdf.move_down 5
          pdf.text "Audit Rating : " + "No Rating"
          pdf.move_down 5
-         pdf.text "Start date: : " + audit.start_date.strftime("%d-%m-%y")
+         pdf.text "Start date: : " + audit.start_date.strftime("%d-%m-%y") if audit.start_date
          pdf.move_down 5
-         pdf.text "End date:  : " + audit.end_date.strftime("%d-%m-%y")
+         pdf.text "End date:  : " + audit.end_date.strftime("%d-%m-%y") if audit.end_date
          pdf.move_down 5
          pdf.text "Auditor : " + audit.auditor_name
          pdf.move_down 5
@@ -170,15 +170,15 @@ class AuditsController < ApplicationController
        pdf.bounding_box [point+50, pdf.cursor+1], :width => 500,:padding => 50  do
         pdf.stroke_bounds 
         pdf.move_down 5
-        pdf.text "Observation: " + finding.description
+        pdf.text "Observation: " + finding.description if finding.description
         pdf.move_down 5
-        pdf.text "Corrective Action : " + finding.corrective_action
+        pdf.text "Corrective Action : " + finding.corrective_action if finding.corrective_action
         pdf.move_down 5
-        pdf.text "Preventive Action : " + finding.preventive_action
+        pdf.text "Preventive Action : " + finding.preventive_action if finding.preventive_action
         pdf.move_down 5
-        pdf.text "Risk Rating : " + finding.risk_rating 
+        pdf.text "Risk Rating : " + finding.risk_rating if finding.risk_rating
         pdf.move_down 5 
-        pdf.text "Status : " + finding.status_id
+        pdf.text "Status : " + finding.status_id if finding.status_id
         pdf.move_down 5
          pdf.text "Closed On : " + ""
         pdf.move_down 10

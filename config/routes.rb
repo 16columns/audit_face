@@ -9,6 +9,7 @@ AuditFace::Application.routes.draw do
   #end 
   get "dashboards/capa_pending_audits"
   post "dashboards/capa_pending_audits"
+  post "dashboards/capa_pending_findings"
   resources :dashboards
   get "audits/export_findings"
   post "audits/export_findings"

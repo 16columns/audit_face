@@ -10,11 +10,21 @@ class DashboardsController < ApplicationController
     @in_progress_audits =[]
     @upcoming_audits = []
     @capa_pending_audits = []
+    @findings_capa_pending = []
+    @findings_under_review = []
+    @findings_closed = []
     audit_closed =false
     
     @audits.each do |audit|
       audit.findings.each do|finding|
-        @finding_count += 1       
+        @finding_count += 1  
+        if finding.status_id == "CAPA Pending" || finding.status_id == "" ||  finding.status_id == nil
+            @findings_capa_pending << finding
+        elsif finding.status_id == "Under review"
+            @findings_under_review <<  finding
+        elsif  finding.status_id == "Closed"
+          @findings_closed << finding
+        end 
       end
     end
     
@@ -43,7 +53,7 @@ class DashboardsController < ApplicationController
         end 
       end
     end
- puts "********capa_pending_audits*********#{@capa_pending_audits.inspect}"
+   puts "********capa_pending_audits*********#{@capa_pending_audits.inspect}"
     @upcoming_audits = current_user.audits.where('start_date >= ?',Time.now)
    # @in_progress_audits = (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) 
     @findings = Finding.find(:all)
@@ -91,6 +101,13 @@ class DashboardsController < ApplicationController
      # format.html # show.html.erb
      format.json { render json:  @capa_pending_findings.to_json }
     end  
+    puts "*****@capa_pending_findings*************#{@capa_pending_findings.inspect}"
   end
-  
+  def capa_pending_findings
+    puts "action called"
+    puts params.inspect
+    puts "*********************"
+    @audit = Audit.find(params[:audit_id])
+    
+  end
  end
