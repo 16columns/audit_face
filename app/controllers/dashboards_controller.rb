@@ -40,7 +40,6 @@ class DashboardsController < ApplicationController
         @in_progress_audits << audit
       end  
     end
-    puts "*********audtis******#{@audits.inspect}"
     @audits.each do |audit|
       audit.findings.each do|finding|
         if finding.status_id == "CAPA Pending" 

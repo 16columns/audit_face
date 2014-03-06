@@ -28,14 +28,52 @@
 <div class="container">
   <div class="col-lg-5 col-md-5 col-lg-offset-1">
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#client" data-toggle="tab">Client</a></li>
-  <li><a href="#team" data-toggle="tab">Team</a></li>
+  <li class="active"><a href="#organization" data-toggle="tab">Client</a></li>
+  <li><a href="#client" data-toggle="tab">Auditee</a></li>
+  <li><a href="#team" data-toggle="tab">Auditor</a></li>
   <li class="pull-right"><%= f.button :submit , 'Submit',  class: "btn btn-success btn-sm" %></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div class="tab-pane active" id="client">
+  <div class="tab-pane active" id="organization">
+    <br/>
+   <form class="form-horizontal" role="form">
+     <div class="form-group">
+         <div class="col-sm-12">
+      <input class="form-control" placeholder="Organization name">
+    </div>
+  </div>
+     
+     <div class="form-group">
+         <div class="col-sm-12">
+      <input class="form-control" placeholder="Address">
+    </div>
+  </div>
+       <div class="form-group">
+         <div class="col-sm-12">
+      <input class="form-control" placeholder="Contact number">
+    </div>
+  </div>
+     
+       <div class="form-group">
+         <div class="col-sm-12">
+      <input class="form-control" placeholder="MR name">
+    </div>
+  </div>
+     
+       <div class="form-group">
+         <div class="col-sm-12">
+      <input class="form-control" placeholder="MR Email">
+    </div>
+  </div>
+     
+   </form>
+  
+  </div>
+  
+  
+  <div class="tab-pane" id="client">
     <div class="form-inputs">
       <div class="input-sm">
         <div class="col-lg-12">

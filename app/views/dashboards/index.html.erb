@@ -260,10 +260,7 @@
         dataType: "json",
          url: "dashboards/capa_pending_audits?audit_id="+audit_id,
         success: function(data){
-           for (var i=0; i<data.length; i++) {
-             //alert(data[i]['audit_id']);
-         }
-       
+              
        document.getElementById('capa_pending_status').innerHTML = data.length + "  CAPA yet to be submitted" ;
       },
     error: function(){
