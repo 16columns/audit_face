@@ -57,7 +57,7 @@ class FindingsController < ApplicationController
     respond_to do |format|
     if @finding.save
         # current_user.create_activity @finding, 'created'
-          format.html { redirect_to "/audits/#{params[:finding][:audit_id]}", notice: 'Finding was successfully created.' }
+          format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully created.' }
         format.json { render json: @finding, status: :created, location: @finding }
       else
         format.html { render action: "new" }
@@ -92,7 +92,7 @@ class FindingsController < ApplicationController
       #    Document.delete deleted_docs.map { |u| u }
         
          current_user.create_activity @finding, 'updated'
-        format.html { redirect_to "/audits/#{params[:finding][:audit_id]}", notice: 'Finding was successfully updated.' }
+        format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully updated.' }
 
         format.json { head :no_content }
       else

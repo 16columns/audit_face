@@ -92,7 +92,7 @@ class DashboardsController < ApplicationController
     @capa_pending_findings = []
     @audit = Audit.find(params[:audit_id])
     @audit.findings.each do |finding|
-        if finding.status_id == "CAPA Pending"
+        if finding.status_id == "CAPA Pending" || finding.status_id == ""
               @capa_pending_findings <<  finding
         end
       end
