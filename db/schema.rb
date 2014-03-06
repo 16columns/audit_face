@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140127195049) do
+ActiveRecord::Schema.define(:version => 20140306085748) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(:version => 20140127195049) do
   add_index "activities", ["targetable_id", "targetable_type"], :name => "index_activities_on_targetable_id_and_targetable_type"
   add_index "activities", ["user_id"], :name => "index_activities_on_user_id"
 
+  create_table "auditors", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "audit_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "audits", :force => true do |t|
     t.string   "department_name"
     t.string   "auditee_name"
@@ -33,11 +41,13 @@ ActiveRecord::Schema.define(:version => 20140127195049) do
     t.string   "auditor_email"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.integer  "user_id"
     t.string   "audit_type"
     t.string   "location"
+    t.string   "secondry_auditor_name"
+    t.string   "secondry_auditor_email"
   end
 
   add_index "audits", ["audit_type"], :name => "index_audits_on_audit_type"
@@ -90,11 +100,20 @@ ActiveRecord::Schema.define(:version => 20140127195049) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.datetime "closure_date"
   end
 
   add_index "findings", ["audit_id"], :name => "index_findings_on_audit_id"
   add_index "findings", ["iso_clause"], :name => "index_findings_on_iso_clause"
   add_index "findings", ["status_id"], :name => "index_findings_on_status_id"
+
+  create_table "reports", :force => true do |t|
+    t.string   "report_name"
+    t.string   "report_tag"
+    t.string   "report_status"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "risks", :force => true do |t|
     t.string   "risk_name"
