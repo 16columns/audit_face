@@ -54,6 +54,16 @@ class FindingsController < ApplicationController
   def create
     @finding = Finding.new(params[:finding])
     puts "*********params inspect**************#{params.inspect}" 
+    closure_date = DateTime.new(params["finding"]["closure_date(1i)"].to_i, params["finding"]["closure_date(2i)"].to_i,params["finding"]["closure_date(3i)"].to_i,
+                                                                    params["finding"]["closure_date(4i)"].to_i,params["finding"]["closure_date(5i)"].to_i)
+    puts "***********************"
+    puts closure_date
+    puts "***********************"
+  #  @finding.closure_date = closure_date
+    puts "***********************"
+   # puts @finding.closure_date
+    puts "***********************"
+    
     respond_to do |format|
     if @finding.save
         # current_user.create_activity @finding, 'created'
@@ -64,6 +74,7 @@ class FindingsController < ApplicationController
         format.json { render json: @finding.errors, status: :unprocessable_entity }
       end
     end
+  puts "************** @finding*********#{ @finding.inspect }"
   end
 
   # PUT /findings/1

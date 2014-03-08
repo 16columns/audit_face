@@ -95,7 +95,7 @@
       <div class="input-sm">
          <div class="col-lg-12">
       <%= f.label :closure_date , "Closure Date" %><br/>
-           <%= f.datetime_select(:closure_date,prompt: {year: 'year',month: 'month', day: 'day',hour: 'hour', minute:'min' }) %>
+           <%= f.datetime_select(:closure_date,default: 7.days.from_now)  %>
       </div>
       </div>
        
