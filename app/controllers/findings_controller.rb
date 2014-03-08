@@ -53,17 +53,11 @@ class FindingsController < ApplicationController
   # POST /findings.json
   def create
     @finding = Finding.new(params[:finding])
-    puts "*********params inspect**************#{params.inspect}" 
-    closure_date = DateTime.new(params["finding"]["closure_date(1i)"].to_i, params["finding"]["closure_date(2i)"].to_i,params["finding"]["closure_date(3i)"].to_i,
-                                                                    params["finding"]["closure_date(4i)"].to_i,params["finding"]["closure_date(5i)"].to_i)
-    puts "***********************"
-    puts closure_date
-    puts "***********************"
-  #  @finding.closure_date = closure_date
-    puts "***********************"
-   # puts @finding.closure_date
-    puts "***********************"
-    
+
+    @finding.audit_id = params[:audit_id]
+    if @finding.status_id == "Closed"
+        @finding.closure_date = Time.now + 5.minutes 
+    end
     respond_to do |format|
     if @finding.save
         # current_user.create_activity @finding, 'created'
@@ -74,18 +68,20 @@ class FindingsController < ApplicationController
         format.json { render json: @finding.errors, status: :unprocessable_entity }
       end
     end
-  puts "************** @finding*********#{ @finding.inspect }"
   end
 
   # PUT /findings/1
   # PUT /findings/1.json
   def update
     @finding = Finding.find(params[:id])
-    puts "***********update action************"
-    puts params.inspect
-    puts "***************************************"
+
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
+        if params[:finding][:status_id] == "Closed"
+          @finding.closure_date = @finding.updated_at 
+          @finding.save
+        end
+
 
      #   updated_docs = []
      #   if params[:finding][:documents_attributes] != nil
@@ -118,9 +114,7 @@ class FindingsController < ApplicationController
   def destroy
     @finding = Finding.find(params[:id])
     @finding.destroy
-    puts "****************************"
-    puts params.inspect
-    puts "*******************************"
+
     respond_to do |format|
         #current_user.create_activity @finding, 'destroyed'
       format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully deleted.' }

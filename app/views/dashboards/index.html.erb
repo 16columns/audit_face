@@ -114,11 +114,13 @@
          <%#=  collection_select(:capa_pending_audits, :id,@capa_pending_audits, :id,:id, {},{:class=>'form-control'})   %>
          <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'], obj['id']] }),:class=>'form-control' %>
          <% capa_pending_findings = []%> 
-         <% @capa_pending_audits.first.findings.each do |finding| %>
-               <% if finding.status_id == "CAPA Pending" || finding.status_id == "" %>    
-                   <% capa_pending_findings << finding %>
-               <% end %>
-         <% end %>
+         <% if @capa_pending_audits != [] %>
+           <% @capa_pending_audits.first.findings.each do |finding| %>
+                 <% if finding.status_id == "CAPA Pending" || finding.status_id == "" %>    
+                     <% capa_pending_findings << finding %>
+                 <% end %>
+           <% end %>
+          <%end%> 
          <span class="col-lg-offset-6">
            <h3>  <a href="#" class="btn-link" data-toggle="modal"  data-target="#capapending" id="capa_pending_status"><%= capa_pending_findings.count %>  CAPA yet to be submitted </a></h3>
            
