@@ -62,12 +62,26 @@
         <li><%= link_to "Login", new_user_session_path %></li>
         <% end %>
         </ul>
+    
       
       <div class="navbar-form navbar-right" role="search">
+        
       <%= form_tag({:controller => 'search', :action => 'index'}, {:method => 'get'})  do |s| %>
+        
       <div class="form-group">
-      <%= text_field_tag :search, params[:search], style: "width:250px; margin-top:5px", placeholder: "Jump to audits or findings" %>
-      <%= submit_tag "Search" %>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+          Search by <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Audits</a></li>
+        <li><a href="#">Findings</a></li>
+        <li><a href="#">Reports</a></li>
+    
+        </ul>
+        </div>
+        <%= text_field_tag :search, params[:search], style: "width:200px; margin-top:5px", placeholder: "Jump to audits or findings", class: "input-sm" %>
+        <%= submit_tag "Search", class: "btn btn-sm" %>
       </div>  
     <% end %>
     </div>
