@@ -13,6 +13,10 @@ class DashboardsController < ApplicationController
     @findings_capa_pending = []
     @findings_under_review = []
     @findings_closed = []
+    
+    @open_audits_month_wise = []
+    @in_progress_audits_month_wise = []
+    @closed_audits_month_wise = []
     audit_closed =false
     
     @audits.each do |audit|
@@ -26,6 +30,10 @@ class DashboardsController < ApplicationController
           @findings_closed << finding
         end 
       end
+    end
+    
+    @audits.each do |audit|
+      
     end
     
     @audits.each do |audit|

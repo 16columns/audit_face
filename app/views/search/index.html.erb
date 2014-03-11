@@ -18,7 +18,7 @@
     <% @audits.each do |audit| %>
      <div class="container">
      <div class="row-fluid">
-     <div class="col-lg-7">
+     <div class="col-lg-7 col-lg-offset-1">
        
       <small>
         <div class="panel panel-default">
@@ -75,7 +75,7 @@
    <span class="label label-warning"> Matching results for Findings</span>
    
     <div class="row-fluid"> 
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-lg-offset-1">
     <%= will_paginate @findings %>
     </div>
     </div>
@@ -91,7 +91,7 @@
    <% @findings.each do |finding| %>
     <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-7">
+    <div class="col-lg-7 col-lg-offset-1">
         
     <small>
       <div class="panel panel-default">
