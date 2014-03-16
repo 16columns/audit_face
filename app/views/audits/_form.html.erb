@@ -38,40 +38,38 @@
 <div class="tab-content">
   <div class="tab-pane active" id="organization">
     <br/>
-   <form class="form-horizontal" role="form">
-     <div class="form-group">
-         <div class="col-sm-12">
-      <input class="form-control" placeholder="Organization name">
+   <div class="form-inputs">
+      <div class="input-sm">
+        <div class="col-lg-12">
+          <%= f.input :organiation_name, placeholder: 'The organization name where audit needs to be done' %>
+      </div>
+      </div>
+      <br/><br/>
+      <div class="input-sm">
+        <div class="col-lg-12">
+      <%= f.input :address, placeholder: 'Address' %>
+      </div>
+      </div>
+      <br/><br/>
+      <div class="input-sm">
+        <div class="col-lg-12">
+      <%= f.input :contact_number, placeholder: 'Contact Number' %>
+      </div>
+      </div>
+     <br/><br/>
+      <div class="input-sm">
+        <div class="col-lg-12">
+      <%= f.input :representative_name, placeholder: 'MR Name' %>
+      </div>
+      </div>
+     <br/><br/>
+      <div class="input-sm">
+        <div class="col-lg-12">
+      <%= f.input :representative_email, placeholder: 'MR Email' %>
+      </div>
+      </div>
     </div>
-  </div>
-     
-     <div class="form-group">
-         <div class="col-sm-12">
-      <input class="form-control" placeholder="Address">
-    </div>
-  </div>
-       <div class="form-group">
-         <div class="col-sm-12">
-      <input class="form-control" placeholder="Contact number">
-    </div>
-  </div>
-     
-       <div class="form-group">
-         <div class="col-sm-12">
-      <input class="form-control" placeholder="MR name">
-    </div>
-  </div>
-     
-       <div class="form-group">
-         <div class="col-sm-12">
-      <input class="form-control" placeholder="MR Email">
-    </div>
-  </div>
-     
-   </form>
-  
-  </div>
-  
+   </div>
   
   <div class="tab-pane" id="client">
     <div class="form-inputs">
@@ -144,13 +142,13 @@
     <div class="form-inputs">
       <div class="input-sm">
           <div class="col-lg-12">
-      <%= f.input :auditor_name, placeholder: 'Auditor\'s name' %>
+            <%= f.input :auditor_name,  :input_html => { :value => current_user.profile_name }  %>
       </div>
       </div>
        <br/><br/>
         <div class="input-sm">
             <div class="col-lg-12">
-       <%= f.input :auditor_email, placeholder: 'awesomeauditor@domain.com' %>
+       <%= f.input :auditor_email, :input_html => { :value => current_user.email } %>
        <!-- <label class="badge pull-right" data-toggle="modal" data-target="#myModal">
         Add auditor </label> -->
         </div>
