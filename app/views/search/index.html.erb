@@ -1,5 +1,5 @@
  <div class="container">
-   <span class="label label-danger">Matching Results for Audits</span>
+   <span class="label label-danger col-lg-offset-1">Matching Results for Audits</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12">
@@ -11,7 +11,7 @@
   <% if  @audits == [] %>
   <div class="container">
    
-  <div class="panel-heading">Search result yielded zero audits </div>
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero audits </div>
   
 </div>
   <%else %>
@@ -72,7 +72,7 @@
  </div> 
 
 <div class="container">
-   <span class="label label-warning"> Matching results for Findings</span>
+   <span class="label label-warning col-lg-offset-1"> Matching results for Findings</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12 col-lg-offset-1">
@@ -84,7 +84,7 @@
   <% if  @findings == [] %>
       <div class="container">
    <%#= @findings.inspect%>
-  <div class="panel-heading">Search result yielded zero findings </div>
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero findings </div>
   
 </div>
   <%else %>
