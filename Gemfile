@@ -22,6 +22,7 @@ gem "jquery-fileupload-rails"
 gem 'high_voltage', '~> 2.1.0'
 gem 'whenever', :require => false
 gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
+gem 'roo'
 
 
 # Gems used only for assets and not required

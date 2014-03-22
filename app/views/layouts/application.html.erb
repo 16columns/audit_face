@@ -7,6 +7,7 @@
   
   <link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
   
@@ -68,7 +69,7 @@
         
       <%= form_tag({:controller => 'search', :action => 'index'}, {:method => 'get'})  do |s| %>
         
-      <div class="form-group">
+      <!--<div class="form-group">
         <div class="btn-group">
           <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
           Search by <span class="caret"></span>
@@ -79,9 +80,12 @@
         <li><a href="#">Reports</a></li>
     
         </ul>
-        </div>
-        <%= text_field_tag :search, params[:search], style: "width:200px; margin-top:5px", placeholder: "Jump to audits or findings", class: "input-sm" %>
-        <%= submit_tag "Search", class: "btn btn-sm" %>
+        </div>-->
+        <%= text_field_tag :search, params[:search], style: "width:250px; margin-top:5px", placeholder: "Jump to audits, findings or reports", class: "input-sm" %>
+        <%= button_tag(:type => 'submit', :class => 'btn btn-sm') do %>
+        <span class="glyphicon glyphicon-search"></span> Search 
+        <% end %>
+        <%# submit_tag "Search", class: "btn btn-default" %> 
       </div>  
     <% end %>
     </div>

@@ -7,7 +7,7 @@
 <% @reports.each do |report| %>
 <div class="container">
   
-  <div class="col-lg-10 col-lg-offset-1">
+  <div class="col-lg-7 col-lg-offset-1">
     
     
     <div class="panel panel-default">
@@ -38,7 +38,13 @@
 <div class="page-header">
 </div>
 <% end %>
-
+<div class="container">
+    <div class="row-fluid"> 
+    <div class="col-lg-12 col-lg-offset-1">
+    <%= will_paginate @reports %>
+    </div>
+    </div>
+    </div>
 
 
 

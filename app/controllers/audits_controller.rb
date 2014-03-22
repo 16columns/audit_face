@@ -6,7 +6,7 @@ class AuditsController < ApplicationController
   # GET /audits.json
   def index
     @audits_not_started = current_user.audits.where('start_date > ?',Time.now)      
-    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 3).order('id DESC')
+    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC')
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }
@@ -222,3 +222,8 @@ class AuditsController < ApplicationController
         end
       end
  end
+
+
+
+
+

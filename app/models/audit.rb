@@ -4,7 +4,7 @@ class Audit < ActiveRecord::Base
   has_many :findings, :dependent => :destroy
   
   validates :department_name, :auditee_name, :auditee_email, :auditor_name, 
-            :auditor_email, :location, :presence => true
+            :auditor_email, :location, :organiation_name, :presence => true
             
   validates :start_date, :date => {:before_or_equal_to => :end_date, :message => 'must be before or same as end date' }
   
@@ -15,6 +15,7 @@ class Audit < ActiveRecord::Base
   def cannot_audit_self
     self.errors[:base] << "You can not audit yourself." if self.auditee_email == self.auditor_email
   end
+  
   def self.capa_pending_auto_follow_up
     @audits_capa_pending = []
     @audits = Audit.all
@@ -35,6 +36,5 @@ class Audit < ActiveRecord::Base
     #end
   end
 end
-
 
 

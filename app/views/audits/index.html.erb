@@ -3,52 +3,64 @@
    <div class="container">
     <div class="row-fluid">
     <div class="col-lg-12 col-lg-offset-1">
-    <%= link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
-   <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
+    
+      <%= link_to new_audit_path, :class => "btn btn-sm btn-default" do %>
+      <span class="glyphicon glyphicon-plus-sign"></span> New Audit
+
+      <% end %>
+      
+      <%# link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
+      <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
 
       
      <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1"> Preview Schedule </button>
     
+    
+       
     </div>
     </div>
     </div>
-     <br/>
-   <% @audits.each do |audit| %>
-   <div class="container">
-   <div class="row-fluid">
-   <div class="col-lg-6 col-md-6 col-lg-offset-1">
+    <div class="page-header"></div>
+
+    <% @audits.each do |audit| %>
+    <div class="container">
+    <div class="row-fluid">
+    <div class="col-lg-6 col-md-6 col-lg-offset-1">
    
-    <small>
+     <small>
+       
       <div class="panel panel-default" >
       <% audit.findings.each do |finding| %>  
-        <%if finding.status_id != "Closed"%>
-          <% break %>
-        <%end %>  
+      <%if finding.status_id != "Closed"%>
+      <% break %>
+      <%end %>  
       <% end  %>
       <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
       
-          <div class="panel-heading" style="background:#ecf0f1">
-              <strong style="font-size:16px; color:#2980b9"> <%= audit.organiation_name %></strong> - <strong style="font-size:14px;"> <%= audit.department_name %></strong>
+      <div class="panel-heading" style="background:#ecf0f1">
+      <strong style="font-size:16px; color:#2980b9"> <%= audit.organiation_name %></strong> - <strong style="font-size:14px;"> <%= audit.department_name %></strong>
                 
-                <span class="label label-success pull-right">
-               <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
-          
-            <%= "In Progress" %> 
-            <%elsif audit.start_date.to_i > Time.now.to_i %>
-              <%= "Not Started"%>
-            <%elsif Time.now.to_i > audit.end_date.to_i   %>  
-              <%= "Audit Completed" %>
-          <%end%> 
-      </span>
-      </div>
+      <span class="label label-success pull-right">
+      <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
+         
+      <%= "In Progress" %> 
+      <%elsif audit.start_date.to_i > Time.now.to_i %>
+      <%= "Not Started"%>
+      <%elsif Time.now.to_i > audit.end_date.to_i   %>  
+      <%= "Audit Completed" %>
+      <%end%> 
+      
+       </span>
+       </div>
+      
       <div class="panel-body" style="background:#ecf0f1">
-        <span class="label label-default">Audit   # <%= audit.id %></span> - <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
+      <span class="label label-default">Audit   # <%= audit.id %></span> - <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
       </div>
 
-            <div class="panel-footer" style="background:#ecf0f1">  
-                    <div class="meta">
-                   <p>
-                   <%= time_ago_in_words(audit.created_at) + " ago" %>    |
+      <div class="panel-footer" style="background:#ecf0f1">  
+      <div class="meta">
+      <p>
+      <%= time_ago_in_words(audit.created_at) + " ago" %>    |
 
                      <% if audit.start_date.to_i > Time.now.to_i %>
                      <%= link_to " Modify", edit_audit_path(audit), class: "btn" %>  | 
