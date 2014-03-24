@@ -13,7 +13,7 @@
       <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
 
       
-     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1"> Preview Schedule </button>
+     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
     
     
        
@@ -60,20 +60,21 @@
       <div class="panel-footer" style="background:#ecf0f1">  
       <div class="meta">
       <p>
-      <%= time_ago_in_words(audit.created_at) + " ago" %>    |
+      <%= time_ago_in_words(audit.created_at) + " ago" %>  -    
 
                      <% if audit.start_date.to_i > Time.now.to_i %>
-                     <%= link_to " Modify", edit_audit_path(audit), class: "btn" %>  | 
-                     <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn", method: :delete, data: { Confirm: "Are you sure"} %> |
-                      <%= link_to " View Finding", audit, class: "btn btn-link btn-sm disabled" %>
-                    <i class="fa fa-share-square-o fa-lg"></i>
-                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
-                    <% else %>  
-                     <%= link_to " Modify", edit_audit_path(audit), class: "btn disabled" %>  |
-                     <i class="fa fa-trash-o fa-lg"></i> <%= link_to " Delete", audit, class: "btn disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
-                      <%= link_to " View Finding", audit, class: "btn btn-link btn-sm" %>
-                    <i class="fa fa-share-square-o fa-lg"></i>
-                      <%= link_to " Add Finding", new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" %>  
+                    <%= link_to "Modify", edit_audit_path(audit), class: "btn btn-link" %>  | 
+                     <%= link_to "Delete", audit, class: "btn btn-link", method: :delete, data: { Confirm: "Are you sure"} %> |
+                     
+                     <%= link_to "View Finding", audit, class: "btn btn-link btn-sm disabled" %>
+                    
+                     <%= link_to "Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
+                     <% else %>  
+                     <%= link_to "Modify", edit_audit_path(audit), class: "btn btn btn-link disabled" %>  |
+                     <%= link_to "Delete", audit, class: "btn btn btn-link disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
+                      <%= link_to "View Finding", audit, class: "btn btn-link btn-sm" %>
+                  
+                      <%= link_to "Add Finding", new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" %>  
                     <%end%>  
                      </p>
                          
