@@ -15,7 +15,7 @@
     
     <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-10 col-md-10 col-lg-offset-1">
+    <div class="col-lg-9 col-md-9 col-lg-offset-1">
         
     
           <%#=  @audit.findings %>
@@ -93,9 +93,9 @@
                    </span>
                     
                     <br/><br/>
-                    <p><% finding.documents.each do |document| %> <label class="badge">
-                        <%= link_to document.attachment_file_name, document.attachment.url %>
-                      </label> <%end%>  
+                    <p><% finding.documents.each do |document| %> 
+                        <%= link_to document.attachment_file_name, document.attachment.url %> |
+                       <%end%>  
                      
                   </div>  
                       
@@ -120,7 +120,7 @@
     </div>
     </div>
       <div class="container">
-<div class="col-lg-10 col-md-10 col-lg-offset-1">
+<div class="col-lg-9 col-md-9 col-lg-offset-1">
     <div class="alert alert-warning fade in">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <strong>Need your attention!</strong> Follow-up alerts will stop the moment you select "Findings submitted"
