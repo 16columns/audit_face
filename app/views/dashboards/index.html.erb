@@ -6,34 +6,35 @@
 <div class="container">
   
     <div class="row-fluid">
-      <div class="col-lg-2" style="margin-left:30px">
-           <small>
+      <div class="col-lg-2 col-lg-offset-1" >
+            <small>
            <div class="panel panel-default" >
          <div class="panel-heading" style="background:#1abc9c;">
            <strong> All Audits </strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <span class="col-lg-offset-4">
+           <h3 class="col-lg-offset-4">
                   <%= @current_user.audits.count %>
-            </span>
+            </h3>
           </div>
         </div>
-             </small>
+        </small>    
       </div>
        
         <div class="col-lg-2">
-           <small>
+            <small>
            <div class="panel panel-default">
          <div class="panel-heading" style="background:#1abc9c;">
            <strong> My Audits </strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <span class="col-lg-offset-4">
-                  <%= @audits.count %>
-            </span>
+           <h3 class="col-lg-offset-4">
+              <%= @audits.count %> 
+            </h3>
           </div>
+              </small>
         </div>
-             </small>
+             
       </div>
       
       <div class="col-lg-2">
@@ -43,10 +44,10 @@
            <strong>Findings issued by me</strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <span class="col-lg-offset-4">
+           <h3 class="col-lg-offset-4">
            
              <%= @finding_count %>
-            </span>
+            </h3>
           </div>
         </div>
              </small>
@@ -54,17 +55,17 @@
           
        
       
-      <div class="col-lg-3">
+      <div class="col-lg-2">
            <small>
            <div class="panel panel-default">
          <div class="panel-heading" style="background:#1abc9c;">
-         Open Audits (+30 days)
+           <strong> Open Audits (+30 days)</strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <span class="col-lg-offset-6">
+           <h3 class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#openaudits">
            <%= @open_audits_count %></a>
-            </span>
+            </h3>
           </div>
         </div>
              </small>
@@ -74,16 +75,17 @@
            <small>
            <div class="panel panel-default">
          <div class="panel-heading" style="background:#1abc9c;">
-         Upcoming Audits
+           <strong>Upcoming Audits</strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <span class="col-lg-offset-6">
+           <h3 class="col-lg-offset-6">
            <a href class="btn-link" data-toggle="modal" data-target="#upcomingaudits">
            <%= @upcoming_audits.count %></a>
-            </span>
+            </h3>
           </div>
+             
         </div>
-             </small>
+        </small>     
       </div>
       
   </div>
@@ -112,7 +114,8 @@
        </div>
        <div class="panel-body">
          <%#=  collection_select(:capa_pending_audits, :id,@capa_pending_audits, :id,:id, {},{:class=>'form-control'})   %>
-         <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'], obj['id']] }),:class=>'form-control' %>
+          <%#= @capa_pending_audits.inspect%>
+         <%= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }),:class=>'form-control' %>
          <% capa_pending_findings = []%> 
          <% if @capa_pending_audits != [] %>
            <% @capa_pending_audits.first.findings.each do |finding| %>

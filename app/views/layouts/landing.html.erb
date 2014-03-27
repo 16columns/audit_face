@@ -8,6 +8,9 @@
 <link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+
+  
 </head>
 <body style="font-family: 'Open Sans', sans-serif">
 
@@ -156,8 +159,8 @@
    <div class="container">
      <h1 class="col-lg-offset-4" style="font-family: 'Lato', sans-serif;"> Who uses 77comply?   </h1> 
      <div class="col-lg-5">
-     <div class="well">
-       <ul >
+     <div class="well" style="background: url(<%= asset_path 'leather.jpg' %>)">
+       <ul style="color:#ffffff" >
        <li><h4>Internal Auditors</h4></li>
        <li><h4>Independent Auditors</h4></li>
         <li><h4>Quality Managers</h4></li>
@@ -165,8 +168,8 @@
        </div>
        </div>
     <div class="col-lg-5 col-lg-offset-2">
-      <div class="well">
-     <ul >
+      <div class="well" style="background: url(<%= asset_path 'leather.jpg' %>)">
+     <ul style="color:#ffffff">
        <li><h4>Lead Auditors</h4></li>
        <li><h4>Management Representatives</h4></li>
        <li><h4>Consultants</h4></li>

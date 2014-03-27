@@ -65,3 +65,5 @@ class UserMailer < ActionMailer::Base
     mail(:to => @audit.auditee_email, :subject => "CAPA Pending Auto Follow Up")  
   end
 end
+
+

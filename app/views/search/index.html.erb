@@ -21,7 +21,7 @@
      <div class="col-lg-7 col-lg-offset-1">
        
       <small>
-        <div class="panel panel-default">
+        <div class="panel panel-default style="background:#ecf0f1"">
         <% audit.findings.each do |finding| %>  
           <%if finding.status_id != "Closed"%>
             <% break %>
@@ -30,7 +30,7 @@
         <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
         
         <div class="panel-heading">
-        <span class="label label-default">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
+        <span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
             <span class="label label-info pull-right">
   
             <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
@@ -44,11 +44,11 @@
            </span>
         </div>
        
-        <div class="panel-body">
+        <div class="panel-body" style="background:#ecf0f1">
           <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
         </div>
   
-              <div class="panel-footer">  
+              <div class="panel-footer" style="background:#ecf0f1">  
                       <div class="meta">
                      <p>
                      <%= time_ago_in_words(audit.created_at) + " ago" %>    |
@@ -93,8 +93,8 @@
     <div class="row-fluid">
     <div class="col-lg-7 col-lg-offset-1">
         
-    <small>
-      <div class="panel panel-default">
+    <small> 
+      <div class="panel panel-default" style="background:#ecf0f1">
         <div class="panel-heading">
           <span class="label label-success"> Finding # <%= finding.id %></span> | <%= finding.audit.department_name if finding.audit %> 
           <% if finding.status_id == "CAPA Pending"  %>
@@ -108,11 +108,11 @@
           <%end%>  
         </div>
         
-        <div class="panel-body">
+        <div class="panel-body" style="background:#ecf0f1">
           <%= finding.description %>
         </div>
         
-        <div class="panel-footer">
+        <div class="panel-footer" style="background:#ecf0f1">
           <%= link_to time_ago_in_words(finding.created_at) + " ago" , finding %>  | 
           <span class="label label-warning"><%= finding.category %></span>         |
           
