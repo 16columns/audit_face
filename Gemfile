@@ -15,7 +15,7 @@ gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
 gem 'prawn'
-gem 'prawn-rails'
+
 gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
 gem "jquery-fileupload-rails"
@@ -30,9 +30,8 @@ group :development, :test do
   
 end
 
-group :production do
-  gem 'rails_12factor'
-end
+gem 'rails_12factor', group: :production
+
 
 # Gems used only for assets and not required
 # in production environments by default.
