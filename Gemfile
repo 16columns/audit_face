@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -25,12 +25,16 @@ gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://g
 gem 'roo'
 
 
+
 group :development, :test do
   gem 'mysql2'
   
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 
 # Gems used only for assets and not required
