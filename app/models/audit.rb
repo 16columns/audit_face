@@ -2,7 +2,7 @@ class Audit < ActiveRecord::Base
   attr_accessible :auditee_email, :auditee_name, :auditor_email, :auditor_name, :department_name, :end_date, :start_date, :user_id, :audit_type,:location, :secondry_auditor_name, :secondry_auditor_email, :organiation_name, :address, :contact_number, :representative_name, :representative_email
   belongs_to :user
   has_many :findings, :dependent => :destroy
-  
+  has_one :report
   validates :department_name, :auditee_name, :auditee_email, :auditor_name, 
             :auditor_email, :location, :organiation_name, :presence => true
             
