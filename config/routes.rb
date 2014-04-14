@@ -15,6 +15,8 @@ AuditFace::Application.routes.draw do
   post "dashboards/capa_pending_findings"
   resources :dashboards
   get "audits/export_findings"
+  #get "audits/findings_submitted"
+  post "audits/findings_submitted"
   post "audits/export_findings"
   get "audits/share_schedule"
   post "audits/share_schedule"

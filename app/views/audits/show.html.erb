@@ -3,16 +3,25 @@
     <div class="container">
     <div class="row-fluid">
     <div class="col-lg-9 col-md-9 col-lg-offset-1">
-       <%= link_to "Create Findings", new_audit_finding_path(@audit.id), class: "btn btn-default btn-sm" %> 
+       <%= link_to "Create 
+", new_audit_finding_path(@audit.id), class: "btn btn-default btn-sm" %> 
       <%= link_to "Export Findings (pdf)", "export_findings?audit_id=#{@audit.id}", class: "btn btn-info btn-sm" %>
    <%# link_to "Export Findings(doc)", "export_findings?audit_id=#{@audit.id}", class: "btn btn-info btn-sm" %>
-      <label class="pull-right"> <input type="checkbox"> Findings submitted        </label>
+<%= form_for @audit, :url => url_for(:controller  => 'audits', :action => "findings_submitted") do |f| %>
+    
+      <%= hidden_field_tag :audit_id , params[:id] %>
+      <label class="pull-right"> <%= f.check_box :findings_submitted %></label>
+    <% end -%>
+
+ 
      
     </div>
         
     </div>
     </div>
-    <br/>
+<div>
+          <br/>
+          </div>
     
     <div class="container">
     <div class="row-fluid">
@@ -88,7 +97,7 @@
                      |
                      <strong> <a href="#"  data-id="<%= finding.id%>" data-toggle="modal" data-target="#myModal"> View CAPA </a></strong>
                      |
-                     <%#= hidden_field_tag :audit_id , params[:id] %>
+                     
                       <%= link_to 'Modify', edit_finding_path(finding,:audit_id => params[:id]) %> |
                       <%= link_to 'Destroy', finding_path(finding,:audit_id => params[:id]), method: :delete, data: { confirm: 'This action is permanent, are you sure?' } %>
                    </span>
@@ -149,6 +158,8 @@
   </div>
 </div>   
  <script type"text/javascript">
+  
+   
   $(document).ready(function() {
 
   $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
@@ -173,6 +184,12 @@
     }); 
    
   })
+    $("#audit_findings_submitted").bind('change', function(){
+    alert("****************script is working**************");
+   document.forms[1].submit();
+   });
 });    
+  
+   
 </script>
 

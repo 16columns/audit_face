@@ -5,8 +5,8 @@ class AuditsController < ApplicationController
   # GET /audits
   # GET /audits.json
   def index
-    @audits_not_started = current_user.audits.where('start_date > ?',Time.now)      
-    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC')
+    @audits_not_started = current_user.audits.where('start_date > ? and deleted = ? ',Time.now,false)      
+    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC').where('deleted = ?',false)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }
@@ -107,8 +107,8 @@ class AuditsController < ApplicationController
   def destroy
  
     @audit = current_user.audits.find(params[:id])
-    @audit.destroy
-    
+    @audit.deleted =true
+    @audit.save
     UserMailer.audit_deleted_auditor(@audit,current_user).deliver
     UserMailer.audit_deleted_auditee(@audit,current_user).deliver
     respond_to do |format|
@@ -212,7 +212,14 @@ class AuditsController < ApplicationController
      # format.html # show.html.erb
      format.json { render json:  @capa.to_json }
     end
-  end
+  end   
+    def findings_submitted
+      
+      puts "****************inside forms submitted***************"
+      puts params.inspect
+      redirect_to audits_path
+    end
+  
   private
       def check_audit_status
         audit = current_user.audits.find(params[:id])

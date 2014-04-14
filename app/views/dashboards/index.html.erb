@@ -14,7 +14,8 @@
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
            <h3 class="col-lg-offset-4">
-                  <%= @current_user.audits.count %>
+                  <%# @current_user.audits.count %>
+            <%= link_to @current_user.audits.count, audits_path %>
             </h3>
           </div>
         </div>

@@ -25,3 +25,9 @@
   every :monday, :at => "10:35pm" do
     runner "Audit.capa_pending_auto_follow_up"            
   end
+
+  every :monday, :at => "10:35pm" do
+    runner "Audit.capa_pending_auto_follow_up"            
+  end
+
+
