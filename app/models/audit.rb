@@ -35,6 +35,14 @@ class Audit < ActiveRecord::Base
      #   UsersMailer.weekly_mail(u).deliver
     #end
   end
+
+  def self.submit_findings_follow_up
+     Audit.all.each do |audit|
+      if audit.findings_submitted == false || audit.findings_submitted == 0
+        UserMailer.submit_findings_follow_up(audit,current_user).deliver      
+      end
+    end
+  end  
 end
 
 

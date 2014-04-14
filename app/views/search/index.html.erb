@@ -160,3 +160,59 @@
     <% end %> 
 
 
+<div class="container">
+   <span class="label label-danger col-lg-offset-1">Matching Results for Reports</span>
+   
+    <div class="row-fluid"> 
+    <div class="col-lg-12">
+    <%= will_paginate @reports %>
+    </div>
+    </div>
+    </div>
+ <br/>
+  <% if  @reports == [] %>
+  <div class="container">
+   
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero reports </div>
+  
+</div>
+  <%else %>
+    <% @reports.each do |report| %>
+     <div class="container">
+     <div class="row-fluid">
+     <div class="col-lg-7 col-lg-offset-1">
+       
+      <small>
+       
+        <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
+      <div class="panel panel-default" style="background:#ecf0f1">
+       <div class="panel-heading" style="background:#ecf0f1"> 
+       
+        Department name:  <%= report.audit.department_name %> |
+        Organization name:  <%= report.audit.organiation_name %> |
+        <label class="badge pull-right"><%= report.report_status %></label>
+      </div>
+      
+      <div class="panel-body" style="background:#ecf0f1">
+                    <strong style="color:#7f8c8d"> Report name:  <%= report.report_name %> </strong>
+                   </div>
+      
+       <div class="panel-footer" style="background:#ecf0f1">
+         <span><small>Created at: <%= report.created_at.strftime("%d-%b-%y") %> </small></span> | 
+         <span ><small>Updated at: <%= report.updated_at.strftime("%d-%b-%y") %></small></span>
+<!--        <button type="button" class="btn btn-default btn-sm pull-right">Download audit report</button> -->
+         <%= link_to "Download audit report", report.avatar.url(:original, false), class: "btn btn-default btn-sm pull-right" %>
+         <%= link_to 'Edit', edit_report_path(report), class: "btn btn-link btn-sm pull-right" %>
+         <%= link_to 'Delete', report, method: :delete, data: { confirm: 'This would permanently delete the report' },  class: "btn btn-link btn-sm pull-right" %>
+       <br/>
+         <span class="label label-info"><%= report.report_tag %></span>
+      </div>
+      </div>
+      </small>
+   </div>
+   </div>
+   </div>
+      <% end %>
+    <%end%>     
+
+ </div> 

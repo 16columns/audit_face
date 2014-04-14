@@ -7,6 +7,7 @@ class SearchController < ApplicationController
     terms << params[:search].strip
     audit_conditions = []
     finding_conditions = []
+    report_conditions = []
     values = {}
 
    terms.each_with_index do |t,i|
@@ -16,11 +17,13 @@ class SearchController < ApplicationController
                                   OR auditor_name LIKE :#{arg_id} OR auditor_email LIKE :#{arg_id} OR audit_type LIKE :#{arg_id} "
      finding_conditions << "description LIKE :#{arg_id} OR category LIKE :#{arg_id} OR risk_rating LIKE :#{arg_id}
                               OR corrective_action LIKE :#{arg_id} OR preventive_action LIKE :#{arg_id} OR status_id LIKE :#{arg_id} OR iso_clause LIKE :#{arg_id}"
+      report_conditions <<  "report_name LIKE :#{arg_id} OR report_tag LIKE :#{arg_id} OR report_status LIKE :#{arg_id}"                               
      values[arg_id] = "%"+t+"%"
     end
     
       @audits = current_user.audits.paginate(:page => params[:page], :per_page => 10).where(audit_conditions.join(' OR '), values)
       @findings = Finding.paginate(:page => params[:page], :per_page => 10).where(finding_conditions.join(' OR '), values)
+      @reports = Report.paginate(:page => params[:page], :per_page => 10).where(report_conditions.join(' OR '), values)
    
     respond_to do |format|
       format.html # index.html.erb

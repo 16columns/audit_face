@@ -7,11 +7,11 @@
 ", new_audit_finding_path(@audit.id), class: "btn btn-default btn-sm" %> 
       <%= link_to "Export Findings (pdf)", "export_findings?audit_id=#{@audit.id}", class: "btn btn-info btn-sm" %>
    <%# link_to "Export Findings(doc)", "export_findings?audit_id=#{@audit.id}", class: "btn btn-info btn-sm" %>
-<%= form_for @audit, :url => url_for(:controller  => 'audits', :action => "findings_submitted") do |f| %>
-    
-      <%= hidden_field_tag :audit_id , params[:id] %>
-      <label class="pull-right"> <%= f.check_box :findings_submitted %></label>
-    <% end -%>
+    <%= form_for :audit, :url => url_for(:controller  => 'audits', :action => "findings_submitted") do |f| %>
+      
+        <%= hidden_field_tag :audit_id , params[:id] %>
+        <label class="pull-right"><%= f.check_box :findings_submitted %> Findings Submitted</label>
+      <% end -%>
 
  
      
@@ -185,7 +185,6 @@
    
   })
     $("#audit_findings_submitted").bind('change', function(){
-    alert("****************script is working**************");
    document.forms[1].submit();
    });
 });    

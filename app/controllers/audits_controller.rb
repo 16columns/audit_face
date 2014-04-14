@@ -214,10 +214,10 @@ class AuditsController < ApplicationController
     end
   end   
     def findings_submitted
-      
-      puts "****************inside forms submitted***************"
-      puts params.inspect
-      redirect_to audits_path
+      audit = Audit.find(params[:audit_id])
+      puts "***********audit found*********#{audit.inspect}"
+      audit.update_attributes(:findings_submitted => params[:audit][:findings_submitted])
+      redirect_to "/audits/#{params[:audit_id]}"
     end
   
   private

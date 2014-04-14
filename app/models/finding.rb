@@ -12,7 +12,7 @@ class Finding < ActiveRecord::Base
   validates :closure_date, :date => {:after_or_equal_to => Time.now, :message => 'must be after or same as created date' }
   validates_presence_of :corrective_action, :if => Proc.new { |finding| finding.status_id == "Under review" || finding.status_id == "Closed"} ,:message => "Please enter CAPA before you change the status to Under Review"
 #  has_attached_file :avatar #, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  
+  #do_not_validate_attachment_file_type :documents
   accepts_nested_attributes_for :documents , :allow_destroy => true
   
 end

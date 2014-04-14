@@ -74,7 +74,9 @@ class FindingsController < ApplicationController
   # PUT /findings/1.json
   def update
     @finding = Finding.find(params[:id])
-
+    puts "**********params**************#{params.inspect}"
+    #@finding.documents.destroy
+    #@finding.documents.build
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
         if params[:finding][:status_id] == "Closed"
