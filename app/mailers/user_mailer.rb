@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "vishant@comply.com"  
+  default :from => "support@77comply.com"  
   
   def welcome_email(user)  
     mail(:to => user.email, :subject => "Grand welcome to 77comply!")  
@@ -64,4 +64,13 @@ class UserMailer < ActionMailer::Base
     @user = current_user
     mail(:to => @audit.auditee_email, :subject => "CAPA Pending Auto Follow Up")  
   end
+
+  def submit_findings_follow_up(audit,current_user)
+    @audit = audit
+    @user = current_user
+    mail(:to => @audit.auditor_email, :subject => "Submit Your Findings Follow Up")  
+  end
+
 end
+
+

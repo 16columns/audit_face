@@ -15,6 +15,8 @@ AuditFace::Application.routes.draw do
   post "dashboards/capa_pending_findings"
   resources :dashboards
   get "audits/export_findings"
+  #get "audits/findings_submitted"
+  post "audits/findings_submitted"
   post "audits/export_findings"
   get "audits/share_schedule"
   post "audits/share_schedule"
@@ -36,6 +38,8 @@ AuditFace::Application.routes.draw do
 
   get "/pages2/*id" => 'pages2#show', as: :page, format: false
   get 'pages2/landing2' => 'high_voltage/pages2#show', id: 'landing2'
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

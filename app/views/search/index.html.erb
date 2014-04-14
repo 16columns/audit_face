@@ -1,5 +1,5 @@
  <div class="container">
-   <span class="label label-danger">Matching Results for Audits</span>
+   <span class="label label-danger col-lg-offset-1">Matching Results for Audits</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12">
@@ -11,7 +11,7 @@
   <% if  @audits == [] %>
   <div class="container">
    
-  <div class="panel-heading">Search result yielded zero audits </div>
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero audits </div>
   
 </div>
   <%else %>
@@ -21,7 +21,7 @@
      <div class="col-lg-7 col-lg-offset-1">
        
       <small>
-        <div class="panel panel-default">
+        <div class="panel panel-default style="background:#ecf0f1"">
         <% audit.findings.each do |finding| %>  
           <%if finding.status_id != "Closed"%>
             <% break %>
@@ -30,7 +30,7 @@
         <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
         
         <div class="panel-heading">
-        <span class="label label-default">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
+        <span class="label label-info">Audit # <%= audit.id %></span> | <strong><%= audit.department_name %></strong>
             <span class="label label-info pull-right">
   
             <%if (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) %>
@@ -44,11 +44,11 @@
            </span>
         </div>
        
-        <div class="panel-body">
+        <div class="panel-body" style="background:#ecf0f1">
           <strong>Auditor: </strong> <%= audit.auditor_name %> | <strong>Auditee: </strong><%= audit.auditee_name %>
         </div>
   
-              <div class="panel-footer">  
+              <div class="panel-footer" style="background:#ecf0f1">  
                       <div class="meta">
                      <p>
                      <%= time_ago_in_words(audit.created_at) + " ago" %>    |
@@ -72,7 +72,7 @@
  </div> 
 
 <div class="container">
-   <span class="label label-warning"> Matching results for Findings</span>
+   <span class="label label-warning col-lg-offset-1"> Matching results for Findings</span>
    
     <div class="row-fluid"> 
     <div class="col-lg-12 col-lg-offset-1">
@@ -84,7 +84,7 @@
   <% if  @findings == [] %>
       <div class="container">
    <%#= @findings.inspect%>
-  <div class="panel-heading">Search result yielded zero findings </div>
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero findings </div>
   
 </div>
   <%else %>
@@ -93,8 +93,8 @@
     <div class="row-fluid">
     <div class="col-lg-7 col-lg-offset-1">
         
-    <small>
-      <div class="panel panel-default">
+    <small> 
+      <div class="panel panel-default" style="background:#ecf0f1">
         <div class="panel-heading">
           <span class="label label-success"> Finding # <%= finding.id %></span> | <%= finding.audit.department_name if finding.audit %> 
           <% if finding.status_id == "CAPA Pending"  %>
@@ -108,11 +108,11 @@
           <%end%>  
         </div>
         
-        <div class="panel-body">
+        <div class="panel-body" style="background:#ecf0f1">
           <%= finding.description %>
         </div>
         
-        <div class="panel-footer">
+        <div class="panel-footer" style="background:#ecf0f1">
           <%= link_to time_ago_in_words(finding.created_at) + " ago" , finding %>  | 
           <span class="label label-warning"><%= finding.category %></span>         |
           
@@ -160,3 +160,59 @@
     <% end %> 
 
 
+<div class="container">
+   <span class="label label-danger col-lg-offset-1">Matching Results for Reports</span>
+   
+    <div class="row-fluid"> 
+    <div class="col-lg-12">
+    <%= will_paginate @reports %>
+    </div>
+    </div>
+    </div>
+ <br/>
+  <% if  @reports == [] %>
+  <div class="container">
+   
+  <div class="panel-heading col-lg-offset-1">Search result yielded zero reports </div>
+  
+</div>
+  <%else %>
+    <% @reports.each do |report| %>
+     <div class="container">
+     <div class="row-fluid">
+     <div class="col-lg-7 col-lg-offset-1">
+       
+      <small>
+       
+        <%#= (audit.start_date..audit.end_date).cover?(Time.now)%>
+      <div class="panel panel-default" style="background:#ecf0f1">
+       <div class="panel-heading" style="background:#ecf0f1"> 
+       
+        Department name:  <%= report.audit.department_name %> |
+        Organization name:  <%= report.audit.organiation_name %> |
+        <label class="badge pull-right"><%= report.report_status %></label>
+      </div>
+      
+      <div class="panel-body" style="background:#ecf0f1">
+                    <strong style="color:#7f8c8d"> Report name:  <%= report.report_name %> </strong>
+                   </div>
+      
+       <div class="panel-footer" style="background:#ecf0f1">
+         <span><small>Created at: <%= report.created_at.strftime("%d-%b-%y") %> </small></span> | 
+         <span ><small>Updated at: <%= report.updated_at.strftime("%d-%b-%y") %></small></span>
+<!--        <button type="button" class="btn btn-default btn-sm pull-right">Download audit report</button> -->
+         <%= link_to "Download audit report", report.avatar.url(:original, false), class: "btn btn-default btn-sm pull-right" %>
+         <%= link_to 'Edit', edit_report_path(report), class: "btn btn-link btn-sm pull-right" %>
+         <%= link_to 'Delete', report, method: :delete, data: { confirm: 'This would permanently delete the report' },  class: "btn btn-link btn-sm pull-right" %>
+       <br/>
+         <span class="label label-info"><%= report.report_tag %></span>
+      </div>
+      </div>
+      </small>
+   </div>
+   </div>
+   </div>
+      <% end %>
+    <%end%>     
+
+ </div> 

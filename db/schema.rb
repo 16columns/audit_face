@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140306085748) do
+ActiveRecord::Schema.define(:version => 20140315203117) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -48,6 +48,11 @@ ActiveRecord::Schema.define(:version => 20140306085748) do
     t.string   "location"
     t.string   "secondry_auditor_name"
     t.string   "secondry_auditor_email"
+    t.string   "organiation_name"
+    t.string   "address"
+    t.string   "contact_number"
+    t.string   "representative_name"
+    t.string   "representative_email"
   end
 
   add_index "audits", ["audit_type"], :name => "index_audits_on_audit_type"

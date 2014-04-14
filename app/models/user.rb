@@ -43,4 +43,9 @@ class User < ActiveRecord::Base
     def send_welcome_email
       UserMailer.welcome_email(self).deliver
     end 
+  
+    def user_registered_message
+    AdminMailer.user_registered_message(self).deliver
+  end
+  
   end

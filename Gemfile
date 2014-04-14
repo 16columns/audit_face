@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'mysql2'
+
 # gem 'sqlite3-ruby'
 gem 'devise'
 gem 'simple_form'
@@ -15,13 +15,26 @@ gem 'bootstrap-will_paginate'
 gem 'font-awesome-rails'
 gem 'date_validator'
 gem 'prawn'
-gem 'prawn-rails'
+
 gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
 gem "jquery-fileupload-rails"
 gem 'high_voltage', '~> 2.1.0'
 gem 'whenever', :require => false
 gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
+gem 'roo'
+
+
+
+group :development, :test do
+  gem 'mysql2'
+  
+end
+
+group :production do
+  gem 'mysql2'
+  gem 'rails_12factor'
+end
 
 
 # Gems used only for assets and not required

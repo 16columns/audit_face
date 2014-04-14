@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @reports = Report.all
+    @reports= Report.paginate(:page => params[:page], :per_page => 10).order('id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +44,7 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.save
-        format.html { redirect_to @report, notice: 'Report was successfully created.' }
+        format.html { redirect_to reports_path, notice: 'Report was successfully created.' }
         format.json { render json: @report, status: :created, location: @report }
       else
         format.html { render action: "new" }

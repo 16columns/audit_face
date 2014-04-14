@@ -3,25 +3,25 @@
 </h4>
 
 <% if @audits != [] %>  
-  <table style="border:1px solid black;">
+  <table style="border:1px solid black;border-collapse:collapse;">
     <tr>
-      <th>Audit Id</th>
-      <th>Department</th>
-      <th>Starts Date</th>
-      <th>End Date</th>
-      <th>Auditor</th>
-      <th>Auditee</th>
-      <th>Location</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Audit Id</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Department</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Starts Date</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">End Date</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Auditor</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Auditee</th>
+      <th style="border:1px solid; border-color:#7f8c8d; background-color:#95a5a6;">Location</th>
     </tr>
     <% @audits.each do |audit|%>
-    <tr>
-      <td><%= audit.id %></td>
-      <td><%= audit.department_name %></td>
-      <td><%= audit.start_date.strftime("%d-%m-%y") %></td>
-      <td><%= audit.end_date.strftime("%d-%m-%y") %></td>
-      <td><%= audit.auditor_name %></td>
-      <td><%= audit.auditee_name %></td>
-      <td><%= audit.location %></td>
+    <tr >
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.id %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.department_name %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.start_date.strftime("%d-%m-%y") %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.end_date.strftime("%d-%m-%y") %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.auditor_name %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.auditee_name %></td>
+      <td style="border:1px solid; border-color:#7f8c8d;"><%= audit.location %></td>
      </tr>
    <%end%> 
     </table>
