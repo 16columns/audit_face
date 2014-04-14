@@ -8,6 +8,8 @@ development:
   adapter: mysql2
   encoding: utf8
   database: c9
+  username: root
+  password: root
   pool: 5
   timeout: 5000
   

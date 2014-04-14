@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140315203117) do
+ActiveRecord::Schema.define(:version => 20140413125338) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20140315203117) do
     t.string   "auditor_email"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.integer  "user_id"
     t.string   "audit_type"
     t.string   "location"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20140315203117) do
     t.string   "contact_number"
     t.string   "representative_name"
     t.string   "representative_email"
+    t.boolean  "deleted",                :default => false
+    t.boolean  "findings_submitted",     :default => false
   end
 
   add_index "audits", ["audit_type"], :name => "index_audits_on_audit_type"
@@ -116,8 +118,13 @@ ActiveRecord::Schema.define(:version => 20140315203117) do
     t.string   "report_name"
     t.string   "report_tag"
     t.string   "report_status"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.integer  "audit_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "risks", :force => true do |t|
