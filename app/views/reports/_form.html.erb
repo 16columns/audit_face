@@ -8,11 +8,17 @@
  <!--<div class="form-control">
    <%#= collection_select(:report, :audit_id, Audit.all, :id, :id) %>
 </div>-->
-    <div class="input-sm">
+
+    <div class="form-control">
            <div class="col-lg-12">
-            <%= f.input :audit_id, collection: current_user.audits.all, label_method: :id, value_method: :id %>
+            <%= f.select :audit_id, options_for_select(current_user.audits.all.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }) %>
+
           </div>
       </div>
+
+
+            <%#= f.input :audit_id, collection: current_user.audits.all, label_method: :id, value_method: :id %>
+
     <br/>
     <%= f.input :report_name %>
     <%= f.input :report_tag %>

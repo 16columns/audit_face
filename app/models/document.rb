@@ -2,7 +2,7 @@ class Document < ActiveRecord::Base
  attr_accessible :attachment, :finding_id
 
  has_attached_file :attachment
-do_not_validate_attachment_file_type :attachment
+ do_not_validate_attachment_file_type :attachment
  belongs_to :finding 
 # accepts_nested_attributes_for :findings
 include Rails.application.routes.url_helpers
