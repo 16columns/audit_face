@@ -11,11 +11,8 @@
  
  *= require_self
  *= require bootstrap
- *= require bootstrap-datetimepicker
- *= require jquery.fileupload-ui
  *= require_tree 
-
- */
+*/
  
  
  
