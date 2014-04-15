@@ -1,6 +1,6 @@
 class AddColumnDeletedToAudits < ActiveRecord::Migration
   def change
-    add_column :audits, :deleted, :boolean , :default => 0
+    add_column :audits, :deleted, :boolean , :default => false
 
   end
 end
