@@ -129,47 +129,56 @@ class AuditsController < ApplicationController
 # # end
 # item.unshift(["Date","Settlement Amount","ACH Reference"])
     pdf = Prawn::Document.new 
-    pdf.font_size 8 
+    pdf.font_size 10 
     number=0
     point = -50
  #   pdf.bounding_box pdf.bounds.top_left, :width => 500 do
     
-       pdf.bounding_box [point+50, pdf.cursor+10], :width => 500  do
-         pdf.transparent(1.0) {pdf.stroke_bounds }
+  #     pdf.bounding_box [point+50, pdf.cursor+10], :width => 500  do
+  #       pdf.transparent(1.0) {pdf.stroke_bounds }
          #pdf.total_left_padding 10                
-         pdf.move_down 5
+      pdf.move_down 5
        #pdf.pad(60) do 
          #  pdf.text.margin 0.5
         # pdf.margin_left (10) do
-         pdf.text "Department Name :"+ audit.department_name if audit.department_name
+        pdf.text "System generated audit report"
+        pdf.move_down 15
+        pdf.text "Organization name:"+ audit.organiation_name if audit.organiation_name         
+        pdf.move_down 5
+        pdf.text "Department Name :"+ audit.department_name if audit.department_name
+        pdf.move_down 5
+        pdf.text "Management representative:"+ audit.representative_name if audit.representative_name
+        pdf.move_down 5
+        pdf.text "Management representative email:"+ audit.representative_email if audit.representative_email
+        pdf.horizontal_line 25, 100, :at => 75  
+        pdf.move_down 8
+        pdf.text "Created On: " + audit.created_at.strftime("%d-%m-%y") + " | " + "Audit Rating : " + "No Rating"
          pdf.move_down 5
-         pdf.text "Created On: " + audit.created_at.strftime("%d-%m-%y")
+         #pdf.text "Audit Rating : " + "No Rating"
+         #pdf.move_down 5
+         pdf.text "Start date: : " + audit.start_date.strftime("%d-%m-%y")  + " | " + "End date:  : " + audit.end_date.strftime("%d-%m-%y") if audit.end_date
+#         pdf.move_down 5
+#         pdf.text "End date:  : " + audit.end_date.strftime("%d-%m-%y") if audit.end_date
          pdf.move_down 5
-         pdf.text "Audit Rating : " + "No Rating"
-         pdf.move_down 5
-         pdf.text "Start date: : " + audit.start_date.strftime("%d-%m-%y") if audit.start_date
-         pdf.move_down 5
-         pdf.text "End date:  : " + audit.end_date.strftime("%d-%m-%y") if audit.end_date
-         pdf.move_down 5
-         pdf.text "Auditor : " + audit.auditor_name
-         pdf.move_down 5
-         pdf.text "Auditee : " + audit.auditee_name
+         pdf.text "Auditor : " + audit.auditor_name + " | "+ "Auditee : " + audit.auditee_name
+         #pdf.move_down 5
+         #pdf.text "Auditee : " + audit.auditee_name
          pdf.move_down 5
          pdf.text "Location : " + audit.location.to_s
          pdf.move_down 5
          pdf.text "Status : " + ""
         
-        pdf.transparent(1.0) {pdf.stroke_bounds }
+       # pdf.transparent(1.0) {pdf.stroke_bounds }
         pdf.move_down 30
        #end
-      end
+     # end
 
     audit.findings.each do |finding|
        pdf.text "Finding #{number += 1}"  
        pdf.move_down 10
-       pdf.bounding_box [point+50, pdf.cursor+1], :width => 500,:padding => 50  do
-        pdf.stroke_bounds 
-        pdf.move_down 5
+       #pdf.bounding_box [point+50, pdf.cursor+1], :width => 500,:padding => 50  do
+       # pdf.stroke_bounds 
+       # pdf.move_down 5
         pdf.text "Observation: " + finding.description if finding.description
         pdf.move_down 5
         pdf.text "Corrective Action : " + finding.corrective_action if finding.corrective_action
@@ -180,12 +189,12 @@ class AuditsController < ApplicationController
         pdf.move_down 5 
         pdf.text "Status : " + finding.status_id if finding.status_id
         pdf.move_down 5
-         pdf.text "Closed On : " + ""
+         pdf.text "Closed On : " + finding.closure_date.strftime("%d-%m-%y") if finding.closure_date
         pdf.move_down 10
         #pdf.stroke_bounds 
-        pdf.stroke_bounds 
-        pdf.move_down 30
-    end  
+       # pdf.stroke_bounds 
+       # pdf.move_down 30
+      #end  
     end
 
      
