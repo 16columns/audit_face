@@ -2,7 +2,7 @@
    <div class="col-lg-10 col-lg-offset-1">
  <%= link_to 'New Report', new_report_path, class: "btn btn-default btn-sm" %>
   </div>
-</div>
+  </div>
 <br/>
 <% @reports.each do |report| %>
 <div class="container">
@@ -13,7 +13,7 @@
     <div class="panel panel-default">
       <div class="panel-heading" style="background:#ecf0f1"> 
        
-        Department name:  <%= report.audit.department_name %> |
+        <strong style="font-size:16px; color:#2980b9">Department name:  <%= report.audit.department_name %> </strong> |
         Organization name:  <%= report.audit.organiation_name %> |
         <label class="badge pull-right"><%= report.report_status %></label>
       </div>

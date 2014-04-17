@@ -72,7 +72,7 @@
                     <% else %>  
                     <%= link_to "Modify", edit_audit_path(audit), class: "btn btn btn-link disabled" %>  |
                     <%= link_to "Delete", audit, class: "btn btn btn-link disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
-                     <%= link_to "View Finding", audit, class: "btn btn-link btn-sm col-lg-offset-2" %>
+                     <%= link_to "View Finding", audit, class: "btn btn-link btn-sm" %>
                   
                      <%= link_to "Add Finding", new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" %>  
                     <%end%>  
