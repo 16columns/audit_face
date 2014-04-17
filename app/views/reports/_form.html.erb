@@ -1,7 +1,14 @@
 <%= simple_form_for(@report, :html => { :multipart => true }) do |f| %>
   <%= f.error_notification %>
 <div class="container">
-  
+       
+    <div class="col-lg-9 col-md-9 col-lg-offset-1">
+    <div class="alert alert-warning fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Need your attention!</strong> To upload audit report you must first select the audit
+    </div>  
+    </div>
+      
   <div class="col-lg-5 col-lg-offset-1">
   <div class="form-inputs">
   <%#= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }),:class=>'form-control' %>    
@@ -13,13 +20,12 @@
            <div class="col-lg-12">
             <%= f.select :audit_id, options_for_select(@audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }) %>
 
-          </div>
-      </div>
+    <br/><br/>
 
 
             <%#= f.input :audit_id, collection: current_user.audits.all, label_method: :id, value_method: :id %>
 
-    <br/>
+   
     <%= f.input :report_name %>
     <%= f.input :report_tag %>
     <%= f.input :report_status %>
