@@ -4,6 +4,7 @@ class Report < ActiveRecord::Base
   do_not_validate_attachment_file_type :avatar
 
   belongs_to :audit
+  belongs_to :user
   
 
 

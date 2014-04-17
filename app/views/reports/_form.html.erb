@@ -11,7 +11,7 @@
 
     <div class="form-control">
            <div class="col-lg-12">
-            <%= f.select :audit_id, options_for_select(current_user.audits.all.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }) %>
+            <%= f.select :audit_id, options_for_select(@audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }) %>
 
           </div>
       </div>

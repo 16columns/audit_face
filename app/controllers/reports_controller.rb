@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @reports= Report.paginate(:page => params[:page], :per_page => 10).order('id DESC')
+    @reports= current_user.reports.paginate(:page => params[:page], :per_page => 10).order('id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class ReportsController < ApplicationController
   # GET /reports/new.json
   def new
     @report = Report.new
-
+    @audits = current_user.audits.where('deleted = ? ',false) 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @report }

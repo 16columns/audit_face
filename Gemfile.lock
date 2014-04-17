@@ -28,6 +28,8 @@ GEM
       activesupport (= 3.2.17)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.17)
       activemodel (= 3.2.17)
       activesupport (= 3.2.17)
@@ -95,6 +97,8 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pdf-core (0.2.5)
+    pg (0.17.1)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     prawn (1.0.0)
       pdf-core (~> 0.2.2)
@@ -174,6 +178,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
   bootstrap-datetimepicker-rails
   bootstrap-will_paginate
   cocaine
@@ -188,6 +193,7 @@ DEPENDENCIES
   json (~> 1.8.1)
   mysql2
   paperclip
+  pg
   prawn
   rails (= 3.2.17)
   rails_12factor
