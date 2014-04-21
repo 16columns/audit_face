@@ -4,7 +4,8 @@
   </div>
   </div>
 <br/>
-<% @reports.each do |report| %>
+
+<% @reports.each do |reports| %>
 <div class="container">
   
   <div class="col-lg-7 col-lg-offset-1">
@@ -13,24 +14,24 @@
     <div class="panel panel-default">
       <div class="panel-heading" style="background:#ecf0f1"> 
        
-        <strong style="font-size:16px; color:#2980b9">Department name:  <%= report.audit.department_name %> </strong> |
-        Organization name:  <%= report.audit.organiation_name %> |
-        <label class="badge pull-right"><%= report.report_status %></label>
+      <strong style="font-size:16px; color:#2980b9">Department name:  <%= report.audit.department_name %> </strong> |
+      Organization name:  <%= report.audit.organiation_name %> |
+      <label class="badge pull-right"><%= report.report_status %></label>
       </div>
       
- <div class="panel-body" style="background:#ecf0f1">
-                    <strong style="color:#7f8c8d"> Report name:  <%= report.report_name %> </strong>
-                   </div>
+      <div class="panel-body" style="background:#ecf0f1">
+      <strong style="color:#7f8c8d"> Report name:  <%= report.report_name %> </strong>
+      </div>
       
-       <div class="panel-footer" style="background:#ecf0f1">
-         <span><small>Created at: <%= report.created_at.strftime("%d-%b-%y") %> </small></span> | 
-         <span ><small>Updated at: <%= report.updated_at.strftime("%d-%b-%y") %></small></span>
-<!--        <button type="button" class="btn btn-default btn-sm pull-right">Download audit report</button> -->
-         <%= link_to "Download audit report", report.avatar.url(:original, false), class: "btn btn-default btn-sm pull-right" %>
-         <%= link_to 'Edit', edit_report_path(report), class: "btn btn-link btn-sm pull-right" %>
-         <%= link_to 'Delete', report, method: :delete, data: { confirm: 'This would permanently delete the report' },  class: "btn btn-link btn-sm pull-right" %>
-       <br/>
-         <span class="label label-info"><%= report.report_tag %></span>
+      <div class="panel-footer" style="background:#ecf0f1">
+      <span><small>Created at: <%= report.created_at.strftime("%d-%b-%y") %> </small></span> | 
+      <span ><small>Updated at: <%= report.updated_at.strftime("%d-%b-%y") %></small></span>
+<!--  <button type="button" class="btn btn-default btn-sm pull-right">Download audit report</button> -->
+      <% link_to "Download audit report", report.avatar.url(:original, false), class: "btn btn-default btn-sm pull-right" %>
+      <%= link_to 'Edit', edit_report_path(report), class: "btn btn-link btn-sm pull-right" %>
+      <%= link_to 'Delete', report, method: :delete, data: { confirm: 'This would permanently delete the report' },  class: "btn btn-link btn-sm pull-right" %>
+      <br/>
+      <span class="label label-info"><%= report.report_tag %></span>
       </div>
 </div>
 </div>

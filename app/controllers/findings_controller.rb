@@ -4,7 +4,7 @@ class FindingsController < ApplicationController
   # GET /findings
   # GET /findings.json
   def index
-     @findings= Finding.paginate(:page => params[:page], :per_page => 1).order('id DESC')
+     @findings= Finding.paginate(:page => params[:page], :per_page => 10).order('id DESC')
      
     #@audits= Audit
     
