@@ -1,14 +1,14 @@
 <%# @documents = @finding.documents.build %>
 <%= simple_form_for(@finding, html: {class: "form-horizontal", multipart: true}) do |f| %>
-<%= f.error_notification %>
+
 <% if @finding.errors.any? %>
     <div class="container" id="error_explanation">
     <div class="row-fluid">
-    <div class="col-lg-5 col-lg-offset-3">
-    <div class="well well-sm">
+    <div class="col-lg-5 col-lg-offset-1">
+      <div class="well well-sm" style="background:#66CC99">
       <p><%= pluralize(@finding.errors.count, "error") %> prohibited this audit from being saved</p>
       <% @finding.errors.full_messages.each do |msg| %>
-        <p><%= msg %></p>
+        <p> <%= msg %></p>
       <% end %>
     </div>
      
@@ -50,7 +50,7 @@
       <div class="input-sm">
        <div class="col-lg-12">
       <%#= f.input :category, collection: FindingType.all, label_method: :category_name, value_method: :category_name %>
-      <%= f.input :category ,placeholder: 'Category' %>
+      <%= f.input :category ,placeholder: 'Categorize your findings e.g. Non Conformance, Major NC etc' %>
         </div>
         </div>
         <br/><br/>
