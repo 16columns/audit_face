@@ -21,9 +21,13 @@ class SearchController < ApplicationController
      values[arg_id] = "%"+t+"%"
     end
     
+      audits =[]
       @audits = current_user.audits.paginate(:page => params[:page], :per_page => 10).where(audit_conditions.join(' OR '), values)
-      @findings = Finding.paginate(:page => params[:page], :per_page => 10).where(finding_conditions.join(' OR '), values)
-      @reports = Report.paginate(:page => params[:page], :per_page => 10).where(report_conditions.join(' OR '), values)
+      @audits.each do |audit|
+        audits << audit.id
+      end
+      @findings = current_user.findings.paginate(:page => params[:page], :per_page => 10).where(finding_conditions.join(' OR ') ,  values,audits)
+      @reports = current_user.reports.paginate(:page => params[:page], :per_page => 10).where(report_conditions.join(' OR '), values)
    
     respond_to do |format|
       format.html # index.html.erb

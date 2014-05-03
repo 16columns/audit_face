@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :audits
   has_many :reports, through: :audits
+  has_many :findings, through: :audits
   has_many :activities
   
   
