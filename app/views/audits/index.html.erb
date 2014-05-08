@@ -74,7 +74,9 @@
                     <%= link_to "Delete", audit, class: "btn btn btn-link disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
                      <%= link_to "View Finding", audit, class: "btn btn-link btn-sm" %>
                   
-                     <%= link_to "Add Finding", new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" %>  
+                     <%= link_to new_audit_finding_path(audit.id), class: "btn btn-default btn-sm pull-right" do %>  
+                     <span class="glyphicon glyphicon-plus-sign"></span> Create new finding
+                     <%end%>
                     <%end%>  
                      </p>
                          
