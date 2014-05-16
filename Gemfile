@@ -25,7 +25,7 @@ gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://g
 gem 'roo'
 gem 'pg'
 gem  'activerecord-postgresql-adapter'
-
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'mysql2'

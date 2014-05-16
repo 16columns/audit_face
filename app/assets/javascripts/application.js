@@ -13,6 +13,7 @@
 //= require jquery-1.11.0.js
 //= require jquery_ujs
 //= require bootstrap-datetimepicker
+//= require bootstrap-datepicker
 //= require_tree 
 
 

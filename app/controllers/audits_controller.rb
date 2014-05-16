@@ -48,11 +48,13 @@ class AuditsController < ApplicationController
   def create
     @audit = current_user.audits.new(params[:audit])
     audit = params[:audit]
-    start_date = DateTime.new(params["audit"]["start_date(1i)"].to_i, params["audit"]["start_date(2i)"].to_i,params["audit"]["start_date(3i)"].to_i,
-                                                                    params["audit"]["start_date(4i)"].to_i,params["audit"]["start_date(5i)"].to_i)
+    start_date = Time.parse(params["audit"]["start_date"])
     
-    end_date = DateTime.new(params["audit"]["end_date(1i)"].to_i, params["audit"]["end_date(2i)"].to_i,params["audit"]["end_date(3i)"].to_i,
-                                                                    params["audit"]["end_date(4i)"].to_i,params["audit"]["end_date(5i)"].to_i)
+    end_date = Time.parse(params["audit"]["end_date"])
+    # start_date =  DateTime.new(params["audit"]["start_date(1i)"].to_i, params["audit"]["start_date(2i)"].to_i,params["audit"]["start_date(3i)"].to_i,
+        #                                                                 params["audit"]["start_date(4i)"].to_i,params["audit"]["start_date(5i)"].to_i)
+    # end_date =  DateTime.new(params["audit"]["end_date(1i)"].to_i, params["audit"]["end_date(2i)"].to_i,params["audit"]["end_date(3i)"].to_i,
+      #                                                                 params["audit"]["end_date(4i)"].to_i,params["audit"]["end_date(5i)"].to_i)
      @all_audits = Audit.where("auditor_email = ? or auditee_email = ?",params[:audit][:auditor_email], params[:audit][:auditee_email])
     
       @all_audits.each do |audit|
