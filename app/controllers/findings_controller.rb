@@ -74,9 +74,7 @@ class FindingsController < ApplicationController
   # PUT /findings/1.json
   def update
     @finding = Finding.find(params[:id])
-    puts "**********params**************#{params.inspect}"
-    #@finding.documents.destroy
-    #@finding.documents.build
+    doc_ids = @finding.documents.map{|x| x.id}
     respond_to do |format|
       if @finding.update_attributes(params[:finding],:audit_id => params[:audit_id]) 
         if params[:finding][:status_id] == "Closed"
@@ -84,23 +82,17 @@ class FindingsController < ApplicationController
           @finding.save
         end
 
-
-     #   updated_docs = []
-     #   if params[:finding][:documents_attributes] != nil
-          
-     #     doc_ids = @finding.documents.map{|x| x.id}
-     #     params[:finding][:documents_attributes].each do |index, value|
-     #        updated_docs << value[:id]
-     #     end  
-     #   updated_docs =updated_docs.map{|s| s.to_i}
-     #   puts "*****updated docs******#{updated_docs}"
-     # end
-     #   deleted_docs = doc_ids - updated_docs
-     #   puts "*********these docs are removed***********#{deleted_docs}"
-       #Document.where(:id => deleted_docs.map(:id)).each { |object| object.destroy }  
-      #    Document.delete deleted_docs.map { |u| u }
+        updated_docs = []
+        if params[:finding][:documents_attributes] != nil  
+          params[:finding][:documents_attributes].each do |index, value|
+            updated_docs << value["id"] if value.keys.include?("id")
+          end  
+          updated_docs =updated_docs.compact.map(&:to_i)
+        end
+        deleted_docs = doc_ids - updated_docs
+        Document.where(:id => deleted_docs).each { |object| object.destroy }  
         
-         current_user.create_activity @finding, 'updated'
+        current_user.create_activity @finding, 'updated'
         format.html { redirect_to "/audits/#{params[:audit_id]}", notice: 'Finding was successfully updated.' }
 
         format.json { head :no_content }
