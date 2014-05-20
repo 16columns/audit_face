@@ -32,9 +32,9 @@ class DashboardsController < ApplicationController
       end
     end
     
-    @audits.each do |audit|
+    # @audits.each do |audit|
       
-    end
+    # end
     
     @audits.each do |audit|
       audit.findings.each do|finding|
@@ -60,11 +60,35 @@ class DashboardsController < ApplicationController
         end 
       end
     end
-   puts "********capa_pending_audits*********#{@capa_pending_audits.inspect}"
+    puts "********capa_pending_audits*********#{@capa_pending_audits.inspect}"
     @upcoming_audits = current_user.audits.where('start_date >= ?',Time.now)
+
+    # ------------------------------------------------------------
+    # group data by month to display on google column chart
+
+
+    months = ['', 'Jan','Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct', 'Nov','Dec']
+
+    @open_audits_counts_group_by_month = Hash.new
+    @in_progress_audits_counts_group_by_month = Hash.new
+
+    @open_audits.group_by { |audit|
+                            audit.created_at.month
+                          }.map { |key, value|
+                            @open_audits_counts_group_by_month[months[key]] = value.count
+                          }
+
+    @in_progress_audits.group_by  { |audit|
+                                    audit.created_at.month
+                                  }.map { |key, value|
+                                    @in_progress_audits_counts_group_by_month[months[key]] = value.count
+                                  }
+
+    # ------------------------------------------------------------
+
+
    # @in_progress_audits = (audit.start_date.to_i..audit.end_date.to_i).include?(Time.now.to_i) 
-    @findings = Finding.find(:all)
-   # months = ['Jan','Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct', 'Nov','Dec']
+    #@findings = Finding.find(:all)
    # col_chart = [[]]
    # months.each_with_index do |month,index|
       
@@ -80,7 +104,7 @@ class DashboardsController < ApplicationController
     #          dataTable.addRow([<%= audit.id %>,<%= audit.id %> ,<%= audit.id %> ,<%= audit.id %>]) 
     #    <%end%>  
     #      alert("*************"+dataTable);
-    audits = Audit.all
+    #audits = Audit.all
     #audits.each do |audit|
     #  @data_table.add_row([audit.created_at, audit.start_date, audit.start_date, audit.start_date])
     #end

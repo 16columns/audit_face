@@ -326,8 +326,11 @@
         dataTable.addColumn('number', 'Open')
         dataTable.addColumn('number', 'In Progress')
         dataTable.addColumn('number', 'Closed')
+        var open_audits =  <%=raw @open_audits_counts_group_by_month.to_json %>
+        var in_progress_audits = <%=raw @in_progress_audits_counts_group_by_month.to_json %>
+
         for (var i = 0; i < months.length; i++) 
-            dataTable.addRows([[months[i],<%= @open_audits.count %>,<%= @in_progress_audits.count %>,<%= @open_audits.count %>]]);  
+            dataTable.addRows([[months[i], open_audits[months[i]], in_progress_audits[months[i]] , <%= "0" %> ]]);
         
         new google.visualization.ColumnChart(document.getElementById('visualization')).
             draw(dataTable,
