@@ -18,8 +18,14 @@ class DashboardsController < ApplicationController
     @in_progress_audits_month_wise = []
     @closed_audits_month_wise = []
     audit_closed =false
+
+    @closed_audits = []
     
     @audits.each do |audit|
+      
+      # find out closed audits ------------------------------
+      @closed_audits << audit if audit.findings.count == audit.findings.where(:status_id => "Closed").count
+
       audit.findings.each do|finding|
         @finding_count += 1  
         if finding.status_id == "CAPA Pending" || finding.status_id == "" ||  finding.status_id == nil
@@ -71,6 +77,7 @@ class DashboardsController < ApplicationController
 
     @open_audits_counts_group_by_month = Hash.new
     @in_progress_audits_counts_group_by_month = Hash.new
+    @closed_audits_counts_group_by_month = Hash.new
 
     @open_audits.group_by { |audit|
                             audit.created_at.month
@@ -83,6 +90,12 @@ class DashboardsController < ApplicationController
                                   }.map { |key, value|
                                     @in_progress_audits_counts_group_by_month[months[key]] = value.count
                                   }
+
+    @closed_audits.group_by { |audit|
+                              audit.created_at.month
+                            }.map { |key, value|
+                              @closed_audits_counts_group_by_month[months[key]] = value.count
+                            }
 
     # ------------------------------------------------------------
 
