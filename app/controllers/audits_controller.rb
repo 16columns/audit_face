@@ -171,9 +171,13 @@ class AuditsController < ApplicationController
          pdf.text "Status : " + ""
         
        # pdf.transparent(1.0) {pdf.stroke_bounds }
-        pdf.move_down 30
+        pdf.move_down 20
        #end
      # end
+     pdf.stroke do
+      pdf.horizontal_line(0, 540)
+    end    
+    pdf.move_down 10 
 
     audit.findings.each do |finding|
        pdf.text "Finding #{number += 1}"  
@@ -192,6 +196,10 @@ class AuditsController < ApplicationController
         pdf.text "Status : " + finding.status_id if finding.status_id
         pdf.move_down 5
          pdf.text "Closed On : " + finding.closure_date.strftime("%d-%m-%y") if finding.closure_date
+        pdf.move_down 10
+         pdf.stroke do
+          pdf.horizontal_line(0, 540)
+        end 
         pdf.move_down 10
         #pdf.stroke_bounds 
        # pdf.stroke_bounds 
