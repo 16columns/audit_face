@@ -5,7 +5,7 @@ AuditFace::Application.routes.draw do
 
   resources :activities, only: [:index]
 
-  devise_for :users 
+  devise_for :users , :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
   #resources :users do 
   #  resources :dashboards 

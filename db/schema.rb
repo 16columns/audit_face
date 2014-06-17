@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140417180536) do
+ActiveRecord::Schema.define(:version => 20140615210927) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -114,6 +114,16 @@ ActiveRecord::Schema.define(:version => 20140417180536) do
   add_index "findings", ["iso_clause"], :name => "index_findings_on_iso_clause"
   add_index "findings", ["status_id"], :name => "index_findings_on_status_id"
 
+  create_table "identities", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "identities", ["user_id"], :name => "index_identities_on_user_id"
+
   create_table "reports", :force => true do |t|
     t.string   "report_name"
     t.string   "report_tag"
@@ -149,6 +159,8 @@ ActiveRecord::Schema.define(:version => 20140417180536) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "mobile_number"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

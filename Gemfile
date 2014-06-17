@@ -16,7 +16,11 @@ gem 'font-awesome-rails'
 gem 'date_validator'
 gem 'prawn'
 
+gem 'omniauth'
+gem 'omniauth-linkedin'
+
 gem 'bootstrap-datetimepicker-rails'
+#gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
 gem "jquery-fileupload-rails"
 gem 'high_voltage', '~> 2.1.0'
