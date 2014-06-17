@@ -30,7 +30,7 @@ class DashboardsController < ApplicationController
         @finding_count += 1  
         if finding.status_id == "CAPA Pending" || finding.status_id == "" ||  finding.status_id == nil
             @findings_capa_pending << finding
-        elsif finding.status_id == "Under review"
+        elsif finding.status_id == "Under Review"
             @findings_under_review <<  finding
         elsif  finding.status_id == "Closed"
           @findings_closed << finding
