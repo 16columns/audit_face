@@ -2,26 +2,46 @@
    
    <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-12 col-lg-offset-1">
+      <div class="col-lg-12">
+          <div class="col-lg-4 col-lg-offset-1">
     
-      <%= link_to new_audit_path, :class => "btn btn-sm btn-default" do %>
-      <span class="glyphicon glyphicon-plus-sign"></span> New Audit
+          <%= link_to new_audit_path, :class => "btn btn-sm btn-default" do %>
+          <span class="glyphicon glyphicon-plus-sign"></span> New Audit
 
-      <% end %>
+          <% end %>
       
-      <%# link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
-      <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" > Import Findings (Coming Soon) </button>-->
+          <%# link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
+          <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal" > Import Audit </button>
 
       
-     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
-    
-    
-       
+         <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
+         </div>
+             <div class="col-lg-3">
+                 <div class="form-group">
+                     <select class="form-control input-sm selectpicker">
+                  <option>Filter records by Organization name</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              </select>
+             </div>
+                  </div>
+                  <!--<div class="col-lg-4">
+                    <div class="form-group"> 
+                      <button type="button" class="btn btn-default btn-sm">Filter records by Organization name</button>
+                     </div>  
+              </div>-->
+                  </div>
+                 
+              
     </div>
     </div>
     </div>
+   
+   
     <div class="page-header"></div>
-
+                         
     <% @audits.each do |audit| %>
     <div class="container">
     <div class="row-fluid">
@@ -112,10 +132,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Upload findings to audits</h4>
+        <h4 class="modal-title" id="myModalLabel">Upload Audit</h4>
       </div>
       <div class="modal-body">
      <form class="form-horizontal" role="form">
+       <div class="form-group">
+        <div class="col-sm-8">
+        
+        <button type="button" class="btn btn-info btn-link">Download template</button>
+        </div>
+         </div>
+      <br/>
      <div class="form-group">
         <div class="col-sm-8">
             <select class="form-control">
@@ -128,11 +155,7 @@
        </div>
        <br/><br/><br/>
         
-        <div class="col-sm-8">
-        
-        <button type="button" class="btn btn-info btn-block">Download template</button>
-        </div>
-      <br/><br/><br/>
+       
          <div class="col-sm-8">
 
         <button type="button" class="btn btn-success btn-block">Import</button>
@@ -141,12 +164,11 @@
         <div class="col-sm-12">
        
        <ul>
-           <li> Upload finding in provided template only</li>
-           <li> Avoid blank rows and duplicate import</li>
-           <li> File import will only accept "Critical, High, Medium and Low" risk categories. Finding will skip if incorrect risk category is entered</li>
-           <li> Ensure audits do not contain any findings before an import is made </li>
-           <li> Finding import can be used only once. Import will only perform "add finding" action</li>
-           <li> To modify a finding , an user must visit the finding in application</li>
+           <li> Use provided template only</li>
+           <li> Blank rows will be skipped </li>
+           <li> If any mandatory field is not entered, that particular record will be dropped </li>
+           <li> Duplicate records will be dropped</li>
+           <li> Additional records in second time upload will be appended to existing records</li>
            
        </ul>
         </div>
@@ -225,4 +247,6 @@
 </div><!-- /.modal -->
 
 <% end %>
-
+<script>
+    $('.selectpicker').selectpicker();
+     </script>

@@ -26,6 +26,7 @@ gem 'roo'
 gem 'pg'
 gem  'activerecord-postgresql-adapter'
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-select-rails'
 
 group :development, :test do
   gem 'mysql2'
