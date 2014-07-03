@@ -22,6 +22,7 @@ AuditFace::Application.routes.draw do
   post "audits/share_schedule"
   get "audits/find_capa"
   post "audits/find_capa"
+  post "audits/import"
   resources :audits do
   resources :findings
   
