@@ -26,6 +26,14 @@ class AuditsController < ApplicationController
     end
   end
 
+  def import
+
+    puts "******import action called********************"
+    puts "((((((((((((((( ______________#{params[:file]}"
+     Audit.import(params[:file])
+  redirect_to audits_url, notice: "Audits imported."
+  end
+
   # GET /audits/new
   # GET /audits/new.json
   def new

@@ -16,6 +16,7 @@ gem 'font-awesome-rails'
 gem 'date_validator'
 gem 'prawn'
 
+gem 'roo'
 gem 'bootstrap-datetimepicker-rails'
 gem 'cocaine'
 gem "jquery-fileupload-rails"
@@ -23,8 +24,8 @@ gem 'high_voltage', '~> 2.1.0'
 gem 'whenever', :require => false
 gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
 gem 'roo'
-gem 'pg'
-gem  'activerecord-postgresql-adapter'
+#gem 'pg'
+#gem  'activerecord-postgresql-adapter'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-select-rails'
 
@@ -38,7 +39,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-
+gem 'therubyracer'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
