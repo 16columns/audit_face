@@ -26,9 +26,15 @@
 
    
     <%= f.input :report_name %>
-    <%= f.input :report_tag %>
-    <%= f.input :report_status %>
+    <%#= f.input :report_tag %>
+    
+    <%#= f.input :report_status %>
   </div>
+    <div class="input-sm">
+         <div class="col-lg-12">
+            <%= f.select :report_status, ["Final","Draft"] %>
+          </div>
+        </div>    
     <div class="input-xs">
       <%= f.file_field :avatar %>
 </div>  <br/>
