@@ -3,37 +3,24 @@
    <div class="container">
     <div class="row-fluid">
       <div class="col-lg-12">
-          <div class="col-lg-6 col-lg-offset-1">
+          <div class="col-lg-4 col-lg-offset-1">
     
-          <%= link_to new_audit_path, :class => "btn btn-default" do %>
+          <%= link_to new_audit_path, :class => "btn btn-sm btn-default" do %>
           <span class="glyphicon glyphicon-plus-sign"></span> New Audit
 
           <% end %>
       
           <%# link_to 'New Audit', new_audit_path, class: "btn btn-default btn-sm" %>
-          <button class="btn btn-default" data-toggle="modal" data-target="#myModal" > <span class="glyphicon glyphicon-import"></span> Import Audit </button>
+          <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal" > Import Audit </button>
 
       
-         <button class="btn btn-default" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
+         <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
          </div>
              <div class="col-lg-3">
-<<<<<<< HEAD
-               
-                     <select class="form-control selectpicker">
-                  <option>Filter records by Organization name</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              </select>
-             </div>
-                
-
                  <div class="form-group">
                   <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name) %>
              </div>
                   </div>
-
 
                   <!--<div class="col-lg-4">
                     <div class="form-group"> 
@@ -53,7 +40,7 @@
     <% @audits.each do |audit| %>
     <div class="container">
     <div class="row-fluid">
-    <div class="col-lg-7 col-md-7 col-lg-offset-1">
+    <div class="col-lg-6 col-md-6 col-lg-offset-1">
    
      <small>
        

@@ -17,7 +17,6 @@
          <button class="btn btn-default" data-toggle="modal" data-target="#myModal1"> <span class="glyphicon glyphicon-eye-open"></span> Preview Schedule </button>
          </div>
              <div class="col-lg-3">
-<<<<<<< HEAD
                
                      <select class="form-control selectpicker">
                   <option>Filter records by Organization name</option>
@@ -28,13 +27,6 @@
               </select>
              </div>
                 
-
-                 <div class="form-group">
-                  <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name) %>
-             </div>
-                  </div>
-
-
                   <!--<div class="col-lg-4">
                     <div class="form-group"> 
                       <button type="button" class="btn btn-default btn-sm">Filter records by Organization name</button>
@@ -161,10 +153,10 @@
             <option>5</option>
             </select>
        </div> -->
-       <%#= form_tag import_audits_path, multipart: true do %>
-          <%#= file_field_tag :file %>
-          <%#= submit_tag "Import" %>
-      <%# end %>
+       <%= form_tag import_audits_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Import" %>
+      <% end %>
        <%#= file_field_tag "import_audits"%>
        <br/><br/><br/>
         
