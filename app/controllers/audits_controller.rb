@@ -92,7 +92,7 @@ class AuditsController < ApplicationController
   # PUT /audits/1.json
   def update
     @audit = current_user.audits.find(params[:id])
-  
+
     if @audit.auditor_email != params[:audit][:auditor_email]
        UserMailer.audit_deleted_auditor(@audit,current_user).deliver
        UserMailer.assign_audit(@audit,params[:audit][:auditor_email],current_user).deliver       
@@ -101,6 +101,14 @@ class AuditsController < ApplicationController
       UserMailer.audit_deleted_auditee(@audit,current_user).deliver     
       UserMailer.assign_auditee(@audit,params[:audit][:auditee_email],current_user).deliver
     end  
+    if @audit.start_date.to_date != params[:audit][:start_date]  || @audit.end_date.to_date != params[:audit][:end_date]
+      if @audit.auditor_email == params[:audit][:auditor_email]
+        UserMailer.audit_modified_auditor(@audit,params[:audit][:auditor_email],current_user).deliver
+      end
+      if @audit.auditee_email == params[:audit][:auditee_email]
+        UserMailer.audit_modified_auditee(@audit,params[:audit][:auditee_email],current_user).deliver
+      end 
+    end
     respond_to do |format|
       if @audit.update_attributes(params[:audit])
         format.html { redirect_to audits_path, notice: 'Audit was successfully updated.' }

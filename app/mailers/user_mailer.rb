@@ -28,6 +28,18 @@ class UserMailer < ActionMailer::Base
     @user = current_user
     mail(:to => audit.auditee_email, :subject => "Notification: Audit cancelled")  
   end
+
+  def audit_modified_auditor(audit,email,current_user)
+    @audit = audit
+    @user = current_user
+    mail(:to => email, :subject => "Notification: Audit Modified")  
+  end
+
+  def audit_modified_auditee(audit,email,current_user)
+    @audit = audit
+    @user = current_user
+    mail(:to => email, :subject => "Notification: Audit Modified")  
+  end
   
   def weekly_mail(user)
     @findings = []

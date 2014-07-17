@@ -1,0 +1,17 @@
+<h3>
+  Dear <%= @audit.auditee_name %> </h3>
+<div>
+    The audit schedule has ben updated . Please find the new schedule. <br/>
+     Department Name :  <%= @audit.department_name %>  <br/>
+     Start Date : <%= @audit.start_date.to_date %> <br/>
+     End Date : <%= @audit.end_date.to_date %> <br/>
+     Audit Location : <%= @audit.location %>
+</div> 
+    <p>For any clarification or further information please write to <%= @user.email%> or call at <%= @user.mobile_number%> </p>
+<br/><br/>   
+<div>  
+  <p>Thanks,</p>
+  <p><%= @user.profile_name%></p>
+  <p><%= @user.email%></p>
+</div> 
+
