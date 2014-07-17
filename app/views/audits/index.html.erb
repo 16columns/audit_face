@@ -89,16 +89,15 @@
       <div class="meta">
       <p>
       <%= time_ago_in_words(audit.created_at) + " ago" %>  -    
-
-                    <% if audit.start_date.to_i > Time.now.to_i %>
                     <%= link_to "Modify", edit_audit_path(audit), class: "btn btn-link" %>  | 
-                    <%= link_to "Delete", audit, class: "btn btn-link", method: :delete, data: { Confirm: "Are you sure"} %> |
+                    <% if audit.start_date.to_i > Time.now.to_i %>
+                      <%= link_to "Delete", audit, class: "btn btn-link", method: :delete, data: { Confirm: "Are you sure"} %> |
                      
                     <%= link_to "View Finding", audit, class: "btn btn-link btn-sm disabled" %>
                     
                     <%= link_to "Add Finding", new_audit_finding_path(audit.id), class: "btn btn-primary btn-sm pull-right disabled" %>  
                     <% else %>  
-                    <%= link_to "Modify", edit_audit_path(audit), class: "btn btn btn-link disabled" %>  |
+                    
                     <%= link_to "Delete", audit, class: "btn btn btn-link disabled", method: :delete, data: { Confirm: "Are you sure"} %> |
                      <%= link_to "View Finding", audit, class: "btn btn-link btn-sm" %>
                   

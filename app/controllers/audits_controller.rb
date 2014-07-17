@@ -1,6 +1,6 @@
 
 class AuditsController < ApplicationController
-     before_filter :check_audit_status, :only => [:edit,:update]
+#      before_filter :check_audit_status, :only => [:edit,:update]
       require 'prawn'
   # GET /audits
   # GET /audits.json

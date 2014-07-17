@@ -1,5 +1,6 @@
 
-
-<%= render 'form' %>
-
-
+<% if @audit.start_date.to_date > Date.today %>
+	<%= render 'form' %>
+<% else %>	
+	<%= render 'edit_form' %>
+<% end %>
