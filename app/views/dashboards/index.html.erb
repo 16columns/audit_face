@@ -13,7 +13,7 @@
            <strong> All Audits </strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <h3 class="col-lg-offset-4">
+           <h3 class="col-lg-offset-6">
                   <%# @current_user.audits.count %>
             <%= link_to @current_user.audits.count, audits_path %>
             </h3>
@@ -29,7 +29,7 @@
            <strong> My Audits </strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <h3 class="col-lg-offset-4">
+           <h3 class="col-lg-offset-6">
               <%= @audits.count %> 
             </h3>
           </div>
@@ -45,7 +45,7 @@
            <strong>Findings issued by me</strong>
          </div>
           <div class="panel-body" style="background:#ecf0f1;">
-           <h3 class="col-lg-offset-4">
+           <h3 class="col-lg-offset-6">
            
              <%= @finding_count %>
             </h3>
