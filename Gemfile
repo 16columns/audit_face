@@ -26,6 +26,8 @@ gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://g
 gem 'roo'
 #gem 'pg'
 #gem  'activerecord-postgresql-adapter'
+gem 'omniauth'
+gem 'omniauth-linkedin' 
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap-select-rails'
 

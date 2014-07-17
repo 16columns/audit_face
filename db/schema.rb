@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140417180536) do
+ActiveRecord::Schema.define(:version => 20140717155134) do
 
   create_table "activities", :force => true do |t|
     t.integer  "user_id"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20140417180536) do
     t.string   "representative_email"
     t.boolean  "deleted",                :default => false
     t.boolean  "findings_submitted",     :default => false
+    t.string   "audit_name"
   end
 
   add_index "audits", ["audit_type"], :name => "index_audits_on_audit_type"
@@ -149,6 +150,8 @@ ActiveRecord::Schema.define(:version => 20140417180536) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "mobile_number"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
