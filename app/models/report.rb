@@ -6,6 +6,6 @@ class Report < ActiveRecord::Base
   belongs_to :audit
   belongs_to :user
   
- validates :report_name, :report_status, :report_tag, :audit_id , :avatar, :presence => true
+ validates :report_name, :report_status, :audit_id , :avatar, :presence => true
 
 end
