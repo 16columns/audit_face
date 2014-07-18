@@ -6,7 +6,11 @@ class AuditsController < ApplicationController
   # GET /audits.json
   def index
     @audits_not_started = current_user.audits.where('start_date > ? and deleted = ? ',Time.now,false)      
-    @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC').where('deleted = ?',false)
+    if !params[:org].nil?
+      @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC').where('deleted = ? and organiation_name= ?',false,params[:org]) 
+    else
+      @audits= current_user.audits.paginate(:page => params[:page], :per_page => 5).order('id DESC').where('deleted = ?',false)
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @audits }
