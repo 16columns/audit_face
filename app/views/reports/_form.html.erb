@@ -30,7 +30,7 @@
   </div>
        
    <div class="form-input">
-        
+       
              <div class="input-lg">
                  <%= f.select :report_status, ["Final","Draft"], :class=> "selectpicker" %>
           </div>
@@ -48,3 +48,6 @@
 </div>
 </div>
 <% end %>
+<script>
+$('.selectpicker').selectpicker();
+</script>

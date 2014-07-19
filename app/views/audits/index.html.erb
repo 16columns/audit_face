@@ -1,9 +1,8 @@
-   
-   
+     
    <div class="container">
     <div class="row-fluid">
       <div class="col-lg-12">
-          <div class="col-lg-6 col-lg-offset-1">
+          <div class="col-lg-5 col-lg-offset-1">
     
           <%= link_to new_audit_path, :class => "btn btn-default" do %>
           <span class="glyphicon glyphicon-plus-sign"></span> New Audit
@@ -18,25 +17,23 @@
          </div>
 
              
-              <div class="form-group">
-                  <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name) %>
-             </div>
-                  </div>
+           <div class="col-lg-3">
+               
+                  <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name, {}, {:class => "selectpicker"}) %>
+   </div>
+     </div>
+       
 
 
-                  <!--<div class="col-lg-4">
-                    <div class="form-group"> 
-                      <button type="button" class="btn btn-default btn-sm">Filter records by Organization name</button>
-                     </div>  
-              </div>-->
-                  </div>
+             
                  
               
     </div>
     </div>
-    </div>
+    
    
-   <form id="filter_form" action="/audits/" method="get"><input id="filter_value" name="org" type="hidden" value="" /></form>
+   <form id="filter_form" action="/audits/" method="get">
+     <input id="filter_value" name="org" type="hidden" value="" /></form>
     <div class="page-header"></div>
                          
     <% @audits.each do |audit| %>
@@ -78,7 +75,7 @@
       <div class="meta">
       <p>
       <%= time_ago_in_words(audit.created_at) + " ago" %>  -    
-                    <%= link_to "Modify", edit_audit_path(audit), class: "btn btn-link" %>  | 
+        <%= link_to "Extend audit", edit_audit_path(audit), class: "btn btn-link" %>  | 
                     <% if audit.start_date.to_i > Time.now.to_i %>
                       <%= link_to "Delete", audit, class: "btn btn-link", method: :delete, data: { Confirm: "Are you sure"} %> |
                      
@@ -248,6 +245,7 @@
 </div><!-- /.modal -->
 
 <% end %>
+
 <script>
   $('#organization_organiation_name').change(function() {
 
