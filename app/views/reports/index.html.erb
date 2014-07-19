@@ -6,22 +6,15 @@
       <span class="glyphicon glyphicon-plus-sign"></span> New Report
      <% end %>
      </div>
-     
-                  <div class="col-lg-3">
-                 <div class="form-group">
-              <select class="form-control selectpicker ">
-                  <option>Filter records by Organization name</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              </select>
-             </div>
-     </div>
+     <div class="form-group">
+        <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name) %>
+      </div>
   </div>
   </div>
   </div>
-   
+
+<form id="filter_form" action="/reports/" method="get"><input id="filter_value" name="org" type="hidden" value="" /></form>   
+
 <div class="page-header">
 </div>
 <% @reports.each do |report| %>
@@ -70,10 +63,16 @@
 
 <script>
     $('.selectpicker').selectpicker();
+
+    $('#organization_organiation_name').change(function() {
+
+    var value = $('#organization_organiation_name').val();
+
+    $('#filter_value').val(value);
+    $('#filter_form').submit();
+    });
+
      </script>
-
-
-
 
 
 

@@ -3,8 +3,12 @@ class ReportsController < ApplicationController
   # GET /reports.json
   
   def index
-    @reports= current_user.reports.paginate(:page => params[:page], :per_page => 10).order('id DESC')
-    
+    if !params[:org].nil?
+      @audits = Audit.where("organiation_name= ?",params[:org])
+      @reports= current_user.reports.paginate(:page => params[:page], :per_page => 10).order('id DESC').where(:audit_id => @audits.map(&:id))
+     else
+      @reports= current_user.reports.paginate(:page => params[:page], :per_page => 10).order('id DESC')
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reports }
