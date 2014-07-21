@@ -7,7 +7,7 @@
      <% end %>
      </div>
      <div class="form-group">
-        <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name) %>
+       <%= collection_select(:organization, :organiation_name, Audit.select('DISTINCT organiation_name') , :organiation_name, :organiation_name, {}, {:class=> "selectpicker"})  %>
       </div>
   </div>
   </div>

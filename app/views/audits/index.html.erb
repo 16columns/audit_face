@@ -19,13 +19,10 @@
              
            <div class="col-lg-3">
                
-                  <%= collection_select(:organization, :organiation_name, Audit.all, :organiation_name, :organiation_name, {}, {:class => "selectpicker"}) %>
+                  <%= collection_select(:organization, :organiation_name, Audit.select('DISTINCT organiation_name'), :organiation_name, :organiation_name, {}, {:class => "selectpicker"}) %>
    </div>
      </div>
-       
-
-
-             
+               
                  
               
     </div>
