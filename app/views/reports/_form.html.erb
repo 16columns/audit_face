@@ -9,21 +9,28 @@
     </div>  
     </div>
       
-  <div class="col-lg-5 col-lg-offset-1">
+  <div class="col-lg-4 col-lg-offset-1">
   <div class="form-group">
   <%#= select_tag "audits[id]", options_for_select(@capa_pending_audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s] }),:class=>'form-control' %>    
  <!--<div class="form-control">
    <%#= collection_select(:report, :audit_id, Audit.all, :id, :id) %>
 </div>-->
 
-     <div class="input-lg">
-   <%= f.select :audit_id, options_for_select(@audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s]}) %>
-    </div>
+     <div class="input-sm">
+     <%= f.select :audit_id, options_for_select(@audits.map { |obj| [obj['id'].to_s+'-'+obj['department_name']+'-        '+obj['organiation_name'].to_s, obj['id'].to_s+'-'+obj['department_name']+'-'+obj['organiation_name'].to_s]},        ), {},  {:class => "selectpicker"} %>
+    
     <br/><br/>
+    
+    <%= f.input :report_name %>
+   
+    
+    </div>
+    
+    <br/><br/><br/><br/><br/>
 
     <%#= f.input :audit_id, collection: current_user.audits.all, label_method: :id, value_method: :id %>
    
-    <%= f.input :report_name %>
+   
     <%#= f.input :report_tag %>
     
     <%#= f.input :report_status %>
@@ -31,22 +38,24 @@
        
    <div class="form-input">
        
-             <div class="input-lg">
-                 <%= f.select :report_status, ["Final","Draft"], :class=> "selectpicker" %>
+             <div class="input-sm">
+                 <%= f.select :report_status, ["Final","Draft"], {}, {:class=> "selectpicker"} %>
           </div>
           
 </div>
 <br/>
     <div class="input-sm">
       <%= f.file_field :avatar %>
-</div>  <br/>
+    </div>  <br/>
+
    <div class="form-actions">
-    <%= f.button :submit , 'Submit',  class: "btn btn-success btn-sm" %>
+    <%= f.button :submit , 'Submit',  class: "btn btn-success" %>
   </div>
 
   </div> 
 </div>
 </div>
+
 <% end %>
 <script>
 $('.selectpicker').selectpicker();

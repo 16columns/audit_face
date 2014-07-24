@@ -132,7 +132,7 @@
         <button type="button" class="btn btn-info btn-link">Download template</button>
         </div>
          </div>
-      <br/>
+      
       <div class="form-group">
      <!--   <div class="col-sm-8">
             <select class="form-control">
@@ -148,14 +148,15 @@
           <%#= submit_tag "Import" %>
       <%# end %>
        <%#= file_field_tag "import_audits"%>
-       <br/><br/><br/>
+ 
         
        
          <div class="col-sm-8">
 
         <button type="button" class="btn btn-success btn-block">Import</button>
         </div>
-         <br/><br/><br/>
+        <br/><br/><br/>
+
         <div class="col-sm-12">
        
        <ul>
@@ -179,7 +180,9 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 <%= simple_form_for("", :url => url_for(:controller => 'audits', :action => 'share_schedule')) do |f| %>
+
 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
